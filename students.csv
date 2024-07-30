@@ -1,281 +1,281 @@
 election_id,student_id,first_name,last_name,email,faculty,degree,year,gender,ethnicity,time
-1,lPVrxeWct6KNMVW5BxkLLeWGA0Ej,Xander,Phillips,xphi0001@student.monash.edu,Education,Bachelor of Education,2,Female,Asian,00:00.0
+1,lPVrxeWct6KNMVW5BxkLLeWGA0Ej,Xander,Phillips,xphi0001@student.monash.edu,Education,Bachelor of Education,2.0,Female,Asian,00:00.0
 1,ljPd0188x3WaqPJ4rWbpH9BzFLdG,Nathan,Reed,nree0001@student.monash.edu,,,,,,00:00.0
-1,UZUja3zBhh70N6QiuWfVLxhK5CDC,Antonio,Cunningham,acun0001@student.monash.edu,Medicine,Bachelor of Medicine,3,Female,Hispanic,00:00.0
-1,4p8Gp2w5KBwTnjL4WuragWNGEVNY,Brayden,Owens,bowe0001@student.monash.edu,Science,Master of Biology,5,Female,Caucasian,00:00.0
-1,Danqmm5TqFiYAJ1LN87lslxYcpz3,Alex,Smith,asmi0001@student.monash.edu,Business and Economics,Bachelor of Business Administration,2,Male,Caucasian,00:00.0
-1,Ec4SZHSWYJQAO21MdYm7yfoWonVj,Ace,Simmons,asim0001@student.monash.edu,Law,Bachelor in Law,1,Female,Other,00:00.0
-1,HRocklwtS4Jym3QKZBggh3R3OJfL,Carter,Hill,chil0001@student.monash.edu,Business,Bachelor of Commerce,2,Female,Caucasian,00:00.0
-1,41iNkj5mjwbGidV3eTaqSPKRRY8b,Alan,Davis,adav0001@student.monash.edu,Law,,1,Female,Mixed,00:00.0
+1,UZUja3zBhh70N6QiuWfVLxhK5CDC,Antonio,Cunningham,acun0001@student.monash.edu,Medicine/Nursing,Bachelor of Medicine,3.0,Female,Pacific Islander,00:00.0
+1,4p8Gp2w5KBwTnjL4WuragWNGEVNY,Brayden,Owens,bowe0001@student.monash.edu,Science,Master of Biology,5.0,Female,Caucasian,00:00.0
+1,Danqmm5TqFiYAJ1LN87lslxYcpz3,Alex,Smith,asmi0001@student.monash.edu,Business and Economics,Bachelor of Business Administration,2.0,Male,Caucasian,00:00.0
+1,Ec4SZHSWYJQAO21MdYm7yfoWonVj,Ace,Simmons,asim0001@student.monash.edu,Law,Bachelor in Law,1.0,Female,Other,00:00.0
+1,HRocklwtS4Jym3QKZBggh3R3OJfL,Carter,Hill,chil0001@student.monash.edu,Business and Economics,Bachelor of Commerce,2.0,Female,Caucasian,00:00.0
+1,41iNkj5mjwbGidV3eTaqSPKRRY8b,Alan,Davis,adav0001@student.monash.edu,Law,,1.0,Female,Black/African,00:00.0
 1,jjGodPL8VtHEIkAzCcPje0rYlvvV,Matteo,Watkins,mwat0001@student.monash.edu,,,,,,00:00.0
-1,hk8WTj3BI9a7j1wFt2JyAoq2HWEB,Elliott,Riley,eril0001@student.monash.edu,Education,Bachelor of Education,2,Male,Other,00:00.0
-1,aNE9Brvoy6A5hTR0hbOGKFRL9jGo,Easton,Brooks,ebro0001@student.monash.edu,Science,Bachelor of Science,1,Male,Caucasian,00:00.0
-1,Ukhb5Zf93Qi2PshFxXvuOYocBYQm,Finn,Cook,fcoo0001@student.monash.edu,Engineering,Bachelor of Civil Engineering,2,Female,Black,00:00.0
-1,DvC5lxBod1cLTbSgnzPtc54KHs4O,Abel,Bradley,abra0001@student.monash.edu,Medicine,Bachelor of Medicine,1,Male,Caucasian,00:00.0
-1,7KVLwKJvVYyd86CJhVUyR4NZzMYU,Dawson,Cole,dcol0001@student.monash.edu,Engineering,Bachelor in Electrical Engineering,2,Female,Middle Eastern,00:00.0
-1,T7aaNi8ZowtKcuBI68our6N9uLYL,Thiago,Stephens,tste0001@student.monash.edu,Medicine,Bachelor of Medicine,3,Male,Hispanic,00:00.0
-1,M8Z7KowVYc6c759BWiIwyEtgyVz2,Max,Palmer,mpal0001@student.monash.edu,Engineering,Master of Mechanical Engineering,5,Male,Hispanic,00:00.0
-1,luyS5ezGXcqXDzf9oVlE1LChHGYk,Giovanni,Ortiz,gort0001@student.monash.edu,Arts,Bachelor of Arts,3,Male,Hispanic,00:00.0
-1,H2NNeI52yJi0mIhMpXT6Wa9QCfGR,Kai,Garcia,kgar0001@student.monash.edu,Business,Master of Business Administration,5,Male,Mixed,00:00.0
-1,O21JkvdhxzJE6qo3dNPyLnk9zjcG,Cameron,Cox,ccox0001@student.monash.edu,Medicine,Master in Medical Sciences,4,Male,Caucasian,00:00.0
-1,mEQPRxYS0ISOjV9MWPHDQQpa62Pd,Archer,Dunn,adun0001@student.monash.edu,Engineering,Bachelor of Civil Engineering,2,Female,Caucasian,00:00.0
-1,rBexRR3mDlfs08M9xNGq1j3qkzcF,Landon,Peterson,lpet0001@student.monash.edu,Education,Master of Education,4,Male,Caucasian,00:00.0
-1,nA9cTzEMmjCa9yqoKzFwty825uOI,Greyson,Henderson,ghen0001@student.monash.edu,Business,Master of Business Administration,5,Female,Caucasian,00:00.0
-1,3gsbC1m9g7FMAdo5N3tPWXf84P2y,Timothy,Anderson,tand0003@student.monash.edu,Information Technology,Master of Data Science,4,Male,Middle Eastern,00:00.0
+1,hk8WTj3BI9a7j1wFt2JyAoq2HWEB,Elliott,Riley,eril0001@student.monash.edu,Education,Bachelor of Education,2.0,Male,Other,00:00.0
+1,aNE9Brvoy6A5hTR0hbOGKFRL9jGo,Easton,Brooks,ebro0001@student.monash.edu,Science,Bachelor of Science,1.0,Male,Caucasian,00:00.0
+1,Ukhb5Zf93Qi2PshFxXvuOYocBYQm,Finn,Cook,fcoo0001@student.monash.edu,Engineering,Bachelor of Civil Engineering,2.0,Female,Native American,00:00.0
+1,DvC5lxBod1cLTbSgnzPtc54KHs4O,Abel,Bradley,abra0001@student.monash.edu,Medicine/Nursing,Bachelor of Medicine,1.0,Male,Caucasian,00:00.0
+1,7KVLwKJvVYyd86CJhVUyR4NZzMYU,Dawson,Cole,dcol0001@student.monash.edu,Engineering,Bachelor in Electrical Engineering,2.0,Female,Pacific Islander,00:00.0
+1,T7aaNi8ZowtKcuBI68our6N9uLYL,Thiago,Stephens,tste0001@student.monash.edu,Medicine/Nursing,Bachelor of Medicine,3.0,Male,Hispanic/Latinx,00:00.0
+1,M8Z7KowVYc6c759BWiIwyEtgyVz2,Max,Palmer,mpal0001@student.monash.edu,Engineering,Master of Mechanical Engineering,5.0,Male,Native American,00:00.0
+1,luyS5ezGXcqXDzf9oVlE1LChHGYk,Giovanni,Ortiz,gort0001@student.monash.edu,Arts,Bachelor of Arts,3.0,Male,Mixed Race,00:00.0
+1,H2NNeI52yJi0mIhMpXT6Wa9QCfGR,Kai,Garcia,kgar0001@student.monash.edu,Business and Economics,Master of Business Administration,5.0,Male,Native American,00:00.0
+1,O21JkvdhxzJE6qo3dNPyLnk9zjcG,Cameron,Cox,ccox0001@student.monash.edu,Medicine/Nursing,Master in Medical Sciences,4.0,Male,Caucasian,00:00.0
+1,mEQPRxYS0ISOjV9MWPHDQQpa62Pd,Archer,Dunn,adun0001@student.monash.edu,Engineering,Bachelor of Civil Engineering,2.0,Female,Caucasian,00:00.0
+1,rBexRR3mDlfs08M9xNGq1j3qkzcF,Landon,Peterson,lpet0001@student.monash.edu,Education,Master of Education,4.0,Male,Caucasian,00:00.0
+1,nA9cTzEMmjCa9yqoKzFwty825uOI,Greyson,Henderson,ghen0001@student.monash.edu,Business and Economics,Master of Business Administration,5.0,Female,Caucasian,00:00.0
+1,3gsbC1m9g7FMAdo5N3tPWXf84P2y,Timothy,Anderson,tand0003@student.monash.edu,Information Technology,Master of Data Science,4.0,Male,Caucasian,00:00.0
 1,bYMf3cZDpuDg37DAaoZ2GDZCpUpv,Legend,Stevens,lste0001@student.monash.edu,,,,,,00:00.0
-1,tP5Bfsb5l0JrYR6YenGSMa7SDTeW,Robert,Ross,rros0001@student.monash.edu,Information Technology,Master in Information Technology,5,Female,Caucasian,00:00.0
-1,1eseGN4BpqcoRSFqb9uvR8pNaGE9,James,Davis,jdav0001@student.monash.edu,Engineering,Bachelor of Civil Engineering,3,Female,Caucasian,00:00.0
-1,2ZzY8xqpKEhq7uFkJLdRygZAfjXU,Ryan,Lee,rlee0001@student.monash.edu,Science,Bachelor of Physics,2,Male,Asian,00:00.0
-1,jDOKvlZqPXOecJ6Q4tAE7r3ZUdl4,Zachary,Mason,zmas0001@student.monash.edu,Engineering,Bachelor of Civil Engineering,2,Female,Jewish,00:00.0
-1,BxMTuLMtrg5vI1p4z9jmMyH89iQw,Josiah,Collins,jcol0001@student.monash.edu,Law,Master of Laws,4,Male,Black,00:00.0
-1,f5RKEmLxdb2cHVLGnzhg3GO5sRQi,Tyler,Carpenter,tcar0001@student.monash.edu,Science,Bachelor of Science,2,Female,Caucasian,00:00.0
-1,wh0sGpyxcA4Pw43QegYzPuOclk62,Reagan,Martinez,rmar0001@student.monash.edu,Science,Bachelor of Chemistry,2,Male,Hispanic,00:00.0
-1,cWOsGrRuo83TKOJLZuTvpDXpyuFb,Jasper,Warren,jwar0001@student.monash.edu,Education,Master of Education,4,Male,Caucasian,00:00.0
-1,vid8MTiCbOf5CrcBw8WBKEF3SZ9P,Karter,Perkins,kper0001@student.monash.edu,Engineering,Bachelor in Electrical Engineering,1,Male,Caucasian,00:00.0
-1,zj8KAUvymoHVCcfqQgL79htKGPc7,Avery,Robinson,arob0001@student.monash.edu,Arts,Bachelor of Music,4,Female,Caucasian,00:00.0
-1,S2oKi1zYF9PzrxHJGn6aCSFrpxLJ,Ezra,Turner,etur0001@student.monash.edu,Information Technology,Master of Data Science,4,Male,Jewish,00:00.0
+1,tP5Bfsb5l0JrYR6YenGSMa7SDTeW,Robert,Ross,rros0001@student.monash.edu,Information Technology,Master in Information Technology,5.0,Female,Caucasian,00:00.0
+1,1eseGN4BpqcoRSFqb9uvR8pNaGE9,James,Davis,jdav0001@student.monash.edu,Engineering,Bachelor of Civil Engineering,3.0,Female,Caucasian,00:00.0
+1,2ZzY8xqpKEhq7uFkJLdRygZAfjXU,Ryan,Lee,rlee0001@student.monash.edu,Science,Bachelor of Physics,2.0,Male,Asian,00:00.0
+1,jDOKvlZqPXOecJ6Q4tAE7r3ZUdl4,Zachary,Mason,zmas0001@student.monash.edu,Engineering,Bachelor of Civil Engineering,2.0,Female,Pacific Islander,00:00.0
+1,BxMTuLMtrg5vI1p4z9jmMyH89iQw,Josiah,Collins,jcol0001@student.monash.edu,Law,Master of Laws,4.0,Male,Black/African,00:00.0
+1,f5RKEmLxdb2cHVLGnzhg3GO5sRQi,Tyler,Carpenter,tcar0001@student.monash.edu,Science,Bachelor of Science,2.0,Female,Caucasian,00:00.0
+1,wh0sGpyxcA4Pw43QegYzPuOclk62,Reagan,Martinez,rmar0001@student.monash.edu,Science,Bachelor of Chemistry,2.0,Male,Caucasian,00:00.0
+1,cWOsGrRuo83TKOJLZuTvpDXpyuFb,Jasper,Warren,jwar0001@student.monash.edu,Education,Master of Education,4.0,Male,Caucasian,00:00.0
+1,vid8MTiCbOf5CrcBw8WBKEF3SZ9P,Karter,Perkins,kper0001@student.monash.edu,Engineering,Bachelor in Electrical Engineering,1.0,Male,Caucasian,00:00.0
+1,zj8KAUvymoHVCcfqQgL79htKGPc7,Avery,Robinson,arob0001@student.monash.edu,Arts,Bachelor of Music,4.0,Female,Caucasian,00:00.0
+1,S2oKi1zYF9PzrxHJGn6aCSFrpxLJ,Ezra,Turner,etur0001@student.monash.edu,Information Technology,Master of Data Science,4.0,Male,Mixed Race,00:00.0
 1,N3xE6U8rABsPxWVnJNyprH1HAj64,Carlos,Black,cbla0001@student.monash.edu,,,,,,00:00.0
-1,sk4iYDFzvLxdgle1cy9bRlfbLsA0,Andrew,Sanchez,asan0001@student.monash.edu,Science,Master of Biology,5,Female,Caucasian,00:00.0
-1,hRFr4kafy3KcLaBWhNwBFQbYp0A4,Harrison,Garcia,hgar0001@student.monash.edu,Arts,Bachelor of Arts,2,Female,Other,00:00.0
-1,3VUyzb7wSdfNmnQ5aqDqw8p5kfQs,Jonathan,Ramirez,jram0001@student.monash.edu,Information Technology,Bachelor in Information Technology,1,Female,Hispanic,00:00.0
-1,EY9GzuhnKTv386PV6OPWSR0ukxi6,Sara,White,swhi0001@student.monash.edu,Medicine,Bachelor of Medicine,3,Female,Hispanic,00:00.0
-1,49JdrcH0CirSW3oFxIOaSLFmVcfl,Waylon,Hamilton,wham0001@student.monash.edu,Business,Master of Business Administration,5,Female,Caucasian,00:00.0
-1,ygI6jMUSfWQmbuFMQ2ojiiH9lNnD,Luca,Torres,ltor0001@student.monash.edu,Arts,Master in Arts,5,Male,Hispanic,00:00.0
-1,ZyCWsU8EcNpM18ehm634p4d2cZMV,Julian,Scott,jsco0002@student.monash.edu,Science,Master in Chemistry,4,Male,Hispanic,00:00.0
-1,PdSxaI3ZB9uNkDwmb3pjXDv1KvzI,Aaron,Richardson,aric0001@student.monash.edu,Law,Bachelor of Laws,1,Male,Jewish,00:00.0
-1,SJHnilYMhfyEAYZvYsVTOm1B4nhY,Owen,Rodriguez,orod0001@student.monash.edu,Arts,Master of Arts,4,Male,Caucasian,00:00.0
-1,3sypUvfzo0ZRnR6mJ8kVz9QdFUSo,Judah,Wright,jwri0001@student.monash.edu,Information Technology,Master of Data Science,4,Male,Caucasian,00:00.0
-1,yhU2UnKRdMTKZHxr1bryaXiwi0v4,Adam,Alexander,aale0001@student.monash.edu,Arts,Bachelor in Arts,1,Female,Caucasian,00:00.0
+1,sk4iYDFzvLxdgle1cy9bRlfbLsA0,Andrew,Sanchez,asan0001@student.monash.edu,Science,Master of Biology,5.0,Female,Caucasian,00:00.0
+1,hRFr4kafy3KcLaBWhNwBFQbYp0A4,Harrison,Garcia,hgar0001@student.monash.edu,Arts,Bachelor of Arts,2.0,Female,Other,00:00.0
+1,3VUyzb7wSdfNmnQ5aqDqw8p5kfQs,Jonathan,Ramirez,jram0001@student.monash.edu,Information Technology,Bachelor in Information Technology,1.0,Female,Native American,00:00.0
+1,EY9GzuhnKTv386PV6OPWSR0ukxi6,Sara,White,swhi0001@student.monash.edu,Medicine/Nursing,Bachelor of Medicine,3.0,Female,Other,00:00.0
+1,49JdrcH0CirSW3oFxIOaSLFmVcfl,Waylon,Hamilton,wham0001@student.monash.edu,Business and Economics,Master of Business Administration,5.0,Female,Caucasian,00:00.0
+1,ygI6jMUSfWQmbuFMQ2ojiiH9lNnD,Luca,Torres,ltor0001@student.monash.edu,Arts,Master in Arts,5.0,Male,Asian,00:00.0
+1,ZyCWsU8EcNpM18ehm634p4d2cZMV,Julian,Scott,jsco0002@student.monash.edu,Science,Master in Chemistry,4.0,Male,Black/African,00:00.0
+1,PdSxaI3ZB9uNkDwmb3pjXDv1KvzI,Aaron,Richardson,aric0001@student.monash.edu,Law,Bachelor of Laws,1.0,Male,Black/African,00:00.0
+1,SJHnilYMhfyEAYZvYsVTOm1B4nhY,Owen,Rodriguez,orod0001@student.monash.edu,Arts,Master of Arts,4.0,Male,Caucasian,00:00.0
+1,3sypUvfzo0ZRnR6mJ8kVz9QdFUSo,Judah,Wright,jwri0001@student.monash.edu,Information Technology,Master of Data Science,4.0,Male,Caucasian,00:00.0
+1,yhU2UnKRdMTKZHxr1bryaXiwi0v4,Adam,Alexander,aale0001@student.monash.edu,Arts,Bachelor in Arts,1.0,Female,Caucasian,00:00.0
 1,A2ewa1cHghfUmPruzm8xz9EW60mQ,Jacob,Harris,jhar0001@student.monash.edu,,,,,,00:00.0
-1,blq9mYxjSU6nWudovjGllmIL48lL,Emily,Taylor,etay0001@student.monash.edu,Law,Bachelor of Law,2,Female,Caucasian,00:00.0
-1,38ISAS8ZLugieoKhFmI2lpkBUwbf,Finn,Russell,frus0001@student.monash.edu,Business,Master of Business Administration,5,Female,Asian,00:00.0
-1,DkXJubohsVl7P60eqzqCtAnQNat4,Jayce,Palmer,jpal0001@student.monash.edu,Information Technology,Master of Data Science,5,Male,Caucasian,00:00.0
-1,YSkKleth1tQlzyiB82DclT70nIN4,Tyler,Hunter,thun0001@student.monash.edu,Medicine,Bachelor in Medical Sciences,2,Male,Caucasian,00:00.0
-1,DXa48pAnFbxTkMFjmsHMnVLiKW4P,Milo,Boyd,mboy0001@student.monash.edu,Education,Bachelor in Education,3,Male,,00:00.0
-1,4oQvn6mPYMmvvzgKFNFLBzC8Ulh3,Grayson,Green,ggre0001@student.monash.edu,Medicine,Master of Surgery,4,Female,Caucasian,00:00.0
-1,30dLBQhlyWS2xpdw7ZJ3AzEwSVa9,Juan,Holmes,jhol0001@student.monash.edu,Education,Bachelor in Education,2,Female,Hispanic,00:00.0
-1,ISkmIRCFfRlUyaIA338Bd2C89JOq,Leo,Adams,lada0001@student.monash.edu,Education,Master of Education,5,Female,Caucasian,00:00.0
-1,798dGk3v15Z0zJyBoKDsb1Taesge,Alex,Wilson,awil0001@student.monash.edu,Arts,Bachelor of Theatre,2,Male,Caucasian,00:00.0
-1,xvARlaIr97pnD4I2ABRGRpyhKWeT,Joshua,Rogers,jrog0001@student.monash.edu,Engineering,Bachelor of Civil Engineering,1,Male,Caucasian,00:00.0
-1,2VEv0F5SHA3qdMGm2Ew9XiWYttNI,Austin,Flores,aflo0001@student.monash.edu,Arts,Master of Arts,4,Male,Caucasian,00:00.0
-1,2KCRytZ0yLymLDFMURCbpJnuPSKC,Jaxon,Evans,jeva0001@student.monash.edu,Science,Bachelor of Science,3,Male,Caucasian,00:00.0
-1,uCktEsz4JpNq6xlvljPxbLlz68HB,Harrison,Ellis,hell0001@student.monash.edu,Medicine,Master in Medical Sciences,4,Male,Caucasian,00:00.0
+1,blq9mYxjSU6nWudovjGllmIL48lL,Emily,Taylor,etay0001@student.monash.edu,Law,Bachelor of Law,2.0,Female,Caucasian,00:00.0
+1,38ISAS8ZLugieoKhFmI2lpkBUwbf,Finn,Russell,frus0001@student.monash.edu,Business and Economics,Master of Business Administration,5.0,Female,Asian,00:00.0
+1,DkXJubohsVl7P60eqzqCtAnQNat4,Jayce,Palmer,jpal0001@student.monash.edu,Information Technology,Master of Data Science,5.0,Male,Caucasian,00:00.0
+1,YSkKleth1tQlzyiB82DclT70nIN4,Tyler,Hunter,thun0001@student.monash.edu,Medicine/Nursing,Bachelor in Medical Sciences,2.0,Male,Caucasian,00:00.0
+1,DXa48pAnFbxTkMFjmsHMnVLiKW4P,Milo,Boyd,mboy0001@student.monash.edu,Education,Bachelor in Education,3.0,Male,Pacific Islander,00:00.0
+1,4oQvn6mPYMmvvzgKFNFLBzC8Ulh3,Grayson,Green,ggre0001@student.monash.edu,Medicine/Nursing,Master of Surgery,4.0,Female,Caucasian,00:00.0
+1,30dLBQhlyWS2xpdw7ZJ3AzEwSVa9,Juan,Holmes,jhol0001@student.monash.edu,Education,Bachelor in Education,2.0,Female,Mixed Race,00:00.0
+1,ISkmIRCFfRlUyaIA338Bd2C89JOq,Leo,Adams,lada0001@student.monash.edu,Education,Master of Education,5.0,Female,Caucasian,00:00.0
+1,798dGk3v15Z0zJyBoKDsb1Taesge,Alex,Wilson,awil0001@student.monash.edu,Arts,Bachelor of Theatre,2.0,Male,Caucasian,00:00.0
+1,xvARlaIr97pnD4I2ABRGRpyhKWeT,Joshua,Rogers,jrog0001@student.monash.edu,Engineering,Bachelor of Civil Engineering,1.0,Male,Caucasian,00:00.0
+1,2VEv0F5SHA3qdMGm2Ew9XiWYttNI,Austin,Flores,aflo0001@student.monash.edu,Arts,Master of Arts,4.0,Male,Caucasian,00:00.0
+1,2KCRytZ0yLymLDFMURCbpJnuPSKC,Jaxon,Evans,jeva0001@student.monash.edu,Science,Bachelor of Science,3.0,Male,Caucasian,00:00.0
+1,uCktEsz4JpNq6xlvljPxbLlz68HB,Harrison,Ellis,hell0001@student.monash.edu,Medicine/Nursing,Master in Medical Sciences,4.0,Male,Caucasian,00:00.0
 1,JAywuevgCuHMtxXCSIfJXCQwOU2p,Jameson,Barnes,jbar0001@student.monash.edu,,,,,Caucasian,00:00.0
-1,eKcKkrUdAs0qQ9rRfWUvEMH5SuuY,Ivan,Nichols,inic0001@student.monash.edu,Engineering,Bachelor of Civil Engineering,2,Female,Hispanic,00:00.0
-1,LocjPTF9AzZvejvD3lCtS30wN9ZP,Arthur,Hudson,ahud0001@student.monash.edu,Law,Master in Law,4,Male,Caucasian,00:00.0
-1,qFaLSCUdBHNEpFEDbUfOkoEbGYLo,Parker,Bryant,pbry0001@student.monash.edu,Information Technology,Master of Data Science,5,Male,Caucasian,00:00.0
-1,lT1tJrIA5Eba7mql3azM672QgGGG,Beau,West,bwes0001@student.monash.edu,Law,Bachelor of Laws,2,Male,Caucasian,00:00.0
+1,eKcKkrUdAs0qQ9rRfWUvEMH5SuuY,Ivan,Nichols,inic0001@student.monash.edu,Engineering,Bachelor of Civil Engineering,2.0,Female,Other,00:00.0
+1,LocjPTF9AzZvejvD3lCtS30wN9ZP,Arthur,Hudson,ahud0001@student.monash.edu,Law,Master in Law,4.0,Male,Caucasian,00:00.0
+1,qFaLSCUdBHNEpFEDbUfOkoEbGYLo,Parker,Bryant,pbry0001@student.monash.edu,Information Technology,Master of Data Science,5.0,Male,Caucasian,00:00.0
+1,lT1tJrIA5Eba7mql3azM672QgGGG,Beau,West,bwes0001@student.monash.edu,Law,Bachelor of Laws,2.0,Male,Caucasian,00:00.0
 1,AWQxCyo0ssi7SPZvtBvEfigonT04,Levi,Garcia,lgar0001@student.monash.edu,,,,,,00:00.0
-1,Hr1LOjMIelsBNJ4LiS0SKvU2iOZa,Alexander,Taylor,atay0001@student.monash.edu,Information Technology,Master of Data Science,4,Male,Caucasian,00:00.0
-1,hT0hJMgFEMElGjZuq0VeRDbQtKn1,Gabriel,Gonzalez,ggon0001@student.monash.edu,Education,Bachelor of Education,1,Male,Hispanic,00:00.0
-1,cCvrMS0pVDOgZ4L9YWCZWPfD2aDs,Sebastian,Jenkins,sjen0001@student.monash.edu,Medicine,Master of Surgery,4,Female,Middle Eastern,00:00.0
-1,vHbYXl43fhaawzzIDKWvtnUq5oad,Axel,Watson,awat0001@student.monash.edu,Arts,Master of Arts,4,Male,Hispanic,00:00.0
-1,msrtP9paZdBQiqXmEtF86IHnYB7l,Aaron,Lopez,alop0002@student.monash.edu,Arts,Bachelor of Arts,2,Female,Caucasian,00:00.0
-1,JA8CKCF6uSkrJzvTvhMANfonKyYD,John,Allen,jall0001@student.monash.edu,Information Technology,Master of Data Science,4,Male,Caucasian,00:00.0
-1,s9tRYl41lLa4nzpFY7pZmNbedtBh,Aiden,Harrison,ahar0001@student.monash.edu,Information Technology,Master of Data Science,4,Male,Other,00:00.0
-1,tCmOLSziNJGanJptKgio4d4Ujdqy,Ryder,Cole,rcol0001@student.monash.edu,Medicine,Master in Medical Sciences,4,Female,Caucasian,00:00.0
-1,p7Lk810yhqGU60FAO0040FwoSgpM,Leon,Wagner,lwag0001@student.monash.edu,Arts,Master in Arts,4,Female,Middle Eastern,00:00.0
-1,hl57e3tsrr1wyH2MqlarSGnezNmY,Lincoln,Simmons,lsim0001@student.monash.edu,Science,Bachelor of Science,3,Female,Black,00:00.0
-1,SPXoXAVY0nXAgwxHsVQzkucRR80V,William,Brown,wbro0001@student.monash.edu,Engineering,Master of Mechanical Engineering,4,Female,Caucasian,00:00.0
-1,4FQXk95iSN2spBP0Qlno0RSga9aS,Calvin,Gordon,cgor0001@student.monash.edu,Arts,Master in Arts,4,Female,Caucasian,00:00.0
-1,Sz0RYPTpkvch4GBztaNjp88C2uNh,Jonah,Tucker,jtuc0001@student.monash.edu,Medicine,Master in Medical Sciences,5,Female,Jewish,00:00.0
-1,dwtE2WbtOYAlq13lmAL5LcPcgNxH,Adrian,Bell,abel0001@student.monash.edu,Arts,Bachelor in Arts,1,Male,Hispanic,00:00.0
-1,rZbyAP17QWHd65idEB8ki1r9jXx6,Thomas,Phillips,tphi0001@student.monash.edu,Medicine,Master of Surgery,4,Female,Caucasian,00:00.0
-1,5YtfoE0EAaB9Ckz7Ki8bbe8fGVu5,Jordan,Brown,jbro0001@student.monash.edu,Arts,Bachelor of Fine Arts,1,Male,Caucasian,00:00.0
-1,t1FqLE5dxJ45kWD9nsPTNNGgwP3z,Sebastian,Martinez,smar0001@student.monash.edu,Information Technology,Bachelor in Information Technology,2,Female,Hispanic,00:00.0
-1,r4Hcubz4vhDVZlpbYgJYyVyAeeYa,Jack,Clark,jcla0001@student.monash.edu,Information Technology,Master of Data Science,4,Male,Caucasian,00:00.0
-1,zI1PPRuF3HsQt1mEaGFXUfV0wNNe,Atlas,Carpenter,acar0001@student.monash.edu,Engineering,Bachelor of Civil Engineering,2,Female,Black,00:00.0
-1,pRmn7sgI2lDfuz7rYYgUvkALLQMQ,George,Henry,ghen0002@student.monash.edu,Law,Bachelor of Laws,3,Male,Caucasian,00:00.0
-1,p2iOnFZM33I4H0vO0XDw2w1i5LVg,Isaac,Carter,icar0001@student.monash.edu,Arts,Bachelor of Arts,2,Female,Other,00:00.0
+1,Hr1LOjMIelsBNJ4LiS0SKvU2iOZa,Alexander,Taylor,atay0001@student.monash.edu,Information Technology,Master of Data Science,4.0,Male,Caucasian,00:00.0
+1,hT0hJMgFEMElGjZuq0VeRDbQtKn1,Gabriel,Gonzalez,ggon0001@student.monash.edu,Education,Bachelor of Education,1.0,Male,Pacific Islander,00:00.0
+1,cCvrMS0pVDOgZ4L9YWCZWPfD2aDs,Sebastian,Jenkins,sjen0001@student.monash.edu,Medicine/Nursing,Master of Surgery,4.0,Female,Other,00:00.0
+1,vHbYXl43fhaawzzIDKWvtnUq5oad,Axel,Watson,awat0001@student.monash.edu,Arts,Master of Arts,4.0,Male,Asian,00:00.0
+1,msrtP9paZdBQiqXmEtF86IHnYB7l,Aaron,Lopez,alop0002@student.monash.edu,Arts,Bachelor of Arts,2.0,Female,Caucasian,00:00.0
+1,JA8CKCF6uSkrJzvTvhMANfonKyYD,John,Allen,jall0001@student.monash.edu,Information Technology,Master of Data Science,4.0,Male,Caucasian,00:00.0
+1,s9tRYl41lLa4nzpFY7pZmNbedtBh,Aiden,Harrison,ahar0001@student.monash.edu,Information Technology,Master of Data Science,4.0,Male,Other,00:00.0
+1,tCmOLSziNJGanJptKgio4d4Ujdqy,Ryder,Cole,rcol0001@student.monash.edu,Medicine/Nursing,Master in Medical Sciences,4.0,Female,Caucasian,00:00.0
+1,p7Lk810yhqGU60FAO0040FwoSgpM,Leon,Wagner,lwag0001@student.monash.edu,Arts,Master in Arts,4.0,Female,Asian,00:00.0
+1,hl57e3tsrr1wyH2MqlarSGnezNmY,Lincoln,Simmons,lsim0001@student.monash.edu,Science,Bachelor of Science,3.0,Female,Caucasian,00:00.0
+1,SPXoXAVY0nXAgwxHsVQzkucRR80V,William,Brown,wbro0001@student.monash.edu,Engineering,Master of Mechanical Engineering,4.0,Female,Caucasian,00:00.0
+1,4FQXk95iSN2spBP0Qlno0RSga9aS,Calvin,Gordon,cgor0001@student.monash.edu,Arts,Master in Arts,4.0,Female,Caucasian,00:00.0
+1,Sz0RYPTpkvch4GBztaNjp88C2uNh,Jonah,Tucker,jtuc0001@student.monash.edu,Medicine/Nursing,Master in Medical Sciences,5.0,Female,Asian,00:00.0
+1,dwtE2WbtOYAlq13lmAL5LcPcgNxH,Adrian,Bell,abel0001@student.monash.edu,Arts,Bachelor in Arts,1.0,Male,Other,00:00.0
+1,rZbyAP17QWHd65idEB8ki1r9jXx6,Thomas,Phillips,tphi0001@student.monash.edu,Medicine/Nursing,Master of Surgery,4.0,Female,Caucasian,00:00.0
+1,5YtfoE0EAaB9Ckz7Ki8bbe8fGVu5,Jordan,Brown,jbro0001@student.monash.edu,Arts,Bachelor of Fine Arts,1.0,Male,Caucasian,00:00.0
+1,t1FqLE5dxJ45kWD9nsPTNNGgwP3z,Sebastian,Martinez,smar0001@student.monash.edu,Information Technology,Bachelor in Information Technology,2.0,Female,Native American,00:00.0
+1,r4Hcubz4vhDVZlpbYgJYyVyAeeYa,Jack,Clark,jcla0001@student.monash.edu,Information Technology,Master of Data Science,4.0,Male,Caucasian,00:00.0
+1,zI1PPRuF3HsQt1mEaGFXUfV0wNNe,Atlas,Carpenter,acar0001@student.monash.edu,Engineering,Bachelor of Civil Engineering,2.0,Female,Native American,00:00.0
+1,pRmn7sgI2lDfuz7rYYgUvkALLQMQ,George,Henry,ghen0002@student.monash.edu,Law,Bachelor of Laws,3.0,Male,Caucasian,00:00.0
+1,p2iOnFZM33I4H0vO0XDw2w1i5LVg,Isaac,Carter,icar0001@student.monash.edu,Arts,Bachelor of Arts,2.0,Female,Other,00:00.0
 1,swQH29epNzQ19GCiILK1ltvnoBrT,Gavin,Reyes,grey0002@student.monash.edu,,,,,,00:00.0
-1,qfNgRkykISFn0i7VcLgIcTn2jbxu,Elliott,Stone,esto0001@student.monash.edu,Law,Master of Laws,5,Male,Caucasian,00:00.0
+1,qfNgRkykISFn0i7VcLgIcTn2jbxu,Elliott,Stone,esto0001@student.monash.edu,Law,Master of Laws,5.0,Male,Caucasian,00:00.0
 1,BW65Acqy4a41LG4Xy9H6OR6HeT9c,Matthew,King,mkin0001@student.monash.edu,,,,,,00:00.0
-1,dg16DmyY6D638FrB76Z4bSh5rALb,Casey,Jones,cjon0001@student.monash.edu,Science,Bachelor of Biological Sciences,3,Female,Caucasian,00:00.0
-1,mZvYTbr4v2xVgCimfpViHKvTKrLK,Theo,Willis,twil0002@student.monash.edu,Law,Master of Laws,5,Female,Black,00:00.0
-1,Tphls7ovgKYRSBZoPX2P4v7PNBLF,Jason,Marshall,jmar0001@student.monash.edu,Arts,Master of Arts,4,Male,Caucasian,00:00.0
-1,JyVwwEi4yUBhLgryqpqKvbGn9mgU,Declan,Ford,dfor0001@student.monash.edu,Engineering,Bachelor of Civil Engineering,3,Female,Caucasian,00:00.0
-1,A3uR98pHrCbkk6WqHKzXv3V5f8q7,Laura,Clark,lcla0001@student.monash.edu,Business and Economics,Master of Finance,1,Female,Caucasian,00:00.0
-1,3ar1P4PXCSBEVKpN3AWij1PKXffn,Owen,Burns,obur0001@student.monash.edu,Engineering,Master of Mechanical Engineering,5,Male,Hispanic,00:00.0
-1,9Ikh3GOXAO0p4lI2kIpKROXp1Rni,Caleb,Cook,ccoo0001@student.monash.edu,Information Technology,Bachelor of Cyber Security,2,Male,Caucasian,00:00.0
-1,GCJaePolRQFuyXChUpTKX522H7z8,Mason,Diaz,mdia0001@student.monash.edu,Business,Master of Business Administration,4,Male,Asian,00:00.0
-1,LzGLYxm5SoWMbJwBFfm4isE0C2Z6,Angel,Price,apri0001@student.monash.edu,Law,Master of Laws,5,Male,Hispanic,00:00.0
-1,y7UxXgsf6sIX3HBygVQpUd1VDlhj,Wyatt,Hernandez,wher0001@student.monash.edu,Information Technology,Bachelor of Cyber Security,1,Female,Caucasian,00:00.0
-1,XDgNaH4frRuDMywJHsumyaFKvMPv,Jordan,Coleman,jcol0002@student.monash.edu,,Bachelor of Arts,,Female,,00:00.0
-1,mcCKNCfAOrIDtq6aIiXzS4OKen8F,Luis,Kennedy,lken0001@student.monash.edu,Science,Master of Biology,5,Male,Hispanic,00:00.0
-1,Zm6nj45BLD8KgGu67gDxERREsUwZ,Nathan,Wood,nwoo0001@student.monash.edu,Information Technology,Master of Data Science,5,Female,Asian,00:00.0
-1,2m3RgRn1UJqkTTsirda8Am627jn6,Wesley,Williams,wwil0001@student.monash.edu,Business,Master of Business Administration,5,Male,Mixed,00:00.0
-1,eT84uionSk9GxJEnJbhwOmDxkpVv,Adriel,Ramos,aram0001@student.monash.edu,,,,,,00:00.0
-1,5b8XT2fnXLl4FHzR5EUXvlEkvZpW,Zion,Murray,zmur0001@student.monash.edu,Arts,Master of Arts,4,Female,Caucasian,00:00.0
-1,08AEX67YgemWqAUylat97EyOHeos,Asher,Lopez,alop0001@student.monash.edu,Engineering,Bachelor of Civil Engineering,3,Female,Jewish,00:00.0
-1,e3XsaMViz50PWxoQ4dYMf9m2cJhl,Carson,Perry,cper0001@student.monash.edu,,,,,,00:00.0
-1,eEVhDEMYRtW0gSy7jzBqvpEcA3EK,Sawyer,Walker,swal0001@student.monash.edu,Medicine,Bachelor of Pharmacy,3,Male,Caucasian,00:00.0
+1,dg16DmyY6D638FrB76Z4bSh5rALb,Casey,Jones,cjon0001@student.monash.edu,Science,Bachelor of Biological Sciences,3.0,Female,Caucasian,00:00.0
+1,mZvYTbr4v2xVgCimfpViHKvTKrLK,Theo,Willis,twil0002@student.monash.edu,Law,Master of Laws,5.0,Female,Hispanic/Latinx,00:00.0
+1,Tphls7ovgKYRSBZoPX2P4v7PNBLF,Jason,Marshall,jmar0001@student.monash.edu,Arts,Master of Arts,4.0,Male,Caucasian,00:00.0
+1,JyVwwEi4yUBhLgryqpqKvbGn9mgU,Declan,Ford,dfor0001@student.monash.edu,Engineering,Bachelor of Civil Engineering,3.0,Female,Caucasian,00:00.0
+1,A3uR98pHrCbkk6WqHKzXv3V5f8q7,Laura,Clark,lcla0001@student.monash.edu,Business and Economics,Master of Finance,1.0,Female,Caucasian,00:00.0
+1,3ar1P4PXCSBEVKpN3AWij1PKXffn,Owen,Burns,obur0001@student.monash.edu,Engineering,Master of Mechanical Engineering,5.0,Male,Hispanic/Latinx,00:00.0
+1,9Ikh3GOXAO0p4lI2kIpKROXp1Rni,Caleb,Cook,ccoo0001@student.monash.edu,Information Technology,Bachelor of Cyber Security,2.0,Male,Caucasian,00:00.0
+1,GCJaePolRQFuyXChUpTKX522H7z8,Mason,Diaz,mdia0001@student.monash.edu,Business and Economics,Master of Business Administration,4.0,Male,Asian,00:00.0
+1,LzGLYxm5SoWMbJwBFfm4isE0C2Z6,Angel,Price,apri0001@student.monash.edu,Law,Master of Laws,5.0,Male,Pacific Islander,00:00.0
+1,y7UxXgsf6sIX3HBygVQpUd1VDlhj,Wyatt,Hernandez,wher0001@student.monash.edu,Information Technology,Bachelor of Cyber Security,1.0,Female,Caucasian,00:00.0
+1,XDgNaH4frRuDMywJHsumyaFKvMPv,Jordan,Coleman,jcol0002@student.monash.edu,,Bachelor of Arts,,Female,Other,00:00.0
+1,mcCKNCfAOrIDtq6aIiXzS4OKen8F,Luis,Kennedy,lken0001@student.monash.edu,Science,Master of Biology,5.0,Male,Black/African,00:00.0
+1,Zm6nj45BLD8KgGu67gDxERREsUwZ,Nathan,Wood,nwoo0001@student.monash.edu,Information Technology,Master of Data Science,5.0,Female,Asian,00:00.0
+1,2m3RgRn1UJqkTTsirda8Am627jn6,Wesley,Williams,wwil0001@student.monash.edu,Business and Economics,Master of Business Administration,5.0,Male,Mixed Race,00:00.0
+1,eT84uionSk9GxJEnJbhwOmDxkpVv,Adriel,Ramos,aram0001@student.monash.edu,,,,,Mixed Race,00:00.0
+1,5b8XT2fnXLl4FHzR5EUXvlEkvZpW,Zion,Murray,zmur0001@student.monash.edu,Arts,Master of Arts,4.0,Female,Caucasian,00:00.0
+1,08AEX67YgemWqAUylat97EyOHeos,Asher,Lopez,alop0001@student.monash.edu,Engineering,Bachelor of Civil Engineering,3.0,Female,Pacific Islander,00:00.0
+1,e3XsaMViz50PWxoQ4dYMf9m2cJhl,Carson,Perry,cper0001@student.monash.edu,,,,,Mixed Race,00:00.0
+1,eEVhDEMYRtW0gSy7jzBqvpEcA3EK,Sawyer,Walker,swal0001@student.monash.edu,Medicine/Nursing,Bachelor of Pharmacy,3.0,Male,Caucasian,00:00.0
 1,hgxQbixa6OANgsjQ2mFzEP1QRBEC,Elliot,Gardner,egar0001@student.monash.edu,,,,,Caucasian,00:00.0
-1,BmhiESiNLpSYe8qVTQfIWBW65KRi,Christian,Cooper,ccoo0002@student.monash.edu,Business,Master in Business,4,Male,Caucasian,00:00.0
-1,HXsKJZijb4v186AcEasXoMnHZRLD,Bryson,Harrison,bhar0001@student.monash.edu,Engineering,Bachelor in Electrical Engineering,1,Male,Caucasian,00:00.0
-1,fqOJlgUDV0FQwv3u5Q5XN9a0GilI,Dominic,Hughes,dhug0001@student.monash.edu,Law,Master in Law,5,Female,Hispanic,00:00.0
-1,ELrpqPX1FZLIISzMbgrexrmqqGDW,Blake,Allen,ball0001@student.monash.edu,Law,Bachelor of Criminology,2,Male,Caucasian,00:00.0
-1,tyw7cVCGA0LdGGSUGzr79ey12H0V,Zayden,Harper,zhar0001@student.monash.edu,Information Technology,Bachelor in Information Technology,3,Female,Asian,00:00.0
-1,EU6p0y46dGjq5Z6IF5MRaS2nUvku,Jackson,Thompson,jtho0003@student.monash.edu,Medicine,Bachelor of Medicine,2,Female,Caucasian,00:00.0
-1,yJbHmL9SckLzONHvBA8pS9dFdl2v,Dean,Carroll,dcar0001@student.monash.edu,,,,,,00:00.0
-1,dQFj7ijOmLJKH8D9oGEy4MLWxIhk,Anthony,Mitchell,amit0001@student.monash.edu,,Master in Chemistry,4,Male,Hispanic,00:00.0
-1,TPobA4sDhDDTpSN2HMDIFNrew2Mx,Kai,Foster,kfos0001@student.monash.edu,Education,Bachelor of Education,2,Female,Asian,00:00.0
-1,DsZaKFO98gDOXFBhrGJUj32KHhyi,Charles,Campbell,ccam0001@student.monash.edu,Arts,Bachelor in Arts,1,Female,Caucasian,00:00.0
-2,0P0fK9ZfQkKEu6ja5s1afXkv8F45,Colton,Ward,cwar0001@student.monash.edu,Law,Bachelor in Law,2,Female,Caucasian,00:00.0
-2,lutxyLo6EWexz3c73WGfRutpYxG2,Emmett,Wallace,ewal0001@student.monash.edu,Education,Bachelor of Education,1,Male,Caucasian,00:00.0
-2,nweCoistre0hh6ofmOy1sTYHhl16,Brandon,Payne,bpay0001@student.monash.edu,Medicine,Master of Surgery,5,Female,Caucasian,00:00.0
-2,tR8dM1HssJz8bpXSkQx3Rj8oIHxi,Kevin,Harris,khar0001@student.monash.edu,Information Technology,Bachelor of Computer Science,3,Male,African American,00:00.0
-2,zNHB8QOspI9xt18xHnvY1NVBdCyf,Ryker,Hunt,rhun0001@student.monash.edu,,,,,,00:00.0
-2,Sr0sU3RDSxc2e8IclTkrpQSnmVNi,Messiah,Rice,mric0002@student.monash.edu,Arts,Master of Arts,5,Male,Asian,00:00.0
-2,0MMnVLBSan8hZSICLWF02urtCrqL,Cole,Hicks,chic0001@student.monash.edu,Science,Bachelor of Science,2,Female,Caucasian,00:00.0
-2,V4UwtcGhgCOq9OeWnhCU7SVdAf8d,King,Wagner,kwag0001@student.monash.edu,Education,Master of Education,4,Male,Black,00:00.0
-2,0cIkFS2KXJ2bAEAXjNAQW3J4284w,Henry,Moore,hmoo0001@student.monash.edu,Law,Master of Laws,5,Male,Caucasian,00:00.0
-2,FPCOkDa4f3hgWGpBXgT6NTWi4lHM,Elias,Gordon,egor0001@student.monash.edu,Arts,Bachelor of Arts,1,Female,Mixed,00:00.0
-2,QLQqAUcdJud8jCFiMKSpALxCoTVn,Finn,Snyder,fsny0001@student.monash.edu,Education,,1,Female,,00:00.0
-2,0hrQtmCDU2fzbxWfVxon3uTuDofH,Xander,Riley,xril0001@student.monash.edu,Science,Bachelor in Chemistry,1,Male,Hispanic,00:00.0
-2,AlNSDB4HQEsuLAgQYmHM4fO9ikR0,Maverick,Edwards,medw0001@student.monash.edu,,,,,,00:00.0
-2,Ns00P3WKpYZJhRQmpVoEjFH4lKny,Elias,Morris,emor0001@student.monash.edu,Law,Master of Laws,5,Female,Hispanic,00:00.0
-2,tpH7sPtvAZLWWpIhorGii4VVz0uI,Miguel,Armstrong,marm0001@student.monash.edu,Engineering,Master of Mechanical Engineering,5,Female,Caucasian,00:00.0
-2,E1BU0ue1KdDHMAfRysTzEEfQ72ob,Anna,Martin,amar0001@student.monash.edu,Arts,Bachelor of Arts,1,Female,Caucasian,00:00.0
-2,MdHXxEX1b0A9jWjm6BjT0BTiZUyH,Lorenzo,Mills,lmil0001@student.monash.edu,Business,Master of Business Administration,4,Male,Hispanic,00:00.0
-2,oM2gzlXDDG4kTcbP3ktZuyFdzDVI,Jaxson,Powell,jpow0001@student.monash.edu,Science,Bachelor of Science,2,Male,Caucasian,00:00.0
-2,mlbw9nw0e8iPEvBqk2ODeXgBhK4t,Jamie,Scott,jsco0001@student.monash.edu,Science,Bachelor of Physics,1,Male,Caucasian,00:00.0
-2,vDTEeNXM9kmtMkEgkrwTnoxAmew1,Wesley,Griffin,wgri0001@student.monash.edu,Science,Bachelor of Science,2,Female,Caucasian,00:00.0
-2,pXefmz7KzbgGlBglXQj5LZ6C0icM,Aiden,Lee,alee0001@student.monash.edu,Education,Bachelor in Education,3,Male,Caucasian,00:00.0
-2,9BcZPoLQ8LPuC31ZoDoy5OYmEEDz,Jake,Thompson,jtho0002@student.monash.edu,Business and Economics,Bachelor of Economics,3,Male,Caucasian,00:00.0
-2,vGYuXdpZhZWDRmAn5VTTDaTLByUn,Braxton,Crawford,bcra0001@student.monash.edu,Education,Bachelor of Education,1,Male,Caucasian,00:00.0
-2,H5bhsro6ph0YMYAgKDV1XqsJCU5X,Christopher,Parker,cpar0001@student.monash.edu,Arts,,4,Male,Caucasian,00:00.0
-2,p9Ac8BBjulo1cSCpJFLoBTQJPZPl,Lucas,Wilson,lwil0001@student.monash.edu,Education,Master of Education,4,Male,Hispanic,00:00.0
-2,GwjF7vOWg34W0HMQM0Bcb2AxbaRz,Jameson,Pierce,jpie0001@student.monash.edu,Law,Bachelor of Laws,2,Male,Mixed,00:00.0
+1,BmhiESiNLpSYe8qVTQfIWBW65KRi,Christian,Cooper,ccoo0002@student.monash.edu,Business and Economics,Master in Business,4.0,Male,Caucasian,00:00.0
+1,HXsKJZijb4v186AcEasXoMnHZRLD,Bryson,Harrison,bhar0001@student.monash.edu,Engineering,Bachelor in Electrical Engineering,1.0,Male,Caucasian,00:00.0
+1,fqOJlgUDV0FQwv3u5Q5XN9a0GilI,Dominic,Hughes,dhug0001@student.monash.edu,Law,Master in Law,5.0,Female,Black/African,00:00.0
+1,ELrpqPX1FZLIISzMbgrexrmqqGDW,Blake,Allen,ball0001@student.monash.edu,Law,Bachelor of Criminology,2.0,Male,Caucasian,00:00.0
+1,tyw7cVCGA0LdGGSUGzr79ey12H0V,Zayden,Harper,zhar0001@student.monash.edu,Information Technology,Bachelor in Information Technology,3.0,Female,Asian,00:00.0
+1,EU6p0y46dGjq5Z6IF5MRaS2nUvku,Jackson,Thompson,jtho0003@student.monash.edu,Medicine/Nursing,Bachelor of Medicine,2.0,Female,Caucasian,00:00.0
+1,yJbHmL9SckLzONHvBA8pS9dFdl2v,Dean,Carroll,dcar0001@student.monash.edu,,,,,Black/African,00:00.0
+1,dQFj7ijOmLJKH8D9oGEy4MLWxIhk,Anthony,Mitchell,amit0001@student.monash.edu,,Master in Chemistry,4.0,Male,Black/African,00:00.0
+1,TPobA4sDhDDTpSN2HMDIFNrew2Mx,Kai,Foster,kfos0001@student.monash.edu,Education,Bachelor of Education,2.0,Female,Asian,00:00.0
+1,DsZaKFO98gDOXFBhrGJUj32KHhyi,Charles,Campbell,ccam0001@student.monash.edu,Arts,Bachelor in Arts,1.0,Female,Caucasian,00:00.0
+2,0P0fK9ZfQkKEu6ja5s1afXkv8F45,Colton,Ward,cwar0001@student.monash.edu,Law,Bachelor in Law,2.0,Female,Caucasian,00:00.0
+2,lutxyLo6EWexz3c73WGfRutpYxG2,Emmett,Wallace,ewal0001@student.monash.edu,Education,Bachelor of Education,1.0,Male,Caucasian,00:00.0
+2,nweCoistre0hh6ofmOy1sTYHhl16,Brandon,Payne,bpay0001@student.monash.edu,Medicine/Nursing,Master of Surgery,5.0,Female,Caucasian,00:00.0
+2,tR8dM1HssJz8bpXSkQx3Rj8oIHxi,Kevin,Harris,khar0001@student.monash.edu,Information Technology,Bachelor of Computer Science,3.0,Male,Caucasian,00:00.0
+2,zNHB8QOspI9xt18xHnvY1NVBdCyf,Ryker,Hunt,rhun0001@student.monash.edu,,,,,Asian,00:00.0
+2,Sr0sU3RDSxc2e8IclTkrpQSnmVNi,Messiah,Rice,mric0002@student.monash.edu,Arts,Master of Arts,5.0,Male,Asian,00:00.0
+2,0MMnVLBSan8hZSICLWF02urtCrqL,Cole,Hicks,chic0001@student.monash.edu,Science,Bachelor of Science,2.0,Female,Caucasian,00:00.0
+2,V4UwtcGhgCOq9OeWnhCU7SVdAf8d,King,Wagner,kwag0001@student.monash.edu,Education,Master of Education,4.0,Male,Pacific Islander,00:00.0
+2,0cIkFS2KXJ2bAEAXjNAQW3J4284w,Henry,Moore,hmoo0001@student.monash.edu,Law,Master of Laws,5.0,Male,Caucasian,00:00.0
+2,FPCOkDa4f3hgWGpBXgT6NTWi4lHM,Elias,Gordon,egor0001@student.monash.edu,Arts,Bachelor of Arts,1.0,Female,Black/African,00:00.0
+2,QLQqAUcdJud8jCFiMKSpALxCoTVn,Finn,Snyder,fsny0001@student.monash.edu,Education,,1.0,Female,Other,00:00.0
+2,0hrQtmCDU2fzbxWfVxon3uTuDofH,Xander,Riley,xril0001@student.monash.edu,Science,Bachelor in Chemistry,1.0,Male,Black/African,00:00.0
+2,AlNSDB4HQEsuLAgQYmHM4fO9ikR0,Maverick,Edwards,medw0001@student.monash.edu,,,,,Other,00:00.0
+2,Ns00P3WKpYZJhRQmpVoEjFH4lKny,Elias,Morris,emor0001@student.monash.edu,Law,Master of Laws,5.0,Female,Other,00:00.0
+2,tpH7sPtvAZLWWpIhorGii4VVz0uI,Miguel,Armstrong,marm0001@student.monash.edu,Engineering,Master of Mechanical Engineering,5.0,Female,Caucasian,00:00.0
+2,E1BU0ue1KdDHMAfRysTzEEfQ72ob,Anna,Martin,amar0001@student.monash.edu,Arts,Bachelor of Arts,1.0,Female,Caucasian,00:00.0
+2,MdHXxEX1b0A9jWjm6BjT0BTiZUyH,Lorenzo,Mills,lmil0001@student.monash.edu,Business and Economics,Master of Business Administration,4.0,Male,Caucasian,00:00.0
+2,oM2gzlXDDG4kTcbP3ktZuyFdzDVI,Jaxson,Powell,jpow0001@student.monash.edu,Science,Bachelor of Science,2.0,Male,Caucasian,00:00.0
+2,mlbw9nw0e8iPEvBqk2ODeXgBhK4t,Jamie,Scott,jsco0001@student.monash.edu,Science,Bachelor of Physics,1.0,Male,Caucasian,00:00.0
+2,vDTEeNXM9kmtMkEgkrwTnoxAmew1,Wesley,Griffin,wgri0001@student.monash.edu,Science,Bachelor of Science,2.0,Female,Caucasian,00:00.0
+2,pXefmz7KzbgGlBglXQj5LZ6C0icM,Aiden,Lee,alee0001@student.monash.edu,Education,Bachelor in Education,3.0,Male,Caucasian,00:00.0
+2,9BcZPoLQ8LPuC31ZoDoy5OYmEEDz,Jake,Thompson,jtho0002@student.monash.edu,Business and Economics,Bachelor of Economics,3.0,Male,Caucasian,00:00.0
+2,vGYuXdpZhZWDRmAn5VTTDaTLByUn,Braxton,Crawford,bcra0001@student.monash.edu,Education,Bachelor of Education,1.0,Male,Caucasian,00:00.0
+2,H5bhsro6ph0YMYAgKDV1XqsJCU5X,Christopher,Parker,cpar0001@student.monash.edu,Arts,,4.0,Male,Caucasian,00:00.0
+2,p9Ac8BBjulo1cSCpJFLoBTQJPZPl,Lucas,Wilson,lwil0001@student.monash.edu,Education,Master of Education,4.0,Male,Pacific Islander,00:00.0
+2,GwjF7vOWg34W0HMQM0Bcb2AxbaRz,Jameson,Pierce,jpie0001@student.monash.edu,Law,Bachelor of Laws,2.0,Male,Mixed Race,00:00.0
 2,dVUkwBVwsVNlEYtVM43c2WsIdMcz,Nolan,Rivera,nriv0001@student.monash.edu,,,,,,00:00.0
 2,T6qo2ZYQiApzDUFvvaynh7ZA66ER,Judah,Fox,jfox0001@student.monash.edu,,,,,,00:00.0
-2,0MpvlaqjGiVugWD8hjfnnSZyCSDQ,Tristan,Andrews,tand0002@student.monash.edu,Business,,,Female,Hispanic,00:00.0
-2,l8TiEMu1FHfPV9VrIZotaNR5EFnq,Damian,Jordan,djor0001@student.monash.edu,Arts,Bachelor in Arts,2,Male,Hispanic,00:00.0
-2,2Rtp9vu34HGqjcHNju35HukqGv5l,Camden,Pierce,cpie0001@student.monash.edu,Education,Bachelor in Education,1,Male,Caucasian,00:00.0
-2,vJVDzvBwYmmf2qWzo2W3q36Y8gul,Brooks,Butler,bbut0001@student.monash.edu,Engineering,Bachelor of Civil Engineering,2,Female,Caucasian,00:00.0
-2,T06398jx8vqoxrMM57AeNLWIRQqL,Miles,Murphy,mmur0001@student.monash.edu,Business,Master of Business Administration,4,Female,Caucasian,00:00.0
-2,2UfcM3TADfe9kCR27hJef6wG8oFE,Hunter,Gray,hgra0001@student.monash.edu,Business,,,Male,,00:00.0
-2,B9KOw0IlHPTImarXUg6y895tw5nC,Mateo,Garcia,mgar0001@student.monash.edu,Information Technology,Bachelor of Cyber Security,1,Male,Mixed,00:00.0
-2,4aH8dUiyJxaFjTzDVlcDdvZ2iCsh,August,Knight,akni0001@student.monash.edu,Business,Master of Business Administration,4,Male,Caucasian,00:00.0
-2,fVuOYc9YmwjfkYIMfAYiFsGlYXaO,Jesus,Matthews,jmat0001@student.monash.edu,Business,Bachelor of Commerce,2,Female,Hispanic,00:00.0
-2,wFgQi8RPdyS2GTsKbMYgDe5zRWFp,Barrett,Ferguson,bfer0001@student.monash.edu,Medicine,Bachelor of Medicine,3,Female,Other,00:00.0
-2,7LhlSpLboaTfld8AFYvkyzKuUj2l,Hayden,Ferguson,hfer0001@student.monash.edu,Arts,Bachelor of Arts,1,Female,Caucasian,00:00.0
-2,9QyuPGQnyi5Jbj6QLnxCtWGJA9Tw,Jayden,Nichols,jnic0001@student.monash.edu,Science,Bachelor of Science,1,Male,Asian,00:00.0
-2,nRjxosty0Hze8LRufLAfXCX2mA1R,Roman,Bennett,rben0001@student.monash.edu,Business,Master of Business Administration,5,Female,Caucasian,00:00.0
-2,DH5kP0LHldGBmrFLfo5hNEDzsDUX,Kaiden,Dixon,kdix0001@student.monash.edu,Arts,Bachelor in Arts,2,Male,Black,00:00.0
-2,dK52ndS6QGaMFeNug4Mpr0sDOias,Ayden,Murray,amur0001@student.monash.edu,Science,Bachelor of Science,3,Female,Caucasian,00:00.0
-2,AZkMQVZ64vy7zQys3agzzFezBiwm,Xavier,Simmons,xsim0001@student.monash.edu,Engineering,Bachelor of Civil Engineering,2,Female,Black,00:00.0
-2,G8ZkjtUVmJ2G4HEnwd8vOmEupqgN,Nathaniel,Lee,nlee0001@student.monash.edu,Business,Master of Business Administration,5,Female,Middle Eastern,00:00.0
-2,aXwdS9UhBlI1IkdQUuesTanLbXAU,Taylor,Green,tgre0001@student.monash.edu,Information Technology,Bachelor of Information Technology,1,Female,Caucasian,00:00.0
-2,j3g1g42uTD1ZojSRlewAkTkAlCtJ,Jackson,Carter,jcar0001@student.monash.edu,Science,Bachelor of Science,3,Female,Asian,00:00.0
-2,Z74iwSokjqWu7SbtN5Smo5IJMudL,Sophie,Moore,smoo0001@student.monash.edu,Science,Bachelor of Chemistry,1,Female,Caucasian,00:00.0
+2,0MpvlaqjGiVugWD8hjfnnSZyCSDQ,Tristan,Andrews,tand0002@student.monash.edu,Business and Economics,,,Female,Hispanic/Latinx,00:00.0
+2,l8TiEMu1FHfPV9VrIZotaNR5EFnq,Damian,Jordan,djor0001@student.monash.edu,Arts,Bachelor in Arts,2.0,Male,Native American,00:00.0
+2,2Rtp9vu34HGqjcHNju35HukqGv5l,Camden,Pierce,cpie0001@student.monash.edu,Education,Bachelor in Education,1.0,Male,Caucasian,00:00.0
+2,vJVDzvBwYmmf2qWzo2W3q36Y8gul,Brooks,Butler,bbut0001@student.monash.edu,Engineering,Bachelor of Civil Engineering,2.0,Female,Caucasian,00:00.0
+2,T06398jx8vqoxrMM57AeNLWIRQqL,Miles,Murphy,mmur0001@student.monash.edu,Business and Economics,Master of Business Administration,4.0,Female,Caucasian,00:00.0
+2,2UfcM3TADfe9kCR27hJef6wG8oFE,Hunter,Gray,hgra0001@student.monash.edu,Business and Economics,,,Male,Hispanic/Latinx,00:00.0
+2,B9KOw0IlHPTImarXUg6y895tw5nC,Mateo,Garcia,mgar0001@student.monash.edu,Information Technology,Bachelor of Cyber Security,1.0,Male,Caucasian,00:00.0
+2,4aH8dUiyJxaFjTzDVlcDdvZ2iCsh,August,Knight,akni0001@student.monash.edu,Business and Economics,Master of Business Administration,4.0,Male,Caucasian,00:00.0
+2,fVuOYc9YmwjfkYIMfAYiFsGlYXaO,Jesus,Matthews,jmat0001@student.monash.edu,Business and Economics,Bachelor of Commerce,2.0,Female,Pacific Islander,00:00.0
+2,wFgQi8RPdyS2GTsKbMYgDe5zRWFp,Barrett,Ferguson,bfer0001@student.monash.edu,Medicine/Nursing,Bachelor of Medicine,3.0,Female,Other,00:00.0
+2,7LhlSpLboaTfld8AFYvkyzKuUj2l,Hayden,Ferguson,hfer0001@student.monash.edu,Arts,Bachelor of Arts,1.0,Female,Caucasian,00:00.0
+2,9QyuPGQnyi5Jbj6QLnxCtWGJA9Tw,Jayden,Nichols,jnic0001@student.monash.edu,Science,Bachelor of Science,1.0,Male,Asian,00:00.0
+2,nRjxosty0Hze8LRufLAfXCX2mA1R,Roman,Bennett,rben0001@student.monash.edu,Business and Economics,Master of Business Administration,5.0,Female,Caucasian,00:00.0
+2,DH5kP0LHldGBmrFLfo5hNEDzsDUX,Kaiden,Dixon,kdix0001@student.monash.edu,Arts,Bachelor in Arts,2.0,Male,Hispanic/Latinx,00:00.0
+2,dK52ndS6QGaMFeNug4Mpr0sDOias,Ayden,Murray,amur0001@student.monash.edu,Science,Bachelor of Science,3.0,Female,Caucasian,00:00.0
+2,AZkMQVZ64vy7zQys3agzzFezBiwm,Xavier,Simmons,xsim0001@student.monash.edu,Engineering,Bachelor of Civil Engineering,2.0,Female,Black/African,00:00.0
+2,G8ZkjtUVmJ2G4HEnwd8vOmEupqgN,Nathaniel,Lee,nlee0001@student.monash.edu,Business and Economics,Master of Business Administration,5.0,Female,Native American,00:00.0
+2,aXwdS9UhBlI1IkdQUuesTanLbXAU,Taylor,Green,tgre0001@student.monash.edu,Information Technology,Bachelor of Information Technology,1.0,Female,Caucasian,00:00.0
+2,j3g1g42uTD1ZojSRlewAkTkAlCtJ,Jackson,Carter,jcar0001@student.monash.edu,Science,Bachelor of Science,3.0,Female,Asian,00:00.0
+2,Z74iwSokjqWu7SbtN5Smo5IJMudL,Sophie,Moore,smoo0001@student.monash.edu,Science,Bachelor of Chemistry,1.0,Female,Caucasian,00:00.0
 2,cxgam8mRtvg5S9oU7ySd18Mzg89l,Edward,Garcia,egar0002@student.monash.edu,,,,,,00:00.0
-2,N0QXl58NVBvlmukm5HbpxZqOSqMS,Victor,Kelly,vkel0001@student.monash.edu,Science,Master of Biology,5,Female,Hispanic,00:00.0
-2,CRDxxwNLVteWWB4zugO6dGzqgPMn,Kayden,Payne,kpay0001@student.monash.edu,Arts,Master of Arts,4,Female,Asian,00:00.0
-2,yKQFdSbRcOrgj9YlmHNLZUs0gQwx,Jasper,Allen,jall0002@student.monash.edu,Information Technology,Bachelor of Cyber Security,3,Male,Caucasian,00:00.0
-2,xNhHmXZHGwUfUfnuOn8RKWWmmktL,James,Black,jbla0001@student.monash.edu,Education,Master of Education,5,Female,Mixed,00:00.0
-2,jmZKNpUhCZXNWj0MklXXOWHOpmUf,Thiago,Hayes,thay0001@student.monash.edu,Education,Bachelor of Education,1,Male,Caucasian,00:00.0
-2,apW591DlaifybOwAR0d5yrluz17s,Emiliano,Davis,edav0001@student.monash.edu,Business,Master of Business Administration,5,Female,Middle Eastern,00:00.0
-2,EieXYST5RofXytLH9qd4RWaE3huO,Emmanuel,Daniels,edan0001@student.monash.edu,Information Technology,Master of Data Science,4,Male,Hispanic,00:00.0
-2,kG1Ih3RkEWeTGQay5hNuJlHDkr4O,Jace,Russell,jrus0001@student.monash.edu,Arts,Master of Arts,5,Female,Caucasian,00:00.0
-2,FhmreaoyNyJzHopJ4vO11N2UHF3X,Taylor,Anderson,tand0001@student.monash.edu,Medicine,Bachelor of Medical Science,1,Female,Caucasian,00:00.0
-2,3ev0urU6JvVl7nSh2D3x09lTkL5E,Declan,Evans,deva0001@student.monash.edu,Engineering,Bachelor of Civil Engineering,1,Female,Asian,00:00.0
-2,fNnlwpYXYiMF9XFCopHYhm2WGIOx,Maxwell,Rice,mric0001@student.monash.edu,Information Technology,Master of Data Science,4,Male,Caucasian,00:00.0
-2,M8CTfLOrbKvO6SdNIePKxV2MJ5zY,Samuel,Walker,swal0002@student.monash.edu,Law,Master of Laws,4,Male,Caucasian,00:00.0
-2,2ADb1IC3Rg6H3Pq1n0RXVvKhBhEV,Daniel,White,dwhi0001@student.monash.edu,Science,Master of Biology,4,Female,Hispanic,00:00.0
-2,qGCum1G4Nk6blet2Slpi1gJJcBB0,Charlie,Morris,cmor0001@student.monash.edu,Business and Economics,Bachelor of Finance,3,Male,Caucasian,00:00.0
-2,FX7ZpQiayU2YnUc4lsrbUat3rRov,Ian,Jenkins,ijen0001@student.monash.edu,Education,Bachelor of Education,1,Male,Caucasian,00:00.0
-2,lL3imFFMpHt7eA5JhW0BXpUD5njA,Max,Reyes,mrey0001@student.monash.edu,Science,Master of Biology,4,Male,Mixed,00:00.0
-2,ofbRVpJ6DEcf2kIkC0ECe0fl1UiO,Peyton,Lee,plee0001@student.monash.edu,Information Technology,Bachelor of Software Engineering,1,Male,Korean,00:00.0
-2,Z5NBJW0ftGW1P25BOHsu5XsnKpnE,Messiah,Weaver,mwea0001@student.monash.edu,Engineering,Bachelor of Civil Engineering,3,Male,Caucasian,00:00.0
-2,C5hrHfvKOfHQTmdNImM5T5MGqHIJ,Jude,Grant,jgra0001@student.monash.edu,Arts,Master of Arts,4,Female,Jewish,00:00.0
-2,iDpL4q78J2CMwKjPDpKxb03gvmGm,Declan,Murray,dmur0001@student.monash.edu,Business,Master of Business Administration,4,Male,Black,00:00.0
-2,anoH6i38kW3IcEC7sSr3xZgCYpzT,Mason,Anderson,mand0001@student.monash.edu,Business,Bachelor of Commerce,2,Female,Caucasian,00:00.0
-2,c2mh8l5xiIZspztZQiIEj5nr3UW8,Kayden,Diaz,kdia0001@student.monash.edu,Law,Master in Law,4,Female,Black,00:00.0
-2,nUKS6zVbyhjx6DqfnQNWIkDCgrKi,Luka,Spencer,lspe0001@student.monash.edu,,Master of Data Science,,,,00:00.0
-2,hOHThgQKwp4d7kRIXtjURnKGVsFx,Weston,James,wjam0001@student.monash.edu,Information Technology,Master of Data Science,5,Male,Hispanic,00:00.0
-2,l4l9Udg9XJoAEKO2c6ThZMLy28Ak,Santiago,James,sjam0001@student.monash.edu,Education,Master of Education,4,Male,Hispanic,00:00.0
-2,eeifchNdwLxXzbPf1ui9nenmSbGP,Kingston,Cruz,kcru0001@student.monash.edu,,Master in Law,4,,,00:00.0
+2,N0QXl58NVBvlmukm5HbpxZqOSqMS,Victor,Kelly,vkel0001@student.monash.edu,Science,Master of Biology,5.0,Female,Hispanic/Latinx,00:00.0
+2,CRDxxwNLVteWWB4zugO6dGzqgPMn,Kayden,Payne,kpay0001@student.monash.edu,Arts,Master of Arts,4.0,Female,Asian,00:00.0
+2,yKQFdSbRcOrgj9YlmHNLZUs0gQwx,Jasper,Allen,jall0002@student.monash.edu,Information Technology,Bachelor of Cyber Security,3.0,Male,Caucasian,00:00.0
+2,xNhHmXZHGwUfUfnuOn8RKWWmmktL,James,Black,jbla0001@student.monash.edu,Education,Master of Education,5.0,Female,Mixed Race,00:00.0
+2,jmZKNpUhCZXNWj0MklXXOWHOpmUf,Thiago,Hayes,thay0001@student.monash.edu,Education,Bachelor of Education,1.0,Male,Caucasian,00:00.0
+2,apW591DlaifybOwAR0d5yrluz17s,Emiliano,Davis,edav0001@student.monash.edu,Business and Economics,Master of Business Administration,5.0,Female,Native American,00:00.0
+2,EieXYST5RofXytLH9qd4RWaE3huO,Emmanuel,Daniels,edan0001@student.monash.edu,Information Technology,Master of Data Science,4.0,Male,Asian,00:00.0
+2,kG1Ih3RkEWeTGQay5hNuJlHDkr4O,Jace,Russell,jrus0001@student.monash.edu,Arts,Master of Arts,5.0,Female,Caucasian,00:00.0
+2,FhmreaoyNyJzHopJ4vO11N2UHF3X,Taylor,Anderson,tand0001@student.monash.edu,Medicine/Nursing,Bachelor of Medical Science,1.0,Female,Caucasian,00:00.0
+2,3ev0urU6JvVl7nSh2D3x09lTkL5E,Declan,Evans,deva0001@student.monash.edu,Engineering,Bachelor of Civil Engineering,1.0,Female,Asian,00:00.0
+2,fNnlwpYXYiMF9XFCopHYhm2WGIOx,Maxwell,Rice,mric0001@student.monash.edu,Information Technology,Master of Data Science,4.0,Male,Caucasian,00:00.0
+2,M8CTfLOrbKvO6SdNIePKxV2MJ5zY,Samuel,Walker,swal0002@student.monash.edu,Law,Master of Laws,4.0,Male,Caucasian,00:00.0
+2,2ADb1IC3Rg6H3Pq1n0RXVvKhBhEV,Daniel,White,dwhi0001@student.monash.edu,Science,Master of Biology,4.0,Female,Mixed Race,00:00.0
+2,qGCum1G4Nk6blet2Slpi1gJJcBB0,Charlie,Morris,cmor0001@student.monash.edu,Business and Economics,Bachelor of Finance,3.0,Male,Caucasian,00:00.0
+2,FX7ZpQiayU2YnUc4lsrbUat3rRov,Ian,Jenkins,ijen0001@student.monash.edu,Education,Bachelor of Education,1.0,Male,Caucasian,00:00.0
+2,lL3imFFMpHt7eA5JhW0BXpUD5njA,Max,Reyes,mrey0001@student.monash.edu,Science,Master of Biology,4.0,Male,Native American,00:00.0
+2,ofbRVpJ6DEcf2kIkC0ECe0fl1UiO,Peyton,Lee,plee0001@student.monash.edu,Information Technology,Bachelor of Software Engineering,1.0,Male,Asian,00:00.0
+2,Z5NBJW0ftGW1P25BOHsu5XsnKpnE,Messiah,Weaver,mwea0001@student.monash.edu,Engineering,Bachelor of Civil Engineering,3.0,Male,Caucasian,00:00.0
+2,C5hrHfvKOfHQTmdNImM5T5MGqHIJ,Jude,Grant,jgra0001@student.monash.edu,Arts,Master of Arts,4.0,Female,Mixed Race,00:00.0
+2,iDpL4q78J2CMwKjPDpKxb03gvmGm,Declan,Murray,dmur0001@student.monash.edu,Business and Economics,Master of Business Administration,4.0,Male,Mixed Race,00:00.0
+2,anoH6i38kW3IcEC7sSr3xZgCYpzT,Mason,Anderson,mand0001@student.monash.edu,Business and Economics,Bachelor of Commerce,2.0,Female,Caucasian,00:00.0
+2,c2mh8l5xiIZspztZQiIEj5nr3UW8,Kayden,Diaz,kdia0001@student.monash.edu,Law,Master in Law,4.0,Female,Caucasian,00:00.0
+2,nUKS6zVbyhjx6DqfnQNWIkDCgrKi,Luka,Spencer,lspe0001@student.monash.edu,,Master of Data Science,,,Mixed Race,00:00.0
+2,hOHThgQKwp4d7kRIXtjURnKGVsFx,Weston,James,wjam0001@student.monash.edu,Information Technology,Master of Data Science,5.0,Male,Hispanic/Latinx,00:00.0
+2,l4l9Udg9XJoAEKO2c6ThZMLy28Ak,Santiago,James,sjam0001@student.monash.edu,Education,Master of Education,4.0,Male,Other,00:00.0
+2,eeifchNdwLxXzbPf1ui9nenmSbGP,Kingston,Cruz,kcru0001@student.monash.edu,,Master in Law,4.0,,Hispanic/Latinx,00:00.0
 2,PwQ7tak4oZaqTAkO1SxHkKU5Zemw,Amir,Mcdonald,amcd0001@student.monash.edu,,,,,,00:00.0
-2,DjNSarpKxjd2dYlyVnrkXgrfckKD,Landon,Hudson,lhud0001@student.monash.edu,Arts,Bachelor of Arts,1,Male,Caucasian,00:00.0
-2,VgwNv3bhf8D5MTeXlwxUaZChlYP9,David,Ray,dray0001@student.monash.edu,Medicine,Bachelor of Medicine,2,Male,Caucasian,00:00.0
-2,JZJEv1YV3QM3fGJXP8NITTVWbQEY,Timothy,Howard,thow0001@student.monash.edu,Science,Bachelor in Chemistry,3,Male,Middle Eastern,00:00.0
-2,B48PXqWyXcDmjuwwhonMWYn7WXxL,George,Clark,gcla0001@student.monash.edu,Business,Master of Business Administration,5,Male,Asian,00:00.0
-2,MLlcnPd5ekMUnHjd2T6uaodPPJ8E,Sawyer,Gibson,sgib0001@student.monash.edu,Business,Master of Business Administration,4,Female,Caucasian,00:00.0
-2,mJ8Hra6pAZfDsW4bb4XGiFVcaxsh,Bennett,Myers,bmye0001@student.monash.edu,Education,Bachelor of Education,2,,,00:00.0
-2,gwk8lu8ZB8WICUNs7Ss3J4GHYX5N,Joseph,Hall,jhal0001@student.monash.edu,Science,Bachelor in Chemistry,3,Male,Caucasian,00:00.0
-2,Jf59kELvLypoPL31bysiFnLPtyKI,Ethan,Bennett,eben0001@student.monash.edu,Arts,Bachelor of Arts,2,Female,Asian,00:00.0
+2,DjNSarpKxjd2dYlyVnrkXgrfckKD,Landon,Hudson,lhud0001@student.monash.edu,Arts,Bachelor of Arts,1.0,Male,Caucasian,00:00.0
+2,VgwNv3bhf8D5MTeXlwxUaZChlYP9,David,Ray,dray0001@student.monash.edu,Medicine/Nursing,Bachelor of Medicine,2.0,Male,Caucasian,00:00.0
+2,JZJEv1YV3QM3fGJXP8NITTVWbQEY,Timothy,Howard,thow0001@student.monash.edu,Science,Bachelor in Chemistry,3.0,Male,Pacific Islander,00:00.0
+2,B48PXqWyXcDmjuwwhonMWYn7WXxL,George,Clark,gcla0001@student.monash.edu,Business and Economics,Master of Business Administration,5.0,Male,Asian,00:00.0
+2,MLlcnPd5ekMUnHjd2T6uaodPPJ8E,Sawyer,Gibson,sgib0001@student.monash.edu,Business and Economics,Master of Business Administration,4.0,Female,Caucasian,00:00.0
+2,mJ8Hra6pAZfDsW4bb4XGiFVcaxsh,Bennett,Myers,bmye0001@student.monash.edu,Education,Bachelor of Education,2.0,,Pacific Islander,00:00.0
+2,gwk8lu8ZB8WICUNs7Ss3J4GHYX5N,Joseph,Hall,jhal0001@student.monash.edu,Science,Bachelor in Chemistry,3.0,Male,Caucasian,00:00.0
+2,Jf59kELvLypoPL31bysiFnLPtyKI,Ethan,Bennett,eben0001@student.monash.edu,Arts,Bachelor of Arts,2.0,Female,Asian,00:00.0
 2,qIJTx1gOg2tObfAz4EWOVnyj3WMw,Cooper,Kelly,ckel0001@student.monash.edu,,,,,,00:00.0
 2,hNdSKsRV2DsdiQiNuZrpbucehpPI,Noah,Johnson,njoh0001@student.monash.edu,,,,,,00:00.0
-2,ritHwf7w3gzkXu4LAqmejM283VgP,Isaac,Nelson,inel0001@student.monash.edu,Science,Bachelor of Science,2,Female,Jewish,00:00.0
-2,HGaY2z1Lpee4dGFLahz5nVmO8JyD,Eric,Payne,epay0001@student.monash.edu,Business,Master of Business Administration,4,Male,Asian,00:00.0
-2,24nBku3AJo2JXAvecyifq7fc7VB1,Braxton,Richardson,bric0001@student.monash.edu,Arts,Master of Arts,4,Female,Middle Eastern,00:00.0
-2,OM75Tof6O7M0x43aCO6NYmTM11h2,Jack,Stephens,jste0001@student.monash.edu,Medicine,Bachelor of Medicine,1,Female,Black,00:00.0
-2,c5ucEFxoylUvFgojiEj614XJUfZI,Micah,Woods,mwoo0001@student.monash.edu,Business,Bachelor of Commerce,2,Female,Jewish,00:00.0
-2,Q9Z01SKCNaYTFN9pUCzyPKvZTJ7p,Nicholas,Patterson,npat0001@student.monash.edu,Engineering,Master in Electrical Engineering,4,Female,Caucasian,00:00.0
-2,8SWazVgnD1yVKf0kJQfSOAHvDZkj,Ashton,Morales,amor0001@student.monash.edu,Information Technology,Master of Data Science,4,Male,Caucasian,00:00.0
-2,7ZHDdk0O3XgBo4xQVssrrScXKqk3,Myles,Wells,mwel0001@student.monash.edu,Medicine,Master in Medical Sciences,4,Female,Caucasian,00:00.0
-2,0z3XmdVkL2yGu1FlIUGC7v9ouwH2,Jaxon,Evans,jeva0002@student.monash.edu,Science,Master of Biology,4,Male,Black,00:00.0
-2,baxLK0gBPTAX9E3FOWrjFpbpOPcK,Riley,Harris,rhar0001@student.monash.edu,Information Technology,Bachelor of Cybersecurity,2,Male,Caucasian,00:00.0
-2,rFZdM5jtlmR9e4S2ToILmnRMazip,Ezra,Thompson,etho0001@student.monash.edu,Medicine,Bachelor of Medicine,1,Female,Other,00:00.0
-2,sLmCm7PH0N0Ukn1aYPfLhCgDW2nG,Brody,Hart,bhar0002@student.monash.edu,Law,Master of Laws,4,Male,Black,00:00.0
-2,LuwA3HDw2u6dBIHRkq8z9fiwOXmM,Alex,Lane,alan0001@student.monash.edu,Engineering,Bachelor of Civil Engineering,1,Male,Hispanic,00:00.0
-2,WKJXVDXWyLyMhAdTiUWxv0kNF7LT,Zion,Shaw,zsha0001@student.monash.edu,Medicine,Master of Surgery,5,Female,Black,00:00.0
-2,P59v09J5eCVG5cUzWnFftBG7q1r1,Oliver,Williams,owil0001@student.monash.edu,Law,Master in Law,4,Male,Caucasian,00:00.0
-2,j1XEkjXLjH6hz7jiuivRTzeUtQYN,Tucker,Garcia,tgar0001@student.monash.edu,Arts,Bachelor in Arts,3,Female,Asian,00:00.0
-2,kuX6GIR02kVoC4bE3FeYBWiBQjGH,Malachi,Rose,mros0001@student.monash.edu,Medicine,Bachelor of Medicine,1,Male,,00:00.0
-2,e8IE1d1kg0T4by17SXl09QtZ3MIB,Colton,Ward,cwar0002@student.monash.edu,Arts,Bachelor of Arts,2,Male,Middle Eastern,00:00.0
-2,7rwXhOkKvenzrcTS8droXiKHleny,Theodore,Lewis,tlew0001@student.monash.edu,Medicine,Master of Surgery,5,Male,Caucasian,00:00.0
-2,rMweXckoyT7jyKUbCwfH1NJyANj1,Chase,Freeman,cfre0001@student.monash.edu,Information Technology,,,Female,,00:00.0
-2,5Cgp4N3HwWPQXRUMHYcso9dYZXju,Michael,Green,mgre0001@student.monash.edu,Engineering,Bachelor of Mechanical Engineering,1,Male,Caucasian,00:00.0
-2,uos910CPQOOKQ9vNuoVtsbs5W4hA,Joseph,Owens,jowe0001@student.monash.edu,Education,Master of Education,5,Female,Caucasian,00:00.0
-2,tEpiMUit5G26GqZXx0dEyt0YvLRa,Eli,Bailey,ebai0001@student.monash.edu,Business,Bachelor of Commerce,2,Male,Jewish,00:00.0
-2,xlfcOXlr3ByWZECpe18kCfFTBbJ7,Logan,Martin,lmar0001@student.monash.edu,Business,Bachelor in Business,2,Female,Caucasian,00:00.0
-2,JO61w2N4ulzoJBs3CaaLGWOohNlb,David,Young,dyou0001@student.monash.edu,Arts,Bachelor of Arts,2,Male,Caucasian,00:00.0
-2,15d7XS5XgjHaxKXu1myFKWWDHyr7,Leonardo,Long,llon0001@student.monash.edu,Science,Bachelor in Chemistry,3,Male,Hispanic,00:00.0
-2,4OUCYGWUezj4LP2ESpRUscHQQ4EI,Robert,Rogers,rrog0001@student.monash.edu,Engineering,Master of Mechanical Engineering,5,Female,Mixed,00:00.0
-2,JNjemvRfIoojxA3Vr6E1nMin0ZUs,Tom,Wilson,twil0001@student.monash.edu,Engineering,Bachelor of Civil Engineering,2,Male,Caucasian,00:00.0
-2,jwXi6oBYDFjgt23HceBwefGlpF9E,Weston,Graham,wgra0001@student.monash.edu,Medicine,Master of Surgery,4,Male,Caucasian,00:00.0
-2,YOuK9VbdIpvLUIiRZu3KTYyGm8Uu,Ezra,Taylor,etay0002@student.monash.edu,Engineering,Master of Mechanical Engineering,5,Female,Black,00:00.0
-2,4NNBqMefLUPcM3uEwudo5DdfVYxn,Jayden,Baker,jbak0001@student.monash.edu,Law,Bachelor of Laws,1,Male,Black,00:00.0
-2,3c65z73WOyd8oF7SQtySeOiijoMC,Hayden,Duncan,hdun0001@student.monash.edu,Arts,Master of Arts,5,Female,Asian,00:00.0
-2,AA9oucrYcEpldM9D1VVv5m0QRSWs,Dylan,Roberts,drob0001@student.monash.edu,Law,Master of Laws,4,Male,Caucasian,00:00.0
-2,hMeBI6EPlQF1o7qPMz2vFanKSjxq,Silas,Hayes,shay0001@student.monash.edu,Arts,Bachelor of Arts,3,Male,Caucasian,00:00.0
-2,CaY7HxvgWfP59UHbgqOmHCHNp71o,Connor,Wood,cwoo0001@student.monash.edu,Engineering,Bachelor of Civil Engineering,1,Female,Caucasian,00:00.0
-2,H8o18ZoZ586FoNd7ysQsEX54svJs,Mateo,Robinson,mrob0001@student.monash.edu,Engineering,Bachelor of Civil Engineering,2,Male,Hispanic,00:00.0
-2,Sm5n7YByTnfX3f36hM8qm5kzqDSG,Benjamin,Miller,bmil0001@student.monash.edu,Engineering,Bachelor of Civil Engineering,1,Male,Caucasian,00:00.0
-2,t27eLy8rgFkJ5OGxnKidf6IjJhsE,Ryan,Morgan,rmor0001@student.monash.edu,Business,Bachelor of Commerce,2,Male,Caucasian,00:00.0
-2,dGG0BbmFH5WJrj7W0dyEKzBUa5NI,Riley,Davis,rdav0001@student.monash.edu,Law,Bachelor of Laws,2,Male,Caucasian,00:00.0
-2,hsmYabGsCrjDG9Jg0LNgUIgxYAgC,Quinn,Hernandez,qher0001@student.monash.edu,Engineering,Bachelor of Civil Engineering,4,Male,Hispanic,00:00.0
-2,n51sqlc0gCXMmgXAaGcuk4kAUgQl,Ethan,Jackson,ejac0001@student.monash.edu,Business,Master of Business Administration,5,Female,Caucasian,00:00.0
+2,ritHwf7w3gzkXu4LAqmejM283VgP,Isaac,Nelson,inel0001@student.monash.edu,Science,Bachelor of Science,2.0,Female,Other,00:00.0
+2,HGaY2z1Lpee4dGFLahz5nVmO8JyD,Eric,Payne,epay0001@student.monash.edu,Business and Economics,Master of Business Administration,4.0,Male,Asian,00:00.0
+2,24nBku3AJo2JXAvecyifq7fc7VB1,Braxton,Richardson,bric0001@student.monash.edu,Arts,Master of Arts,4.0,Female,Black/African,00:00.0
+2,OM75Tof6O7M0x43aCO6NYmTM11h2,Jack,Stephens,jste0001@student.monash.edu,Medicine/Nursing,Bachelor of Medicine,1.0,Female,Caucasian,00:00.0
+2,c5ucEFxoylUvFgojiEj614XJUfZI,Micah,Woods,mwoo0001@student.monash.edu,Business and Economics,Bachelor of Commerce,2.0,Female,Asian,00:00.0
+2,Q9Z01SKCNaYTFN9pUCzyPKvZTJ7p,Nicholas,Patterson,npat0001@student.monash.edu,Engineering,Master in Electrical Engineering,4.0,Female,Caucasian,00:00.0
+2,8SWazVgnD1yVKf0kJQfSOAHvDZkj,Ashton,Morales,amor0001@student.monash.edu,Information Technology,Master of Data Science,4.0,Male,Caucasian,00:00.0
+2,7ZHDdk0O3XgBo4xQVssrrScXKqk3,Myles,Wells,mwel0001@student.monash.edu,Medicine/Nursing,Master in Medical Sciences,4.0,Female,Caucasian,00:00.0
+2,0z3XmdVkL2yGu1FlIUGC7v9ouwH2,Jaxon,Evans,jeva0002@student.monash.edu,Science,Master of Biology,4.0,Male,Other,00:00.0
+2,baxLK0gBPTAX9E3FOWrjFpbpOPcK,Riley,Harris,rhar0001@student.monash.edu,Information Technology,Bachelor of Cybersecurity,2.0,Male,Caucasian,00:00.0
+2,rFZdM5jtlmR9e4S2ToILmnRMazip,Ezra,Thompson,etho0001@student.monash.edu,Medicine/Nursing,Bachelor of Medicine,1.0,Female,Other,00:00.0
+2,sLmCm7PH0N0Ukn1aYPfLhCgDW2nG,Brody,Hart,bhar0002@student.monash.edu,Law,Master of Laws,4.0,Male,Native American,00:00.0
+2,LuwA3HDw2u6dBIHRkq8z9fiwOXmM,Alex,Lane,alan0001@student.monash.edu,Engineering,Bachelor of Civil Engineering,1.0,Male,Hispanic/Latinx,00:00.0
+2,WKJXVDXWyLyMhAdTiUWxv0kNF7LT,Zion,Shaw,zsha0001@student.monash.edu,Medicine/Nursing,Master of Surgery,5.0,Female,Asian,00:00.0
+2,P59v09J5eCVG5cUzWnFftBG7q1r1,Oliver,Williams,owil0001@student.monash.edu,Law,Master in Law,4.0,Male,Caucasian,00:00.0
+2,j1XEkjXLjH6hz7jiuivRTzeUtQYN,Tucker,Garcia,tgar0001@student.monash.edu,Arts,Bachelor in Arts,3.0,Female,Asian,00:00.0
+2,kuX6GIR02kVoC4bE3FeYBWiBQjGH,Malachi,Rose,mros0001@student.monash.edu,Medicine/Nursing,Bachelor of Medicine,1.0,Male,Hispanic/Latinx,00:00.0
+2,e8IE1d1kg0T4by17SXl09QtZ3MIB,Colton,Ward,cwar0002@student.monash.edu,Arts,Bachelor of Arts,2.0,Male,Hispanic/Latinx,00:00.0
+2,7rwXhOkKvenzrcTS8droXiKHleny,Theodore,Lewis,tlew0001@student.monash.edu,Medicine/Nursing,Master of Surgery,5.0,Male,Caucasian,00:00.0
+2,rMweXckoyT7jyKUbCwfH1NJyANj1,Chase,Freeman,cfre0001@student.monash.edu,Information Technology,,,Female,Hispanic/Latinx,00:00.0
+2,5Cgp4N3HwWPQXRUMHYcso9dYZXju,Michael,Green,mgre0001@student.monash.edu,Engineering,Bachelor of Mechanical Engineering,1.0,Male,Caucasian,00:00.0
+2,uos910CPQOOKQ9vNuoVtsbs5W4hA,Joseph,Owens,jowe0001@student.monash.edu,Education,Master of Education,5.0,Female,Caucasian,00:00.0
+2,tEpiMUit5G26GqZXx0dEyt0YvLRa,Eli,Bailey,ebai0001@student.monash.edu,Business and Economics,Bachelor of Commerce,2.0,Male,Other,00:00.0
+2,xlfcOXlr3ByWZECpe18kCfFTBbJ7,Logan,Martin,lmar0001@student.monash.edu,Business and Economics,Bachelor in Business,2.0,Female,Caucasian,00:00.0
+2,JO61w2N4ulzoJBs3CaaLGWOohNlb,David,Young,dyou0001@student.monash.edu,Arts,Bachelor of Arts,2.0,Male,Caucasian,00:00.0
+2,15d7XS5XgjHaxKXu1myFKWWDHyr7,Leonardo,Long,llon0001@student.monash.edu,Science,Bachelor in Chemistry,3.0,Male,Other,00:00.0
+2,4OUCYGWUezj4LP2ESpRUscHQQ4EI,Robert,Rogers,rrog0001@student.monash.edu,Engineering,Master of Mechanical Engineering,5.0,Female,Caucasian,00:00.0
+2,JNjemvRfIoojxA3Vr6E1nMin0ZUs,Tom,Wilson,twil0001@student.monash.edu,Engineering,Bachelor of Civil Engineering,2.0,Male,Caucasian,00:00.0
+2,jwXi6oBYDFjgt23HceBwefGlpF9E,Weston,Graham,wgra0001@student.monash.edu,Medicine/Nursing,Master of Surgery,4.0,Male,Caucasian,00:00.0
+2,YOuK9VbdIpvLUIiRZu3KTYyGm8Uu,Ezra,Taylor,etay0002@student.monash.edu,Engineering,Master of Mechanical Engineering,5.0,Female,Pacific Islander,00:00.0
+2,4NNBqMefLUPcM3uEwudo5DdfVYxn,Jayden,Baker,jbak0001@student.monash.edu,Law,Bachelor of Laws,1.0,Male,Mixed Race,00:00.0
+2,3c65z73WOyd8oF7SQtySeOiijoMC,Hayden,Duncan,hdun0001@student.monash.edu,Arts,Master of Arts,5.0,Female,Asian,00:00.0
+2,AA9oucrYcEpldM9D1VVv5m0QRSWs,Dylan,Roberts,drob0001@student.monash.edu,Law,Master of Laws,4.0,Male,Caucasian,00:00.0
+2,hMeBI6EPlQF1o7qPMz2vFanKSjxq,Silas,Hayes,shay0001@student.monash.edu,Arts,Bachelor of Arts,3.0,Male,Caucasian,00:00.0
+2,CaY7HxvgWfP59UHbgqOmHCHNp71o,Connor,Wood,cwoo0001@student.monash.edu,Engineering,Bachelor of Civil Engineering,1.0,Female,Caucasian,00:00.0
+2,H8o18ZoZ586FoNd7ysQsEX54svJs,Mateo,Robinson,mrob0001@student.monash.edu,Engineering,Bachelor of Civil Engineering,2.0,Male,Mixed Race,00:00.0
+2,Sm5n7YByTnfX3f36hM8qm5kzqDSG,Benjamin,Miller,bmil0001@student.monash.edu,Engineering,Bachelor of Civil Engineering,1.0,Male,Caucasian,00:00.0
+2,t27eLy8rgFkJ5OGxnKidf6IjJhsE,Ryan,Morgan,rmor0001@student.monash.edu,Business and Economics,Bachelor of Commerce,2.0,Male,Caucasian,00:00.0
+2,dGG0BbmFH5WJrj7W0dyEKzBUa5NI,Riley,Davis,rdav0001@student.monash.edu,Law,Bachelor of Laws,2.0,Male,Caucasian,00:00.0
+2,hsmYabGsCrjDG9Jg0LNgUIgxYAgC,Quinn,Hernandez,qher0001@student.monash.edu,Engineering,Bachelor of Civil Engineering,4.0,Male,Asian,00:00.0
+2,n51sqlc0gCXMmgXAaGcuk4kAUgQl,Ethan,Jackson,ejac0001@student.monash.edu,Business and Economics,Master of Business Administration,5.0,Female,Caucasian,00:00.0
 2,j1jaOdCK9n9HEU2NrgvlHjJOksBr,Michael,Thomas,mtho0001@student.monash.edu,,,,,,00:00.0
-2,5vljs6dcqClkPVERxlTUCDNVKGKU,Nathaniel,Simpson,nsim0001@student.monash.edu,Law,Bachelor of Laws,1,Female,Caucasian,00:00.0
-2,hgh3h5XhlYuM1MuDT6kMyWHY7Fa5,Bentley,Burns,bbur0001@student.monash.edu,Business,Bachelor of Commerce,3,Male,Caucasian,00:00.0
-2,U8PFsGrR1LbLOl8sP1BkvKXjrUVh,Jordan,Thompson,jtho0001@student.monash.edu,Engineering,Bachelor of Aerospace Engineering,4,Male,Caucasian,00:00.0
-2,HURyGPiwvPvH20UBWMB88FQbrmCC,Rowan,Sanders,rsan0001@student.monash.edu,Information Technology,Master of Data Science,4,Female,Caucasian,00:00.0
-2,dt5I2S3VbkdXtqIXfGSpGP3j6tHk,Diego,Webb,dweb0001@student.monash.edu,Arts,Bachelor of Arts,3,Male,Hispanic,00:00.0
-2,VecwJypuIjF1PL4j0qCPWa97B0qi,Luke,Wright,lwri0001@student.monash.edu,Law,Bachelor of Laws,2,Male,Caucasian,00:00.0
-2,4yan8DA71QPBZNRGUx86XgkvU5lz,Ezekiel,Howard,ehow0001@student.monash.edu,Arts,Bachelor in Arts,1,Male,Jewish,00:00.0
-2,DiKxeQqFmDLZwMszOJtVN9RHW5OT,Lincoln,Carter,lcar0001@student.monash.edu,Science,Bachelor of Science,3,Female,Caucasian,00:00.0
-2,j0VUmNANIrb4Ej5dlLSbYWcNHesV,Vincent,Gomez,vgom0001@student.monash.edu,Education,Master in Education,5,Male,Caucasian,00:00.0
-2,t3Ts8MzT5tero0tBLiwumo1CHw4q,Emiliano,Olson,eols0001@student.monash.edu,Business,Master of Business Administration,5,Female,Other,00:00.0
-2,8yEqy7HsejUUxGBPrGGqneTj4SaO,Isaiah,Stewart,iste0001@student.monash.edu,Arts,Bachelor of Arts,2,Male,Black,00:00.0
-2,1yzCPGqyZtbsCGP6w6CnV1YrwfUz,Justin,Berry,jber0001@student.monash.edu,,,,,Caucasian,00:00.0
-2,a0nqtIuPE1EQ9CuBjdAiECuCCaRD,Everett,Washington,ewas0001@student.monash.edu,Business,Master of Business Administration,4,Female,Caucasian,00:00.0
-2,WPFywqSLU9h020l9cv4JRTYPaSDO,Elijah,Jones,ejon0001@student.monash.edu,Law,Master of Laws,4,Female,Black,00:00.0
-2,HeUzfm1BOBvu4b9b56HNgPuXWN9z,Harper,Nguyen,hngu0001@student.monash.edu,Medicine,Bachelor of Nursing,1,Female,Vietnamese,00:00.0
-2,gAtSGdgcrZC2mFA5Gr25coQ9ZdPh,Rhett,Hawkins,rhaw0001@student.monash.edu,Law,Master of Laws,5,Male,Caucasian,00:00.0
-2,hTt10By1h08qCH7Qh8Xy4nlVne8m,Maddox,Arnold,marn0001@student.monash.edu,Medicine,Master of Surgery,4,Female,Caucasian,00:00.0
-2,gywbG1LVun6nqzg8bGEyWmYxZAwv,Hudson,Perez,hper0001@student.monash.edu,Engineering,Bachelor of Civil Engineering,3,Male,Caucasian,00:00.0
-2,mi1Thxhxk7Bti0NVd3dB4ML6TGZF,Bailey,Garcia,bgar0001@student.monash.edu,Business and Economics,Bachelor of Economics,3,Male,Hispanic,00:00.0
-2,x6JtPgjbQjIRNUOiOy2JJJsivncs,Enzo,Ray,eray0001@student.monash.edu,Arts,Bachelor in Arts,,Female,,00:00.0
-2,QrisC9jrJsjK3vuyL8PrOizA6jYX,Jose,Gonzales,jgon0001@student.monash.edu,Science,Master of Biology,5,Male,Hispanic,00:00.0
-2,nDmy6PbyOYVz6u4DYmi6JydjK1W4,Jeremiah,Sanders,jsan0001@student.monash.edu,Medicine,Bachelor of Medicine,1,Male,Black,00:00.0
-2,LOEVMkn7BZo5jb6VdrqPkVjDRqdm,Kevin,Ferguson,kfer0001@student.monash.edu,Business,Master of Business Administration,5,Male,Caucasian,00:00.0
-2,n4gc1nV7ishcX41W4DJhmII7inQX,Liam,Smith,lsmi0001@student.monash.edu,Information Technology,Master of Data Science,4,Male,Caucasian,00:00.0
-2,gMkQegMGJbuggnkecKuTUPezVFeg,Rowan,Fisher,rfis0001@student.monash.edu,Information Technology,Bachelor in Information Technology,2,Female,Caucasian,00:00.0
-2,7P3By8q6QGLSCq6lOdvudU3mMOY2,Morgan,White,mwhi0001@student.monash.edu,Engineering,Bachelor of Mechanical Engineering,4,Female,Caucasian,00:00.0
-2,doQ2MGDrQGqtyzYR8xBetXUujtjo,Gael,Reynolds,grey0001@student.monash.edu,Science,Master of Biology,5,Female,Hispanic,00:00.0
+2,5vljs6dcqClkPVERxlTUCDNVKGKU,Nathaniel,Simpson,nsim0001@student.monash.edu,Law,Bachelor of Laws,1.0,Female,Caucasian,00:00.0
+2,hgh3h5XhlYuM1MuDT6kMyWHY7Fa5,Bentley,Burns,bbur0001@student.monash.edu,Business and Economics,Bachelor of Commerce,3.0,Male,Caucasian,00:00.0
+2,U8PFsGrR1LbLOl8sP1BkvKXjrUVh,Jordan,Thompson,jtho0001@student.monash.edu,Engineering,Bachelor of Aerospace Engineering,4.0,Male,Caucasian,00:00.0
+2,HURyGPiwvPvH20UBWMB88FQbrmCC,Rowan,Sanders,rsan0001@student.monash.edu,Information Technology,Master of Data Science,4.0,Female,Caucasian,00:00.0
+2,dt5I2S3VbkdXtqIXfGSpGP3j6tHk,Diego,Webb,dweb0001@student.monash.edu,Arts,Bachelor of Arts,3.0,Male,Other,00:00.0
+2,VecwJypuIjF1PL4j0qCPWa97B0qi,Luke,Wright,lwri0001@student.monash.edu,Law,Bachelor of Laws,2.0,Male,Caucasian,00:00.0
+2,4yan8DA71QPBZNRGUx86XgkvU5lz,Ezekiel,Howard,ehow0001@student.monash.edu,Arts,Bachelor in Arts,1.0,Male,Pacific Islander,00:00.0
+2,DiKxeQqFmDLZwMszOJtVN9RHW5OT,Lincoln,Carter,lcar0001@student.monash.edu,Science,Bachelor of Science,3.0,Female,Caucasian,00:00.0
+2,j0VUmNANIrb4Ej5dlLSbYWcNHesV,Vincent,Gomez,vgom0001@student.monash.edu,Education,Master in Education,5.0,Male,Caucasian,00:00.0
+2,t3Ts8MzT5tero0tBLiwumo1CHw4q,Emiliano,Olson,eols0001@student.monash.edu,Business and Economics,Master of Business Administration,5.0,Female,Other,00:00.0
+2,8yEqy7HsejUUxGBPrGGqneTj4SaO,Isaiah,Stewart,iste0001@student.monash.edu,Arts,Bachelor of Arts,2.0,Male,Hispanic/Latinx,00:00.0
+2,1yzCPGqyZtbsCGP6w6CnV1YrwfUz,Justin,Berry,jber0001@student.monash.edu,,,,,,00:00.0
+2,a0nqtIuPE1EQ9CuBjdAiECuCCaRD,Everett,Washington,ewas0001@student.monash.edu,Business and Economics,Master of Business Administration,4.0,Female,Caucasian,00:00.0
+2,WPFywqSLU9h020l9cv4JRTYPaSDO,Elijah,Jones,ejon0001@student.monash.edu,Law,Master of Laws,4.0,Female,Mixed Race,00:00.0
+2,HeUzfm1BOBvu4b9b56HNgPuXWN9z,Harper,Nguyen,hngu0001@student.monash.edu,Medicine/Nursing,Bachelor of Nursing,1.0,Female,Mixed Race,00:00.0
+2,gAtSGdgcrZC2mFA5Gr25coQ9ZdPh,Rhett,Hawkins,rhaw0001@student.monash.edu,Law,Master of Laws,5.0,Male,Caucasian,00:00.0
+2,hTt10By1h08qCH7Qh8Xy4nlVne8m,Maddox,Arnold,marn0001@student.monash.edu,Medicine/Nursing,Master of Surgery,4.0,Female,Caucasian,00:00.0
+2,gywbG1LVun6nqzg8bGEyWmYxZAwv,Hudson,Perez,hper0001@student.monash.edu,Engineering,Bachelor of Civil Engineering,3.0,Male,Caucasian,00:00.0
+2,mi1Thxhxk7Bti0NVd3dB4ML6TGZF,Bailey,Garcia,bgar0001@student.monash.edu,Business and Economics,Bachelor of Economics,3.0,Male,Caucasian,00:00.0
+2,x6JtPgjbQjIRNUOiOy2JJJsivncs,Enzo,Ray,eray0001@student.monash.edu,Arts,Bachelor in Arts,,Female,Asian,00:00.0
+2,QrisC9jrJsjK3vuyL8PrOizA6jYX,Jose,Gonzales,jgon0001@student.monash.edu,Science,Master of Biology,5.0,Male,Caucasian,00:00.0
+2,nDmy6PbyOYVz6u4DYmi6JydjK1W4,Jeremiah,Sanders,jsan0001@student.monash.edu,Medicine/Nursing,Bachelor of Medicine,1.0,Male,Caucasian,00:00.0
+2,LOEVMkn7BZo5jb6VdrqPkVjDRqdm,Kevin,Ferguson,kfer0001@student.monash.edu,Business and Economics,Master of Business Administration,5.0,Male,Caucasian,00:00.0
+2,n4gc1nV7ishcX41W4DJhmII7inQX,Liam,Smith,lsmi0001@student.monash.edu,Information Technology,Master of Data Science,4.0,Male,Caucasian,00:00.0
+2,gMkQegMGJbuggnkecKuTUPezVFeg,Rowan,Fisher,rfis0001@student.monash.edu,Information Technology,Bachelor in Information Technology,2.0,Female,Caucasian,00:00.0
+2,7P3By8q6QGLSCq6lOdvudU3mMOY2,Morgan,White,mwhi0001@student.monash.edu,Engineering,Bachelor of Mechanical Engineering,4.0,Female,Caucasian,00:00.0
+2,doQ2MGDrQGqtyzYR8xBetXUujtjo,Gael,Reynolds,grey0001@student.monash.edu,Science,Master of Biology,5.0,Female,Native American,00:00.0
 2,YrJLPxmy7n9gCdNsOxMgnLLSZtps,River,Porter,rpor0001@student.monash.edu,Information Technology,,,Female,Caucasian,00:00.0
-2,u6Pomd7Tbt1SgvpDglSIt0786yXy,Max,Robertson,mrob0002@student.monash.edu,Engineering,Master of Mechanical Engineering,4,Female,Caucasian,00:00.0
-2,zPLpYRKp2iGHFe8QJ8RMdsdRRf9k,Graham,Ruiz,grui0001@student.monash.edu,Medicine,Master in Medical Sciences,5,Male,Hispanic,00:00.0
+2,u6Pomd7Tbt1SgvpDglSIt0786yXy,Max,Robertson,mrob0002@student.monash.edu,Engineering,Master of Mechanical Engineering,4.0,Female,Caucasian,00:00.0
+2,zPLpYRKp2iGHFe8QJ8RMdsdRRf9k,Graham,Ruiz,grui0001@student.monash.edu,Medicine/Nursing,Master in Medical Sciences,5.0,Male,Other,00:00.0
 2,X61NblPdCYNrVFI9UHZ3JRdGnd52,Evan,Sullivan,esul0001@student.monash.edu,,Bachelor of Education,,,Caucasian,00:00.0

@@ -1,0 +1,51 @@
+ballot_id,election_id,user_id,first_name,last_name,email,faculty,degree,year,gender,ethnicity,position
+1,1,20Eo0SLOzEskh7xirzxkx2hK8xfl,Emma,Robertson,emma.robertson@student.monash.edu,Arts,Bachelor of Arts,2,Male,Caucasian,President
+2,1,o9dl56QDGDhrKePdMmHUOA4Cbhsz,Lucas,Kim,lucas.kim@student.monash.edu,Science,Bachelor of Science,1,Female,Caucasian,President
+3,1,TilI8RQwvweqxn8Geuq6t59ITOtK,Isabella,Johnson,isabella.johnson@student.monash.edu,Business and Economics,Bachelor of Commerce,3,Female,Caucasian,President
+4,1,pRmShEEDirMkvOES3h77xNnn6tiL,Nora,Fisher,nora.fisher@student.monash.edu,Engineering,Bachelor of Graphic Design,1,Female,Caucasian,President
+5,1,zD4NzhhybE1ntrf0GY4hCYSmiEq8,Aaron,Patel,aaron.patel@student.monash.edu,Business and Economics,Bachelor of Marketing,2,Female,Other,President
+6,1,ajzABnpDLGj8vsSnFbdJLEy2tnYX,Lily,Nguyen,lily.nguyen@student.monash.edu,Science,Bachelor of Environmental Science,3,Female,Pacific Islander,President
+7,1,5S2IJauRh8KmgwwbiHR4dovapd2k,Felix,Ortiz,felix.ortiz@student.monash.edu,Engineering,Bachelor of Software Engineering,4,Female,Native American,President
+8,1,9ysMwRLz1XG4OxR1JRE1gENX20EP,Hannah,Moore,hannah.moore@student.monash.edu,Medicine/Nursing,Bachelor of Dentistry,2,Male,Caucasian,Secretary
+9,1,Q1HR2sO45XNHKh8NeIFdS8TQUaZy,Adrian,Black,adrian.black@student.monash.edu,Law,Bachelor of Criminal Justice,1,Female,Caucasian,Secretary
+10,1,EwaRPT5R0MpCfCM0llOSM8RynMyn,Zoe,Richards,zoe.richards@student.monash.edu,Information Technology,Bachelor of Data Science,3,Male,Caucasian,Secretary
+11,1,Fjk2kTohXogKS5S4OxTCN9PVCP6D,Julian,Thompson,julian.thompson@student.monash.edu,Arts,Bachelor of Performing Arts,4,Female,Caucasian,Secretary
+12,1,cF8H6oUSA5p5OxfjrZSI5o1idcWd,Ethan,Lee,ethan.lee@student.monash.edu,Engineering,Bachelor of Civil Engineering,4,Female,Native American,Treasurer
+13,1,9vUnIyvStQZ0L4XYZiGLfYvzVIgU,Sophia,Martinez,sophia.martinez@student.monash.edu,Medicine,Bachelor of Medical Science,2,Female,Other,Treasurer
+14,1,ayYqDY95hdWjnmKTor49eYAQ7NUn,Mason,Hernandez,mason.hernandez@student.monash.edu,Law,Bachelor of Laws,3,Male,Caucasian,Treasurer
+15,1,2FSpqabNFWjZMnWFJTUuWOXwVeZE,Olivia,Wong,olivia.wong@student.monash.edu,Information Technology,Bachelor of Computer Science,1,Male,Other,Treasurer
+16,1,iAvqEv6k66YKwKz14FOtQgg4bJ6a,Nathan,Butler,nathan.butler@student.monash.edu,Arts,Bachelor of Visual Arts,1,Male,Caucasian,Treasurer
+17,1,4WRs9ue2I4bCZllBaHQlXSbEIJcw,Claire,Watkins,claire.watkins@student.monash.edu,Business and Economics,Bachelor of International Business,2,Female,Caucasian,Treasurer
+18,1,5GguwmUNElAcsdZrQanaLpHwvFjo,Georgia,Pena,georgia.pena@student.monash.edu,Law,Bachelor of Commercial Law,1,Male,Hispanic/Latinx,Vice President
+19,1,DKwpeI7JJ0B6k2uzU8fhIJNCwhhm,Finn,Townsend,finn.townsend@student.monash.edu,Information Technology,Bachelor of Network Security,3,Male,Caucasian,Vice President
+20,1,QehMBsCWpRvqMOeXdO4DOt3HAkhi,Mia,Atkinson,mia.atkinson@student.monash.edu,Arts,Bachelor of Journalism,4,Female,Caucasian,Vice President
+21,1,TvPMmKOLM4Q75YP8DhT5O7bqCxed,Leo,Frost,leo.frost@student.monash.edu,Business and Economics,Master of Finance,1,Male,Caucasian,Vice President
+22,2,yTPTwX1IwrTGF0UOPv8eHKpHAVH5,Hannah,Pearce,hannah.pearce@student.monash.edu,Engineering,Bachelor of Aerospace Engineering,2,Male,Caucasian,President
+23,2,IbiiirjV6X0oBOBZqFYVTGeo9cWA,Zoe,Flynn,zoe.flynn@student.monash.edu,Science,Bachelor of Marine Biology,3,Male,Pacific Islander,President
+24,2,wFzWtQosx8BkJiaf8RET5abtsjmi,Adam,Daly,adam.daly@student.monash.edu,Medicine,Bachelor of Paramedicine,4,Male,Caucasian,President
+25,2,S1CkVQs2kMGHc1tceGtyNBvLa0kW,Sophie,Moss,sophie.moss@student.monash.edu,Law,Bachelor of Intellectual Property Law,1,Male,Caucasian,President
+26,2,H3g4bsMB6e8dHrZu8tjgel6XxZu7,Dylan,Bolton,dylan.bolton@student.monash.edu,Information Technology,Bachelor of Artificial Intelligence,2,Male,Caucasian,President
+27,2,rkmJbR3ATIFB7H6ipnMrbnT2Cbkp,Ava,Draper,ava.draper@student.monash.edu,Arts,Bachelor of Film and Screen Studies,3,Female,Caucasian,President
+28,2,KYNgVzRTzJh4mYicw5eUpY20bHWe,Marco,Gilbert,marco.gilbert@student.monash.edu,Engineering,Bachelor of Chemical Engineering,3,Male,Caucasian,President
+29,2,lkjxhHFuE5AqXYRTe3Cf80jFfMaH,Elise,Norman,elise.norman@student.monash.edu,Science,Bachelor of Astrophysics,4,Male,Caucasian,Secretary
+30,2,ielBZVQaCzSgrBQ7upG9Bw2SscZm,Barrett,Richardson,bric0001@student.monash.edu,Education,Bachelor of Education,2,Male,Asian,Secretary
+31,2,oSXLiRGJ9xyn4OJXlpqsJd5RLUPg,Aiden,Roberts,arob0001@student.monash.edu,Arts,Master of Arts,4,Male,Asian,Secretary
+32,2,ssFFyu3dEmSr5KoKINdPYXJZhUWX,Elias,Wallace,ewal0001@student.monash.edu,Medicine/Nursing,Master of Surgery,5,Male,Other,Secretary
+33,2,9lDVzfhb3LSKjBCFUOBUCVp6yybW,Miguel,Lee,mlee0001@student.monash.edu,Arts,Bachelor of Arts,3,Male,Other,Secretary
+34,2,haar10qmKq5ztP88dS0bEA7OX7DH,Braxton,Warren,bwar0001@student.monash.edu,Business and Economics,Master of Business Administration,5,Female,Black/African,Secretary
+35,2,w7CWQ93meonITot5coTWX08MsGcE,Jason,Peterson,jpet0001@student.monash.edu,Science,Bachelor of Science,2,Female,Other,Secretary
+36,2,76t8ZjRT6w8jNQk7LREBC7AIpiAV,Logan,Brooks,lbro0001@student.monash.edu,Education,Bachelor of Education,3,Male,Pacific Islander,Treasurer
+37,2,I9G05Lp8ogwqTnpmBKgPGELNA8ds,Arthur,Russell,arus0001@student.monash.edu,Medicine/Nursing,Master of Surgery,4,Male,Mixed Race,Treasurer
+38,2,8YNRl6TIPqUmjqPyL5Zvb80gdfCR,Lucas,Carpenter,lcar0001@student.monash.edu,Arts,Bachelor of Arts,1,Male,Black/African,Treasurer
+39,2,RBr6OLNQynOiEldOZNDaunYRTgau,Levi,Gardner,lgar0001@student.monash.edu,Science,Bachelor of Science,3,Male,Mixed Race,Treasurer
+40,2,2H2VzE4vwrxSaT2GUuXUiY5oWwe2,Ryan,Payne,rpay0001@student.monash.edu,Education,Master of Education,4,Female,Black/African,Treasurer
+41,2,7eu1UqozHcst2JqsKj2XeEecgT2g,Jack,Smith,jsmi0001@student.monash.edu,Engineering,Bachelor of Civil Engineering,3,Female,Pacific Islander,Treasurer
+42,2,dmCjEm9QT25Ynko3Q3NlrzUpLlzj,Jesus,Coleman,jcol0001@student.monash.edu,Education,Master of Education,4,Female,Asian,Vice President
+43,2,QnpSFZy8QNFtF7QTdE6FqDWLvJyH,Ryder,Carter,rcar0001@student.monash.edu,Education,Bachelor of Education,1,Male,Mixed Race,Vice President
+44,2,npAUgiRYSWxnyUaLWJDDgmUcE6kR,Ian,Price,ipri0001@student.monash.edu,Business and Economics,Bachelor of Commerce,1,Female,Pacific Islander,Vice President
+45,2,pPMUlHbHtJVdPks05rHrKGVb6oEv,King,Taylor,ktay0001@student.monash.edu,Arts,Master of Arts,5,Female,Native American,Vice President
+46,2,XPf3p9nN660op6sh3CtWPpndVmys,Sawyer,Foster,sfos0001@student.monash.edu,Arts,Bachelor of Arts,2,Female,Black/African,Vice President
+47,2,wG42GYaPidd44dBiOvuELbmY7I4r,Leonardo,Harper,lhar0001@student.monash.edu,Arts,Bachelor of Arts,2,Female,Caucasian,Vice President
+48,2,0zK40nrbWn5ed8pSF7qYUTslzq0J,Timothy,Robertson,trob0001@student.monash.edu,Engineering,Bachelor of Civil Engineering,3,Female,Hispanic/Latinx,Vice President
+49,2,rj1jJ6OS7oGpyYZYKCxcsrj2TMCD,Thiago,Graham,tgra0001@student.monash.edu,Engineering,Master of Mechanical Engineering,4,Female,Other,Vice President
+50,2,KbtDUziCHcUsViOuToux1GefuREU,Carlos,Carlos,cphi0001@student.monash.edu,Medicine/Nursing,Bachelor of Medicine,1,Female,Caucasian,Vice President
