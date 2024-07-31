@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Company - Home</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .hero {
+            background-size: cover;
+            height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: black;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+        .hero p {
+            font-size: 1.5rem;
+            margin-top: 20px;
+        }
+        .navbar {
+            margin-bottom: 0;
+        }
+    </style>
+
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
+
+<script>
+    const firebaseConfig = {
+        apiKey: "AIzaSyDMRV1SqGWXWWHblOI1eGPjNMhwrzl5iUg",
+        authDomain: "electronicvoting-56d81.firebaseapp.com",
+        projectId: "electronicvoting-56d81",
+        storageBucket: "electronicvoting-56d81.appspot.com"
+    };
+
+    // Initialize Firebase
+    const app = firebase.initializeApp(firebaseConfig);
+    const auth = firebase.auth();
+
+    firebase.auth().onAuthStateChanged(function(user) {
+            const dashboardLink = document.getElementById('dashboardLink');
+            const loginLink = document.getElementById('loginLink');
+
+            if (user) {
+                console.log(user.uid)
+                dashboardLink.style.display = ''; // Show the dashboard button
+                dashboardLink.href = '/app';      // Link to the dashboard
+                loginLink.textContent = 'Sign Out';
+                loginLink.onclick = signOut;      // Assign signOut function on click
+                loginLink.href = '#';             // Remove default navigation
+            } else {
+                dashboardLink.style.display = 'none'; // Hide the dashboard button
+                loginLink.textContent = 'Log In';
+                loginLink.href = '/home_login';
+                loginLink.onclick = null;         // Remove onclick event handler
+            }
+        });
+
+    function signOut() {
+        firebase.auth().signOut().then(() => {
+            window.location.href = '/home_logout';
+        }).catch((error) => {
+            console.error('Sign out failed:', error);
+        });
+    }
+</script>
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/">Company</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/about">About</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/contact">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link btn btn-success" href="/app" id="dashboardLink" style="display: none;">Dashboard</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="btn btn-outline-primary" href="/home_login" id="loginLink">Log In</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <div>
+            <h1>Contact Page</h1>
+            <p>Please contact us at ...</p>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+<script>
+
+    // Check if user is authenticated. This should ideally be determined by checking a session variable set by your backend
+    document.addEventListener('DOMContentLoaded', function() {
+        const isLoggedIn = localStorage.getItem('isLoggedIn');  // Example, using localStorage which should be set when logging in
+        console.log(isLoggedIn)
+
+        const loginLink = document.getElementById('loginLink');
+        if (isLoggedIn) {
+            loginLink.textContent = 'Sign Out';
+            loginLink.href = '/home_logout';  // Adjust if you have a specific route for logging out
+        } else {
+            loginLink.textContent = 'Log In';
+            loginLink.href = '/home_login';
+        }
+    });
+</script>
+
+</html>

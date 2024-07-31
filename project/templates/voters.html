@@ -1,0 +1,100 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<style>
+    .charts-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: flex-start;
+    }
+
+    .chart-container {
+      flex-basis: calc(33% - 40px); /* for a 3x3 grid, adjust to 50% for a 2x2 grid */
+      margin: 20px;
+      box-sizing: border-box;
+    }
+
+    canvas {
+      width: 100%;
+      height: auto;
+    }
+
+    @media (max-width: 768px) {
+      .chart-container {
+        flex-basis: calc(50% - 40px); /* on smaller screens, switch to a 2x2 grid */
+      }
+    }
+  </style>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<div style="text-align: center; padding-top: 100px;">
+
+        <!-- New charts section -->
+        <div class="charts-grid">
+            {% for trait, groups in traits.items() %}
+              <div class="chart-container">
+                <h3>{{ trait|capitalize }}</h3>
+                <canvas id="chart-{{ trait }}"></canvas>
+              </div>
+              <script>
+                var ctx = document.getElementById('chart-{{ trait }}').getContext('2d');
+                var myChart = new Chart(ctx, {
+                    type: 'pie', // Choose 'bar' for bar graphs
+                    data: {
+                        labels: {{ groups.keys()|list|tojson }},
+                        datasets: [{
+                            label: 'Number of Students',
+                            data: {{ groups.values()|list|tojson }},
+                            backgroundColor: [
+                              '#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF'
+                            ],
+                            borderColor: [
+                              '#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF'
+                            ],
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            y: { beginAtZero: true }
+                        }
+                    }
+                });
+              </script>
+            {% endfor %}
+            </div>
+
+    <table style="margin: auto; width: 80%; border-collapse: collapse;">
+        <thead>
+            <tr style="background-color: #f2f2f2;">
+                <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">First Name</th>
+                <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Last Name</th>
+                <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Email</th>
+                <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Faculty</th>
+                <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Degree</th>
+                <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Year</th>
+                <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Gender</th>
+                <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Ethnicity</th>
+                <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Time</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for student in students %}
+            <tr>
+                <td style="border: 1px solid #ddd; padding: 8px;">{{ student.first_name }}</td>
+                <td style="border: 1px solid #ddd; padding: 8px;">{{ student.last_name }}</td>
+                <td style="border: 1px solid #ddd; padding: 8px;">{{ student.email }}</td>
+                <td style="border: 1px solid #ddd; padding: 8px;">{{ student.faculty }}</td>
+                <td style="border: 1px solid #ddd; padding: 8px;">{{ student.degree }}</td>
+                <td style="border: 1px solid #ddd; padding: 8px;">{{ student.year }}</td>
+                <td style="border: 1px solid #ddd; padding: 8px;">{{ student.gender }}</td>
+                <td style="border: 1px solid #ddd; padding: 8px;">{{ student.ethnicity }}</td>
+                <td style="border: 1px solid #ddd; padding: 8px;">{{ student.time }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

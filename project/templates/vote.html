@@ -1,0 +1,95 @@
+{% block content %}
+<style>
+  .page-header {
+    padding: 30px; /* Padding for spacing */
+    text-align: center; /* Center align text */
+    font-family: 'Arial', sans-serif; /* Consistent font family */
+  }
+  .election-title {
+    font-size: 32px; /* Increased font size for the main title */
+    font-weight: 700; /* Bold font weight */
+    color: #333; /* Darker text color for contrast */
+    margin-bottom: 10px; /* Space after the title */
+  }
+  .election-details {
+    font-size: 20px; /* Increased font size for details */
+    font-weight: 500; /* Medium font weight */
+    color: #555; /* Dark grey color for details */
+    margin-bottom: 5px; /* Space after the subtitle */
+  }
+  .auth-note {
+    font-size: 16px; /* Increased font size for notes */
+    color: #666; /* Dark gray color for the note */
+    margin-bottom: 30px; /* Space before the button */
+  }
+  .sign-in-button {
+    background-color: #ffff; /* White background */
+    border-radius: 8px; /* Rounded corners for the button */
+    padding: 20px 40px; /* Padding for larger button size */
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border: none;
+    cursor: pointer;
+    color: black;
+    font-size: 18px; /* Increased font size for button text */
+    font-weight: 500; /* Medium font weight for button text */
+  }
+  .sign-in-button:hover {
+    background-color: #f0f0f0; /* Light grey background on hover */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Slightly larger shadow for hover effect */
+  }
+</style>
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
+
+<script>
+  const token = "{{ token }}";
+
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyDMRV1SqGWXWWHblOI1eGPjNMhwrzl5iUg",
+    authDomain: "electronicvoting-56d81.firebaseapp.com",
+    projectId: "electronicvoting-56d81",
+    storageBucket: "electronicvoting-56d81.appspot.com"
+  };
+
+  // Initialize Firebase
+  const app = firebase.initializeApp(firebaseConfig);
+  const auth = firebase.auth();
+
+  function googleSignIn() {
+    var provider = new firebase.auth.GoogleAuthProvider();
+    auth.signInWithPopup(provider).then((result) => {
+      const user = result.user;
+      user.getIdToken().then(function(idToken) {
+        fetch('/login_voter', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({token: idToken, token_url: token}),
+        })
+        .then(response => response.json())
+        .then(data => {
+              console.log(data.message);
+              console.log(token);
+              window.location.href = '/election/'+token+'/ballot';
+        })
+        .catch((error) => {
+          console.error('Error during fetch:', error);
+        });
+      });
+    }).catch((error) => {
+      console.error("Authentication failed:", error.message);
+    });
+  }
+</script>
+
+<div class="page-header">
+  <div class="election-title"> {{ club_name }} </div>
+  <div class="election-details">{{ election_name }} - Voting ends {{ end_date }}</div>
+  <div class="auth-note">This is only authorized for Monash participants</div>
+  <button class="sign-in-button" onclick="googleSignIn()">Sign in to Vote</button>
+</div>
+
+{% endblock %}

@@ -1,0 +1,125 @@
+{% block title %}
+Visuals - Election Results
+{% endblock %}
+
+{% block styles %}
+<style>
+  .page-header {
+    padding: 30px; /* Padding for spacing */
+    text-align: center; /* Center align text */
+    font-family: 'Arial', sans-serif; /* Consistent font family */
+  }
+  .election-title {
+    font-size: 32px; /* Increased font size for the main title */
+    font-weight: 700; /* Bold font weight */
+    color: #333; /* Darker text color for contrast */
+    margin-bottom: 10px; /* Space after the title */
+  }
+  .election-details,
+  .result-details,
+  .voter-details {
+    font-size: 20px; /* Increased font size for details */
+    font-weight: 500; /* Medium font weight */
+    color: #555; /* Dark grey color for details */
+    margin-bottom: 5px; /* Space after the subtitle */
+  }
+  .list-section {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f9f9f9; /* Light background for sections */
+    border: 1px solid #ddd; /* Border for clear separation */
+    border-radius: 8px; /* Rounded corners for sections */
+  }
+  .metric-container {
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: #f8f9fa; /* Light gray background */
+    text-decoration: none; /* Remove underline */
+    color: black; /* Set text color to black */
+    display: block; /* or display: flex; based on your layout needs */
+    margin-bottom: 20px; /* Adjust this as needed to reduce space between cards */
+  }
+  .card {
+    background-color: #ffff; /* White background */
+    border-radius: 8px; /* Rounded corners for the boxes */
+    padding: 15px;
+    text-align: center; /* Center the text inside the boxes */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Box shadow for depth */
+  }
+  .card:hover {
+    background-color: #f0f0f0; /* Light grey background on hover */
+  }
+  .chart-container {
+    width: 75%; /* Adjust this to make the chart narrower */
+    margin: 20px auto; /* Centering the chart container */
+  }
+  canvas {
+    width: 100% !important;
+    height: auto !important;
+  }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="page-header">
+  <div class="election-title">Thank you for voting!</div>
+
+  {% if show_pollview %}
+  <div class="result-details">
+    <h3>Election Results:</h3>
+    {% for position, candidates in results_by_position.items() %}
+    <div class="header" style="padding-top: 30px; padding-bottom: 10px;">
+      <h5>{{ position }}</h5>
+      <div class="chart-container">
+        <canvas id="chart-{{ loop.index }}"></canvas>
+      </div>
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      <script>
+        var ctx = document.getElementById('chart-{{ loop.index }}').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: [{% for name, count in candidates %}'{{ name }}',{% endfor %}],
+                datasets: [{
+                    label: '# of Votes',
+                    data: [{% for name, count in candidates %}{{ count }},{% endfor %}],
+                    backgroundColor: 'rgba(54, 162, 235, 0.5)',
+                    borderColor: 'rgba(54, 162, 235, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+      </script>
+            <div class="metric-container">
+                <h6>Top Candidates:</h6>
+                {% for name, count in candidates[:3] %}
+                <div class="card">
+                  <h5 class="card-title">{{ name }}</h5>
+                  <p class="card-text">Votes: {{ count }}</p>
+                </div>
+                {% endfor %}
+              </div>
+    </div>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  {% if show_voterview and anonymous == 0 %}
+  <div class="voter-details">
+    <h3>Voters:</h3>
+    <div class="list-section">
+      {% for voter in voter_list %}
+        <p>{{ voter.email }}</p>
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+</div>
+{% endblock %}

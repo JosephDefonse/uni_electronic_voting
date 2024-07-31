@@ -1,0 +1,272 @@
+<head>
+    <meta charset="UTF-8">
+    <title>Dropdown Test</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<style>
+    /* Add additional custom styles if needed */
+    .search-bar {
+        margin-bottom: 20px;
+    }
+    .control-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .control-row > .search-bar {
+        flex-grow: 1;
+        margin-right: 15px;
+    }
+</style>
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
+<script>
+
+    const firebaseConfig = {
+            apiKey: "AIzaSyDMRV1SqGWXWWHblOI1eGPjNMhwrzl5iUg",
+            authDomain: "electronicvoting-56d81.firebaseapp.com",
+            projectId: "electronicvoting-56d81",
+            storageBucket: "electronicvoting-56d81.appspot.com"
+        };
+
+    // Initialize Firebase
+    const app = firebase.initializeApp(firebaseConfig);
+    const auth = firebase.auth();
+
+    function signOut() {
+        console.log("signing out...");
+        firebase.auth().signOut().then(() => {
+            window.location.href = '/home_logout';
+        }).catch((error) => {
+            console.error('Sign out failed:', error);
+        });
+    }  // Corrected by adding this closing brace
+</script>
+
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/app">Election Dashboard</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/app">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/app/settings">Settings</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/app/analysis">Analysis</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="btn btn-outline-primary" href="javascript:void(0);" onclick="signOut()">Sign Out</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+<div class="container">
+    <h1 class="text-center my-4">Election Dashboard</h1>
+
+    <div class="search-bar">
+        <input type="text" id="searchInput" class="form-control" placeholder="Search by election title...">
+    </div>
+
+    <div class="control-row">
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="statusDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Filter by status...
+            </button>
+            <div class="dropdown-menu" aria-labelledby="statusDropdown">
+                <a class="dropdown-item" href="#">None</a>
+                <a class="dropdown-item" href="#">Closed</a>
+                <a class="dropdown-item" href="#">Building</a>
+                <a class="dropdown-item" href="#">Open</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Date (ascending)</a>
+                <a class="dropdown-item" href="#">Date (descending)</a>
+            </div>
+        </div>
+
+        <a href="/app/create_election" class="btn btn-primary">Create Election</a>
+    </div>
+
+    <div class="dropdown mb-4">
+
+        <div class="dropdown-menu" aria-labelledby="statusDropdown">
+            <a class="dropdown-item" href="#">Closed</a>
+            <a class="dropdown-item" href="#">Building</a>
+            <a class="dropdown-item" href="#">Open</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Date (ascending)</a>
+            <a class="dropdown-item" href="#">Date (descending)</a>
+        </div>
+
+    </div>
+
+    <div id="electionCards" class="row">
+        {% for election in elections %}
+        <a href="/election/{{ election.election_id }}/" class="col-md-4 mb-3">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">{{ election.election_name }}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Status: {{ election.status }}</h6>
+                    <p class="card-text">Start Date: {{ election.start_date.strftime('%Y-%m-%d %H:%M') }}</p>
+                    <p class="card-text">End Date: {{ election.end_date.strftime('%Y-%m-%d %H:%M') }}</p>
+                </div>
+            </div>
+        </a>
+        {% endfor %}
+    </div>
+
+    <!-- Pagination -->
+    <nav aria-label="Election pagination">
+        <ul class="pagination justify-content-center">
+            <li class="page-item disabled">
+                <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+                <a class="page-link" href="#">Next</a>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', (event) => {
+    const cardsPerPage = 5;
+    let currentCards = [];
+    const cardsContainer = document.querySelector('#electionCards');
+    const cards = Array.from(cardsContainer.getElementsByClassName('col-md-4 mb-3'));
+    const paginationElement = document.querySelector('.pagination');
+    const searchInput = document.getElementById('searchInput');
+    const dropdownItems = document.querySelectorAll('.dropdown-item');
+    const cards2 = document.querySelectorAll('.clickable-card');
+
+    function setupPagination(cards) {
+        paginationElement.innerHTML = "";
+        let pageCount = Math.ceil(cards.length / cardsPerPage);
+        for (let i = 1; i <= pageCount; i++) {
+            let pageLink = document.createElement('a');
+            pageLink.classList.add('page-link');
+            pageLink.href = '#';
+            pageLink.innerText = i;
+            pageLink.addEventListener('click', function (e) {
+                e.preventDefault();
+                displayPage(i, cards);
+            });
+
+            let pageItem = document.createElement('li');
+            pageItem.classList.add('page-item');
+            if (i === 1) pageItem.classList.add('active');
+            pageItem.appendChild(pageLink);
+
+            paginationElement.appendChild(pageItem);
+        }
+    }
+
+    function displayPage(page, cardsToShow) {
+        const startIndex = (page - 1) * cardsPerPage;
+        const endIndex = startIndex + cardsPerPage;
+        cardsContainer.innerHTML = '';
+
+        currentCards = cardsToShow.slice(startIndex, endIndex);
+        currentCards.forEach(card => {
+            cardsContainer.appendChild(card);
+        });
+
+        Array.from(paginationElement.querySelectorAll('.page-item')).forEach((pageItem, index) => {
+            pageItem.classList.remove('active');
+        });
+        paginationElement.querySelectorAll('.page-item')[page - 1].classList.add('active');
+    }
+
+    function filterCards() {
+        const searchText = searchInput.value.toLowerCase();
+        const filteredCards = cards.filter(card => {
+            const title = card.querySelector('.card-title').textContent.toLowerCase();
+            return title.includes(searchText);
+        });
+
+        setupPagination(filteredCards);
+        displayPage(1, filteredCards);
+    }
+
+    function filterCardsByText(searchText) {
+        const filteredCards = cards.filter(card => {
+            const title = card.querySelector('.card-title').textContent.toLowerCase();
+            return title.includes(searchText);
+        });
+
+        setupPagination(filteredCards);
+        displayPage(1, filteredCards);
+    }
+
+    function filterCardsByStatus(statusText) {
+        let filteredCards;
+        if (statusText === "None") {
+            filteredCards = cards; // Show all cards if "None" is selected
+        } else {
+            filteredCards = cards.filter(card => {
+                return card.querySelector('.card-subtitle').textContent.includes(statusText);
+            });
+        }
+
+        setupPagination(filteredCards);
+        displayPage(1, filteredCards);
+    }
+
+    function sortCardsByDate(direction) {
+        cards.sort((a, b) => {
+            let dateA = new Date(a.querySelector('.card-text').textContent.split(': ')[1]);
+            let dateB = new Date(b.querySelector('.card-text').textContent.split(': ')[1]);
+            return direction === 'ascending' ? dateA - dateB : dateB - dateA;
+        });
+        setupPagination(cards);
+        displayPage(1, cards);
+    }
+
+    function setupDropdownItems() {
+        dropdownItems.forEach(item => {
+            item.addEventListener('click', function() {
+                console.log('Selected:', this.textContent);
+                if (this.textContent.includes('Date (ascending)')) {
+                    sortCardsByDate('ascending');
+                } else if (this.textContent.includes('Date (descending)')) {
+                    sortCardsByDate('descending');
+                } else {
+                    filterCardsByStatus(this.textContent);
+                }
+            });
+        });
+    }
+
+    cards2.forEach(card => {
+        card.addEventListener('click', function() {
+            const electionId = this.getAttribute('data-id');
+            window.location.href = `/election/${electionId}/`;
+        });
+    });
+
+    searchInput.addEventListener('keyup', filterCards);
+
+    setupPagination(cards);
+    displayPage(1, cards); // Display the first page initially
+    setupDropdownItems(); // Set up dropdown items event listeners
+});
+
+</script>
+
+</body>

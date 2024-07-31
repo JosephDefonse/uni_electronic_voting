@@ -1,0 +1,420 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}Electronic Voting{% endblock %}</title>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      .metric-box {
+        margin: 10px;
+        padding: 10px;
+      }
+      .footer-nav {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background: #f8f9fa;
+        border-top: 1px solid #e0e0e0;
+      }
+      .top-navbar {
+        z-index: 1;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: #f8f9fa;
+        color: #f8f9fa;
+        border-bottom: 1px solid #e0e0e0;
+        height: 8%;
+      }
+
+      /* Additional styles */
+
+      .header-with-icon {
+        position: relative;
+        padding-right: 60px; /* Provide space for the icon */
+      }
+
+      .add-icon {
+        position: absolute;
+        top: 0;
+        right: 20px; /* Adjust based on actual layout */
+        width: 35px; /* Adjust size as needed */
+        height: 35px; /* Adjust size as needed */
+      }
+
+      .footer-nav .nav-link {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-decoration: none;
+        color: #929495; /* Default color */
+      }
+
+      .footer-nav .nav-link.active {
+        color: black; /* Active color */
+      }
+
+      .footer-nav .nav-link img {
+        width: 24px; /* Adjust size as needed */
+        height: 24px; /* Adjust size as needed */
+        margin-bottom: 4px; /* Space between icon and label */
+        color: black; /* Default color */
+      }
+    </style>
+    {% block styles %}{% endblock %}
+  </head>
+  <body>
+    <!-- <form id="myForm" action="{{ url_for('submit_form') }}" method="post" onsubmit="return validateForm()"> -->
+    <div
+      class="top-navbar"
+      style="
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 10px;
+        background-color: #f8f9fa;
+        border-bottom: 1px solid #e0e0e0;
+      "
+    >
+      <!-- Conditionally display the plus icon only on 'Home' and 'Subjects' pages -->
+      {% if active_page in ['ballots'] %}
+
+      <a
+        class="nav-link"
+        href="/election/{{ election_id }}"
+        style="flex: 1; visibility: hidden"
+      >
+        <img
+          src="{{ url_for('static', filename='images/back.png') }}"
+          alt="Back"
+          style="max-height: 100%; max-width: 10px"
+        />
+      </a>
+
+      <!-- Title in the middle -->
+      <h1 style="flex: 2; text-align: center; margin: 0; z-index: 1; color: black; font-size: 25px;">
+        {% if active_page == 'home' %} Home
+        {% elif active_page == 'ballots' %} Ballot
+        {% elif active_page == 'candidate' %} New Candidate
+        {% elif active_page == 'edit_candidate' %} Edit Candidate
+        {% elif active_page == 'voters' %} Voters
+        {% elif active_page == 'visuals' %} Polls
+        {% elif active_page == 'acknowledgements' %} Acknowledgements
+        {% else %} {{ active_page | capitalize }}
+        {% endif %}
+      </h1>
+      <a
+        id="newCandidateLink"
+        class="nav-link"
+        href="#"
+        style="flex: 1; text-align: right"
+      >
+        <img
+        src="{% if active_page == 'home' %}{{ url_for('static', filename='images/settings.png') }}{% elif active_page == 'ballots' %}{{ url_for('static', filename='images/plus.png') }}{% endif %}"
+        alt="{% if active_page == 'home' %}visuals{% elif active_page == 'ballots' %}Add{% endif %}"
+        class="add-icon"
+        style="margin-top: 10px"
+      />
+      </a>
+      {% endif %}
+
+      {% if active_page == 'home' %}
+      <a class="nav-link" href="/app" style="flex: 1">
+        <img
+          src="{{ url_for('static', filename='images/back.png') }}"
+          alt="Back"
+          style="max-height: 100%; max-width: 10px"
+        />
+      </a>
+
+      <!-- Title in the middle -->
+      <h1
+        style="
+          flex: 2;
+          text-align: center;
+          margin: 0;
+          z-index: 1;
+          color: black;
+          font-size: 25px;
+        "
+      >
+        Home
+      </h1>
+
+      <a
+        id="newCandidateLink"
+        class="nav-link"
+        href="#"
+        style="flex: 1; text-align: right; visibility: hidden"
+      >
+        <img
+          src="{{ url_for('static', filename='images/plus.png') }}"
+          alt="Add"
+          class="add-icon"
+          style="margin-top: 10px"
+        />
+      </a>
+      {% endif %}
+
+
+
+      <!-- Display a button only on the 'Candidate' page -->
+      {% if active_page == 'candidate' %}
+      <!-- Back arrow on the left -->
+      <a class="nav-link" href="/election/{{ election_id }}/ballots" style="flex: 1">
+        <img
+          src="{{ url_for('static', filename='images/back.png') }}"
+          alt="Back"
+          style="max-height: 100%; max-width: 10px"
+        />
+      </a>
+
+      <!-- Title in the middle -->
+      <h1
+        style="
+          flex: 2;
+          text-align: center;
+          margin: 0;
+          z-index: 1;
+          color: black;
+          font-size: 25px;
+        "
+      >
+        New Candidate
+      </h1>
+
+      <button
+        id="saveButton"
+        type="submit"
+        class="nav-link"
+        style="
+          flex: 1;
+          text-align: right;
+          width: 10%;
+          border: none;
+          background: transparent;
+        "
+      >
+        Save
+      </button>
+      {% endif %}
+
+      {% if active_page == 'visuals' %}
+
+      <a
+        class="nav-link"
+        href="/election/{{ election_id }}"
+        style="flex: 1; visibility: hidden"
+      >
+        <img
+          src="{{ url_for('static', filename='images/back.png') }}"
+          alt="Back"
+          style="max-height: 100%; max-width: 10px"
+        />
+      </a>
+
+      <!-- Title in the middle -->
+      <h1
+        style="
+          flex: 2;
+          text-align: center;
+          margin: 0;
+          z-index: 1;
+          color: black;
+          font-size: 25px;
+        "
+      >
+        Polls
+      </h1>
+
+      <a
+        id="newCandidateLink"
+        class="nav-link"
+        href="#"
+        style="flex: 1; text-align: right; visibility: hidden"
+      >
+        <img
+          src="{{ url_for('static', filename='images/plus.png') }}"
+          alt="Add"
+          class="add-icon"
+          style="margin-top: 10px"
+        />
+      </a>
+      {% endif %}
+
+      {% if active_page == 'voters' %}
+
+      <a
+        class="nav-link"
+        href="/election/{{ election_id }}"
+        style="flex: 1; visibility: hidden"
+      >
+        <img
+          src="{{ url_for('static', filename='images/back.png') }}"
+          alt="Back"
+          style="max-height: 100%; max-width: 10px"
+        />
+      </a>
+
+      <!-- Title in the middle -->
+      <h1
+        style="
+          flex: 2;
+          text-align: center;
+          margin: 0;
+          z-index: 1;
+          color: black;
+          font-size: 25px;
+        "
+      >
+        Voters
+      </h1>
+
+      <a
+        id="newCandidateLink"
+        class="nav-link"
+        href="#"
+        style="flex: 1; text-align: right; visibility: hidden"
+      >
+        <img
+          src="{{ url_for('static', filename='images/plus.png') }}"
+          alt="Add"
+          class="add-icon"
+          style="margin-top: 10px"
+        />
+      </a>
+      {% endif %}
+
+      {% if active_page == 'edit_candidate' %}
+      <a class="nav-link" href="/election/{{ election_id }}/ballots" style="flex: 1">
+        <img
+          src="{{ url_for('static', filename='images/back.png') }}"
+          alt="Back"
+          style="max-height: 100%; max-width: 10px"
+        />
+      </a>
+
+      <!-- Title in the middle -->
+      <h1
+        style="
+          flex: 2;
+          text-align: center;
+          margin: 0;
+          z-index: 1;
+          color: black;
+          font-size: 25px;
+        "
+      >
+        Edit Candidate
+      </h1>
+
+      <a
+        id="newCandidateLink"
+        class="nav-link"
+        href="#"
+        style="flex: 1; text-align: right; visibility: hidden"
+      >
+        <img
+          src="{{ url_for('static', filename='images/plus.png') }}"
+          alt="Add"
+          class="add-icon"
+          style="margin-top: 10px"
+        />
+      </a>
+      {% endif %}
+
+    </div>
+
+    <div style="background-color: #f6f6f6">
+      {% block content %}{% endblock %}
+      <div style="padding-top: 200px; background-color: #f8f9fa"></div>
+    </div>
+
+    <div class="footer-nav">
+      <!-- Bootstrap Navbar or custom footer navigation -->
+      <nav class="nav justify-content-around">
+        <a
+          id="dashboardLink"
+          class="nav-link {{ 'active' if active_page == 'home' else '' }}"
+        >
+          <img
+            src="{{ url_for('static', filename='images/home' + ('_inactive' if active_page != 'home' else '') + '.png') }}"
+            alt="Home"
+          />
+          Dashboard
+        </a>
+        <a
+          id="ballotsLink"
+          class="nav-link {{ 'active' if active_page == 'ballots' else '' }}"
+          href="/election/{{ election_id }}/ballots"
+        >
+          <img
+            src="{{ url_for('static', filename='images/ballot' + ('_inactive' if active_page != 'ballots' else '') + '.png') }}"
+            alt="ballot"
+          />
+          Ballot
+        </a>
+        <a
+          id="votersLink"
+          class="nav-link {{ 'active' if active_page == 'voters' else '' }}"
+          href="/election/{{ election_id }}/voters"
+        >
+          <img src="{{ url_for('static', filename='images/voters' + ('_inactive' if active_page != 'voters' else '') + '.png') }}" alt="voters"/>
+          Voters
+        </a>
+        <a
+          id="pollsLink"
+          class="nav-link {{ 'active' if active_page == 'visuals' else '' }}"
+          href="/election/{{ election_id }}/polls"
+        >
+          <img
+            src="{{ url_for('static', filename='images/visual' + ('_inactive' if active_page != 'visuals' else '') + '.png') }}"
+            alt="visuals"
+          />
+          Polls
+        </a>
+      </nav>
+    </div>
+    <!-- </form> -->
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+          const electionId = localStorage.getItem('election_id'); // Retrieve election_id from local storage
+          console.log('Election ID:', electionId); // Example of using it
+          const dashboardLink = document.getElementById('dashboardLink');
+          const ballotsLink = document.getElementById('ballotsLink');
+          const votersLink = document.getElementById('votersLink');
+          const pollsLink = document.getElementById('pollsLink');
+          const newCandidateLink = document.getElementById('newCandidateLink'); // Get the new candidate link
+
+          if (electionId) {
+              dashboardLink.href = '/election/' + electionId; // Set the href attribute
+              ballotsLink.href = '/election/' + electionId + '/ballots'; // Set the href attribute
+              votersLink.href = '/election/' + electionId + '/voters'; // Set the href attribute
+              pollsLink.href = '/election/' + electionId + '/polls'; // Set the href attribute
+              newCandidateLink.href = '/election/' + electionId + '/ballots/candidate'; // Set the href for the new candidate link
+          }
+      });
+
+    </script>
+
+
+
+    <!-- Bootstrap JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <!-- Firebase JS SDK -->
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
+  </body>
+</html>

@@ -1,0 +1,202 @@
+{% extends 'base.html' %}
+
+{% block title %}New Ballot{% endblock %}
+
+{% block styles %}
+<style>
+  /* Add your existing styles from base.html */
+
+  .header {
+        text-align: left;
+        padding-left: 30px;
+        padding-top: 65px;
+        padding-bottom: 20px;
+        background-color: #f8f9fa; /* Light gray background */
+    }
+
+  label {
+    display: block;
+    margin-top: 20px;
+  }
+
+  input[type="text"], select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  .toggle-switch {
+    margin: 10px 0;
+  }
+
+  .toggle-switch input {
+    display: none;
+  }
+
+  .toggle-switch label {
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    background-color: #f6f6f6;
+    cursor: pointer;
+  }
+
+  .toggle-switch input:checked + label {
+    background-color: #007bff;
+    color: white;
+  }
+
+  .form-section {
+    background-color: #f6f6f6;
+    padding: 20px;
+    margin-bottom: 10px;
+  }
+
+  .form-section:last-of-type {
+    margin-bottom: 0;
+  }
+
+  .save-button {
+    float: right;
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .btn-group {
+  display: flex;
+  justify-content: start;
+  z-index: 0; /* Increase the z-index so it's above the page content */
+}
+
+.btn {
+  cursor: pointer;
+  margin-right: 10px; /* Add some space between buttons */
+  border: 1px solid #ccc;
+  background-color: #fff;
+  padding: 10px 20px;
+  user-select: none; /* Prevent text selection */
+}
+
+.btn input[type="radio"] {
+  display: none; /* Hide the actual radio button */
+}
+
+.btn.active,
+.btn:active {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+.hidden {
+    display: none;
+  }
+
+</style>
+<script>
+  // Check if user is authenticated. This should ideally be determined by checking a session variable set by your backend
+  document.addEventListener('DOMContentLoaded', function() {
+      const election_id = localStorage.getItem('election_id');
+      const form = document.getElementById('new-candidate-form');
+
+      if (election_id) {
+          console.log(election_id);  // Check if it's retrieved properly
+          form.classList.remove('hidden');
+          form.action = `{{ url_for('edit_candidate', ballot_id=candidate.ballot_id, election_id=candidate.election_id) }}`;
+      } else {
+          // Handle the case where election_id is not set
+          console.log("No election_id found in localStorage.");
+          // Optionally hide or disable form submission here
+      }
+  });
+</script>
+
+
+{% endblock %}
+
+{% block content %}
+<div>
+  <form id="new-candidate-form" class="hidden" action="" method="post">
+    <div class="form-section" style="padding-top: 80px;">
+        <!-- Include existing form elements here -->
+
+        <!-- New Input Fields -->
+        <label for="first-name">First Name:</label>
+        <input type="text" id="first-name" name="student_first_name" value="{{ candidate.first_name }}" required maxlength="255">
+
+        <label for="last-name">Last Name:</label>
+        <input type="text" id="last-name" name="student_last_name" value="{{ candidate.last_name }}" required maxlength="255">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="student_email" value="{{ candidate.email }}" required maxlength="255" pattern=".+@.+">
+
+        <label for="faculty">Faculty:</label>
+        <select id="faculty" name="faculty" required>
+            <option value="Arts" {% if candidate.faculty == 'Arts' %}selected{% endif %}>Arts</option>
+            <option value="Business and Economics" {% if candidate.faculty == 'Business and Economics' %}selected{% endif %}>Business and Economics</option>
+            <option value="Education" {% if candidate.faculty == 'Education' %}selected{% endif %}>Education</option>
+            <option value="Engineering" {% if candidate.faculty == 'Engineering' %}selected{% endif %}>Engineering</option>
+            <option value="Information Technology" {% if candidate.faculty == 'Information Technology' %}selected{% endif %}>Information Technology</option>
+            <option value="Law" {% if candidate.faculty == 'Law' %}selected{% endif %}>Law</option>
+            <option value="Medicine/Nursing" {% if candidate.faculty == 'Medicine/Nursing' %}selected{% endif %}>Medicine/Nursing</option>
+            <option value="Pharmacy" {% if candidate.faculty == 'Pharmacy' %}selected{% endif %}>Pharmacy</option>
+            <option value="Science" {% if candidate.faculty == 'Science' %}selected{% endif %}>Science</option>
+        </select>
+
+        <label for="degree">Degree:</label>
+        <input type="text" id="degree" name="degree" required maxlength="255" value="{{ candidate.degree }}">
+
+        <label for="year">Year Level:</label>
+        <input type="number" id="year" name="year" required min="1" value="{{ candidate.year }}">
+
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender" required>
+            <option value="M" {% if candidate.gender == 'M' %}selected{% endif %}>Male</option>
+            <option value="F" {% if candidate.gender == 'F' %}selected{% endif %}>Female</option>
+            <option value="Other" {% if candidate.gender == 'Other' %}selected{% endif %}>Other</option>
+        </select>
+
+        <label for="ethnicity">Ethnicity:</label>
+        <select id="ethnicity" name="ethnicity" required>
+          <option value="Asian" {% if candidate.ethnicity == 'Asian' %}selected{% endif %}>Asian</option>
+          <option value="Black/African" {% if candidate.ethnicity == 'Black/African' %}selected{% endif %}>Black/African</option>
+          <option value="Caucasian" {% if candidate.ethnicity == 'Caucasian' %}selected{% endif %}>Caucasian</option>
+          <option value="Hispanic/Latinx" {% if candidate.ethnicity == 'Hispanic/Latinx' %}selected{% endif %}>Hispanic/Latinx</option>
+          <option value="Native American" {% if candidate.ethnicity == 'Native American' %}selected{% endif %}>Native American</option>
+          <option value="Pacific Islander" {% if candidate.ethnicity == 'Pacific Islander' %}selected{% endif %}>Pacific Islander</option>
+          <option value="Mixed Race" {% if candidate.ethnicity == 'Mixed Race' %}selected{% endif %}>Mixed Race</option>
+          <option value="Other" {% if candidate.ethnicity == 'Other' %}selected{% endif %}>Other</option>
+         </select>
+
+      <label for="position">Position:</label>
+      <select id="position" name="position" required>
+        <option value="President" {% if candidate.position == 'President' %}selected{% endif %}>President</option>
+        <option value="Vice President" {% if candidate.position == 'Vice President' %}selected{% endif %}>Vice President</option>
+        <option value="Secretary" {% if candidate.position == 'Secretary' %}selected{% endif %}>Secretary</option>
+        <option value="Treasurer" {% if candidate.position == 'Treasurer' %}selected{% endif %}>Treasurer</option>
+
+        <!-- Submit Button -->
+        <input type="submit" value="Save" class="save-button">
+    </div>
+</form>
+</div>
+
+<script>
+document.getElementById('new-candidate-form').addEventListener('submit', function(event) {
+    var email = document.getElementById('email').value;
+    if (!email.includes('@')) {
+        alert('Email must contain an @ symbol.');
+        event.preventDefault(); // Prevent form submission
+    }
+});
+</script>
+{% endblock %}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Election</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<style>
+    .form-container {
+        max-width: 600px;
+        margin: 20px auto;
+        padding: 20px;
+    }
+    .form-control,
+    .btn {
+        border-radius: 0;
+    }
+    .checkbox-group {
+        margin-bottom: 20px;
+    }
+    .checkbox-group label {
+        margin-right: 20px;
+    }
+</style>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/app">Election Dashboard</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="/app">Dashboard</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/app/settings">Settings</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/app/analysis">Analysis</a>
+            </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="btn btn-outline-primary" href="#">Log Out</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="form-container">
+        <h4>Create New Election</h4>
+        <form action="/app/create_election" method="post">
+            <div class="form-group">
+                <label for="electionName">Election Name</label>
+                <input type="text" class="form-control" id="electionName" name="election_name" required>
+            </div>
+            <div class="form-group">
+                <label for="electionDescription">Election Description</label>
+                <textarea class="form-control" id="electionDescription" name="election_description" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="startDate">Start Date</label>
+                <input type="datetime-local" class="form-control" id="startDate" name="start_date" required>
+            </div>
+            <div class="form-group">
+                <label for="endDate">End Date</label>
+                <input type="datetime-local" class="form-control" id="endDate" name="end_date" required>
+            </div>
+            <div class="form-group">
+                <label for="electionType">Election Type</label>
+                <select class="form-control" id="electionType" name="election_type" required>
+                    <option value="Standard">Standard</option>
+                    <option value="Preferential">Preferential</option>
+                </select>
+            </div>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="randomisation" value="1"> Randomisation</label>
+                <label><input type="checkbox" name="anonymous" value="1"> Anonymous</label>
+                <label><input type="checkbox" name="pollview" value="1"> Poll View</label>
+                <label><input type="checkbox" name="voterview" value="1"> Voter View</label>
+                <label><input type="checkbox" name="info_extra" value="1"> Info Extra</label>
+            </div>
+            <div class="form-group">
+                <label for="status">Status</label>
+                <select class="form-control" id="status" name="status" required>
+                    <option value="Open">Open</option>
+                    <option value="Closed">Closed</option>
+                    <option value="Building">Building</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

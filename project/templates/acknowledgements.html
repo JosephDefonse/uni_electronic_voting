@@ -1,0 +1,47 @@
+{% extends 'base.html' %} {% block title %}Settings - Academica{% endblock %} {%
+block styles %}
+<style>
+  .settings-header {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #f8f9fa;
+  }
+  .settings-header img {
+    width: 80px; /* Adjust as needed */
+    height: 80px; /* Adjust as needed */
+    margin-bottom: 20px;
+    background-color: #f8f9fa;
+  }
+  .settings-option {
+    background: #fff;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .settings-option:last-child {
+    border-bottom: none;
+  }
+  /* Additional styles for icons and active state can be added here */
+</style>
+{% endblock %} {% block content %}
+
+<div class="list-group" style="padding: 20px; padding-top: 100px">
+  <div class="header">
+    <h7 style="color: #7f7f82">Created by:</h7>
+  </div>
+
+  <div class="metric-container">
+    <div class="card">
+      <div class="card-body">
+        <h3 class="card-title">Shean De Fonseka</h3>
+        <p class="card-text">Student at Monash University</p>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

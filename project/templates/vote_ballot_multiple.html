@@ -1,0 +1,280 @@
+{% block content %}
+<style>
+  body, html {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+  }
+
+  .container {
+    width: 80%;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+
+  h1, h2 {
+    color: #333;
+    text-align: center;
+    padding-bottom: 10px;
+  }
+
+  .position-section h2 {
+    color: #444;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+  }
+
+  .candidate-list {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .candidate-list li {
+    padding: 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .candidate-controls {
+    display: flex;
+  }
+
+  .btn {
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+
+  .btn-primary {
+    background-color: #4CAF50;
+    color: white;
+  }
+
+  .btn-secondary {
+    background-color: #c8c8c8;
+    color: white;
+  }
+
+  .navigation-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+  }
+
+  .error-message {
+    color: red;
+    display: none;
+  }
+  .rank-display {
+  font-weight: bold;
+  color: red;
+  width: 20px; /* or as needed */
+}
+
+.candidate-item {
+  display: flex;
+  align-items: left;
+}
+</style>
+
+<div class="container">
+  <h1> {{ club_name }} - {{ election_name }}</h1>
+  <p>Please order candidates from most to least preferred using the buttons.</p>
+
+  <form id="votingForm" action="{{ url_for('submit_vote_multiple', token=token) }}" method="post">
+    {% for position, candidates in position_groups.items() %}
+    <div class="position-section" id="section-{{ loop.index }}" {% if loop.index > 1 %}style="display: none;"{% endif %}>
+      <h2>{{ position }}</h2>
+      <ul class="candidate-list" id="list-{{ loop.index }}">
+        {% for candidate in candidates %}
+
+        <li id="{{ candidate.ballot_id }}">
+          <div class="rank-display">1</div>
+          {{ candidate.ballot_id }} {{ candidate.first_name }} {{ candidate.last_name }} - {{ candidate.faculty }}
+          <input type="hidden" name="{{ position }}_{{ candidate.ballot_id }}" value="1">
+          <div class="candidate-controls">
+            <button type="button" class="btn btn-secondary" onclick="moveCandidate('up', '{{ candidate.ballot_id }}')">Up</button>
+            <button type="button" class="btn btn-secondary" onclick="moveCandidate('down', '{{ candidate.ballot_id }}')">Down</button>
+          </div>
+        </li>
+
+        {% endfor %}
+      </ul>
+    </div>
+    {% endfor %}
+
+    <div class="navigation-buttons">
+      <div class="back-button">
+        <button type="button" class="btn btn-secondary" onclick="navigatePosition(-1)">Previous</button>
+      </div>
+      <div class="next-button">
+        <button type="button" class="btn btn-secondary" onclick="navigatePosition(1)">Next</button>
+      </div>
+    </div>
+
+    {% if info_extra == 1 and anonymous == 0 %}
+    <div class="additional-info" {% if position_groups|length > 1 %}style="display: none;"{% endif %}>
+      <h3>If you would like to share information about yourself to help our club, please fill in the input fields below.</h3>
+      <label for="first-name">First Name:</label>
+      <input type="text" id="first-name" name="first_name">
+
+      <label for="last-name">Last Name:</label>
+      <input type="text" id="last-name" name="last_name">
+
+      <label for="faculty">Faculty:</label>
+      <select id="faculty" name="faculty">
+          <option value="" selected>Select faculty...</option>
+          <option value="Arts">Arts</option>
+          <option value="Business and Economics">Business and Economics</option>
+          <option value="Education">Education</option>
+          <option value="Engineering">Engineering</option>
+          <option value="Information Technology">Information Technology</option>
+          <option value="Law">Law</option>
+          <option value="Medicine/Nursing">Medicine/Nursing</option>
+          <option value="Pharmacy">Pharmacy</option>
+          <option value="Science">Science</option>
+      </select>
+
+      <label for="degree">Degree:</label>
+      <input type="text" id="degree" name="degree">
+
+      <label for="year">Year:</label>
+      <input type="number" id="year" name="year">
+
+      <label for="gender">Gender:</label>
+      <select id="gender" name="gender">
+        <option value="" selected>Select gender...</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+        <option value="Other">Other</option>
+      </select>
+
+      <label for="ethnicity">Ethnicity:</label>
+      <select id="ethnicity" name="ethnicity">
+        <option value="" selected>Select ethnicity...</option>
+        <option value="Asian">Asian</option>
+        <option value="Black/African">Black/African</option>
+        <option value="Caucasian">Caucasian</option>
+        <option value="Hispanic/Latinx">Hispanic/Latinx</option>
+        <option value="Native American">Native American</option>
+        <option value="Pacific Islander">Pacific Islander</option>
+        <option value="Mixed Race">Mixed Race</option>
+        <option value="Other">Other</option>
+       </select>
+    </div>
+    {% endif %}
+
+    <button type="submit" class="btn btn-primary" id="submitVote" style="display: none; margin-top: 20px;">Submit Vote</button>
+  </form>
+</div>
+
+<script>
+  let currentSectionIndex = 1;
+  const totalSections = {{ position_groups|length }};
+  let ranking = []
+
+  function moveCandidate(direction, candidateId) {
+    const candidateLi = document.getElementById(candidateId);
+    if (!candidateLi) {
+      console.log("Candidate not found:", candidateId);
+      return; // Ensure the candidate element exists
+    }
+
+    console.log("Moving:", candidateId, "Direction:", direction);
+    const parentList = candidateLi.parentNode;
+    if (direction === 'up' && candidateLi.previousElementSibling) {
+      console.log("Moving up");
+      parentList.insertBefore(candidateLi, candidateLi.previousElementSibling);
+    } else if (direction === 'down' && candidateLi.nextElementSibling) {
+      console.log("Moving down");
+      parentList.insertBefore(candidateLi.nextElementSibling, candidateLi);
+    }
+    updateRankings();
+  }
+
+  function logCandidateRanking(sectionIndex) {
+  const list = document.getElementById('list-' + sectionIndex);
+  const candidates = list.querySelectorAll('li');
+
+  console.log(`Ranking for position ${sectionIndex}:`);
+  candidates.forEach((candidate, index) => {
+    position_candidate = {
+      'election_id': 1,
+      'student_id': 0,
+      'ballot_id': parseInt(candidate.id),
+      'rank': index + 1
+    }
+
+    ranking.push(position_candidate)
+
+    // console.log(`${index + 1}: ${candidate.textContent.trim()}`);
+    console.log(ranking)
+  });
+}
+
+function navigatePosition(direction) {
+  const currentSection = document.getElementById('section-' + currentSectionIndex);
+
+  // Log the ranking if going to the next section
+  if (direction === 1) {
+    logCandidateRanking(currentSectionIndex);
+  }
+  console.log(ranking)
+
+  currentSection.style.display = 'none';
+  currentSectionIndex += direction;
+
+  if (currentSectionIndex < 1) {
+    currentSectionIndex = 1;
+  } else if (currentSectionIndex > totalSections) {
+    console.log("Submitting form");
+    document.getElementById('votingForm').submit();
+  } else {
+    // Display the next section
+    const newSection = document.getElementById('section-' + currentSectionIndex);
+    newSection.style.display = 'block';
+  }
+
+  document.getElementById('submitVote').style.display = (currentSectionIndex === totalSections) ? 'block' : 'none';
+  document.querySelector('.next-button').style.display = (currentSectionIndex === totalSections) ? 'none' : 'flex';
+  document.querySelector('.additional-info').style.display = (currentSectionIndex === totalSections || totalSections === 1) ? 'block' : 'none';
+  // document.querySelector('.back-button').style.display = (currentSectionIndex === 1) ? 'none' : 'flex';
+
+  if (direction == -1) {
+    const list = document.getElementById('list-' + currentSectionIndex);
+    const candidates = list.querySelectorAll('li');
+    candidates.forEach((candidate, index) => {
+      ranking.pop()
+    });
+  }
+
+}
+
+function updateRankings() {
+  const allLists = document.querySelectorAll('.candidate-list');
+  allLists.forEach(list => {
+    let candidates = list.querySelectorAll('li');
+    candidates.forEach((candidate, index) => {
+      let rankDisplay = candidate.querySelector('.rank-display');
+      let hiddenInput = candidate.querySelector('input[type="hidden"]');
+      if (rankDisplay) {
+        rankDisplay.textContent = index + 1;
+        hiddenInput.value = index + 1;
+      }
+    });
+  });
+}
+
+updateRankings();
+
+</script>
+{% endblock %}

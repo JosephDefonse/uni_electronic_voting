@@ -1,0 +1,557 @@
+{% extends 'base.html' %}
+
+{% block title %}Home - Academica{% endblock %}
+
+{% block styles %}
+<!-- Existing styles plus any additional styles you want to include -->
+<style>
+  .header {
+    text-align: left;
+    padding-left: 30px;
+    padding-top: 80px;
+    padding-bottom: 20px;
+    background-color: #f8f9fa; /* Light gray background */
+  }
+  .metric-container {
+    padding: 20px;
+    background-color: #f8f9fa; /* Light gray background */
+    text-align: center; /* Center text for all containers */
+  }
+  .metric-box {
+    background-color: #ffff; /* White background */
+    border-radius: 8px; /* Rounded corners for the boxes */
+    margin-bottom: 20px; /* Spacing between boxes */
+    padding: 15px;
+    text-align: center; /* Center the text inside the boxes */
+  }
+  /* Additional styles */
+  .counter-box {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.1); /* Box shadow for depth */
+  }
+  .counter-box h3 {
+    margin: 5px 0;
+    color: #333; /* Darker font color for contrast */
+  }
+  .counter-box p {
+    margin: 0;
+    font-size: 1.5em; /* Larger font size for the counter */
+    font-weight: bold;
+  }
+  .date-container {
+    margin-top: 20px;
+    text-align: center; /* Center text for all containers */
+  }
+  .date-box {
+    margin: 10px 0;
+  }
+  .date-label {
+    font-weight: bold;
+    color: #555;
+  }
+  #myChart {
+    max-width: 1000px; /* Set a max-width as desired */
+    max-height: 1000px; /* Set a max-height as desired */
+    text-align: center;
+  }
+</style>
+{% endblock %}
+
+{% block content %}
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+<!-- Academic title -->
+<div class="full-width-background header">
+  <div class="content-container header-with-icon">
+    <h1>{{ club_name }}</h1>
+  </div>
+</div>
+
+<!-- Metric counters -->
+<div class="metric-container">
+  <div class="counter-box" style="background-color: #f0ad4e;"> <!-- Bootstrap warning color -->
+    <h3>Votes</h3>
+    <p>{{ voters_count }}</p>
+  </div>
+  <div class="counter-box" style="background-color: #d9534f;"> <!-- Bootstrap danger color -->
+    <h3>Candidates</h3>
+    <p>{{ ballot_questions_count }}</p>
+  </div>
+  <div class="counter-box" style="background-color: #5bc0de;"> <!-- Bootstrap info color -->
+    <h3>Positions</h3>
+    <p>{{ options_count }}</p>
+  </div>
+</div>
+
+<!-- Dates -->
+<div class="date-container">
+  <div class="date-container">
+    {% for key, value in election_data.items() %}
+    {% if key != 'token' %}
+    {% if key != 'candidate_token' %}
+    {% if key != 'uni_id' %}
+    {% if key != 'election_id' %}
+    <div class="date-box">
+      <span class="date-label">{{ key.replace('_', ' ') | capitalize }}:</span>
+      {% if key in ['election_name', 'election_description'] %}
+        <input type="text" class="value-field" id="{{ key }}" value="{{ value }}" readonly>
+      {% elif key in ['start_date', 'end_date'] %}
+        <!-- Using datetime-local for date and time selection -->
+        <input type="datetime-local" class="value-field" id="{{ key }}" value="{{ value | datetime }}" readonly>
+      {% elif key == 'election_type' %}
+        <select id="{{ key }}" class="value-field" disabled>
+          <option value="Standard" {% if value == 'Standard' %}selected{% endif %}>Standard</option>
+          <option value="Preferential" {% if value == 'Preferential' %}selected{% endif %}>Preferential</option>
+        </select>
+        {% elif key == 'status' %}
+        <select id="{{ key }}" class="value-field" disabled>
+          <option value="Open" {% if value == 'Open' %}selected{% endif %}>Open</option>
+          <option value="Building" {% if value == 'Building' %}selected{% endif %}>Building</option>
+          <option value="Closed" {% if value == 'Closed' %}selected{% endif %}>Closed</option>
+        </select>
+      {% else %}
+        <input type="text" class="value-field" id="{{ key }}" value="{{ value }}" readonly>
+      {% endif %}
+      <button class="edit-btn btn btn-secondary" onclick="editField('{{ key }}')">Edit</button>
+      <button class="save-btn btn btn-primary" onclick="saveField('{{ key }}')" style="display: none;">Save</button>
+    </div>
+    {% endif %}
+    {% endif %}
+    {% endif %}
+    {% endif %}
+    {% endfor %}
+  </div>
+</div>
+
+<div style="text-align: center; margin-top: 20px;">
+  <button onclick="generateLink()" class="btn btn-primary">Create a Link</button>
+  <input id="linkBox" type="text" value="{{token}}" style="margin-top: 10px; width: 300px;" readonly>
+  <button onclick="copyLink()" class="btn btn-secondary">Copy</button>
+  <button id="removeLink" onclick="removeLink()" class="btn btn-danger" style="display: none;">Remove Link</button>
+</div>
+
+<button id="removeAllVotesBtn" onclick="removeAllVotes()" class="btn btn-danger">Remove All Votes</button>
+
+<div style="text-align: center; margin-top: 20px;">
+  <button onclick="generateCandidateLink()" class="btn btn-primary">Create Candidate Link</button>
+  <input id="candidateLinkBox" type="text" value="{{candidate_token}}" style="margin-top: 10px; width: 300px;" readonly>
+  <button onclick="copyLink('candidateLinkBox')" class="btn btn-secondary">Copy</button>
+  <button id="removeCandidateLink" onclick="removeCandidateLink()" class="btn btn-danger" style="display: none;">Remove Link</button>
+</div>
+
+<title>Interactive Dashboard</title>
+
+<p> Voter's trait </p>
+<select id="x-axis" onchange="updateGraph()">
+  <option value="faculty">Faculty</option>
+  <option value="degree">Degree</option>
+  <option value="gender">Gender</option>
+  <option value="ethnicity">Ethnicity</option>
+  <option value="year">Year</option>
+</select>
+
+<p> and it influences the following Candidate's trait behaviour </p>
+<select id="y-axis" onchange="updateGraph()">
+  <option value="faculty">Faculty</option>
+  <option value="degree">Degree</option>
+  <option value="gender">Gender</option>
+  <option value="ethnicity">Ethnicity</option>
+  <option value="year">Year</option>
+</select>
+
+<div>
+  <canvas id="myChart"></canvas>
+</div>
+
+<div class="metric-container">
+  <table id="combinationTable" class="table">
+      <thead>
+          <tr>
+              <th>Feature X</th>
+              <th>Feature Y</th>
+              <th>X Value</th>
+              <th>Y Value</th>
+              <th>Votes</th>
+          </tr>
+      </thead>
+      <tbody>
+      </tbody>
+  </table>
+</div>
+
+<script>
+
+function fetchTableData() {
+      const electionId = localStorage.getItem('election_id');
+      fetch(`/table_data?election_id=${electionId}`)
+        .then(response => response.json())
+        .then(data => {
+            const table = document.getElementById('combinationTable').getElementsByTagName('tbody')[0];
+            table.innerHTML = ''; // Clear existing rows
+            data.forEach(row => {
+                const tr = document.createElement('tr');
+
+                const tdFeatureX = document.createElement('td');
+                tdFeatureX.textContent = row.feature_x;
+                tr.appendChild(tdFeatureX);
+
+                const tdFeatureY = document.createElement('td');
+                tdFeatureY.textContent = row.feature_y;
+                tr.appendChild(tdFeatureY);
+
+                // You need to dynamically access the properties based on feature_x and feature_y
+                const tdXValue = document.createElement('td');
+                tdXValue.textContent = row[row.feature_x];  // Use bracket notation to access the property name stored in feature_x
+                tr.appendChild(tdXValue);
+
+                const tdYValue = document.createElement('td');
+                tdYValue.textContent = row[row.feature_y];  // Use bracket notation to access the property name stored in feature_y
+                tr.appendChild(tdYValue);
+
+                const tdVotes = document.createElement('td');
+                tdVotes.textContent = row.votes;
+                tr.appendChild(tdVotes);
+
+                table.appendChild(tr);
+            });
+        })
+        .catch(error => {
+            console.error('Error loading table data:', error);
+        });
+}
+
+
+document.addEventListener('DOMContentLoaded', fetchTableData);
+
+let myChart;
+
+function updateGraph() {
+  const xAxis = document.getElementById('x-axis').value;
+  const yAxis = document.getElementById('y-axis').value;
+  const election_id = localStorage.getItem('election_id');
+
+  fetch(`/data?x=${xAxis}&y=${yAxis}&election_id=${election_id}`)
+    .then(response => response.json())
+    .then(data => {
+      const ctx = document.getElementById('myChart').getContext('2d');
+
+      // If a chart instance already exists, destroy it to prevent creating multiple instances
+      if (myChart) {
+        myChart.destroy();
+      }
+
+      myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: data.labels, // These will be the different ethnicities
+          datasets: data.datasets.map((dataset, index) => ({
+            label: dataset.label, // This will be each faculty
+            data: dataset.data, // This will be the counts for each ethnicity within the faculty
+            backgroundColor: generateBackgroundColor(index, data.datasets.length), // Call function to generate unique color
+            stack: 'Stack 0' // This tells Chart.js to stack the bars
+          }))
+        },
+        options: {
+          scales: {
+            x: {
+              stacked: true // This enables stacking on the x-axis
+            },
+            y: {
+              stacked: true // This enables stacking on the y-axis
+            }
+          },
+          plugins: {
+            legend: {
+              display: true
+            }
+          }
+        }
+      });
+      fetchTableData(xAxis, yAxis);
+    })
+    .catch(error => {
+      console.error('Error fetching data: ', error);
+    });
+}
+
+// Generate a unique color based on the index
+function generateBackgroundColor(index, total) {
+  const hue = index * (360 / total); // Create a unique hue value for each faculty
+  return `hsl(${hue}, 60%, 70%)`; // Adjust the saturation and lightness as needed
+}
+
+
+// Call updateGraph on page load to display the initial chart
+window.onload = updateGraph;
+</script>
+
+<script>
+
+function removeAllVotes() {
+    const election_id = localStorage.getItem('election_id'); // Assume election_id is stored in localStorage
+    if (confirm("Are you sure you want to remove all votes for this election?")) {
+        fetch('/remove_all_votes', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ election_id: election_id }) // Send election_id in the body
+        })
+        .then(response => response.json())
+        .then(data => {
+            alert(data.message);  // Display success message
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('Failed to remove all votes.');
+        });
+    }
+}
+
+function generateLink() {
+
+    const election_id = localStorage.getItem('election_id');  // Example, using localStorage
+
+    // Confirmation dialog before generating the link
+    if (confirm("Are you sure you want to create a new link?")) {
+        fetch('/generate_link', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ election_id: election_id })  // Send election_id in the body
+        })
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('linkBox').value = data.link;
+            document.getElementById('removeLink').style.display = 'inline'; // Show the Remove Link button
+        })
+        .catch(error => console.error('Error:', error));
+    } else {
+        // If user cancels, log a message or handle as needed
+        console.log("Link generation canceled by user.");
+    }
+}
+
+function generateCandidateLink() {
+
+const election_id = localStorage.getItem('election_id');  // Example, using localStorage
+
+// Confirmation dialog before generating the link
+if (confirm("Are you sure you want to create a new link?")) {
+    fetch('/generate_candidate_link', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ election_id: election_id })  // Send election_id in the body
+    })
+    .then(response => response.json())
+    .then(data => {
+        document.getElementById('candidateLinkBox').value = data.link;
+        document.getElementById('removeCandidateLink').style.display = 'inline'; // Show the Remove Link button
+    })
+    .catch(error => console.error('Error:', error));
+} else {
+    // If user cancels, log a message or handle as needed
+    console.log("Link generation canceled by user.");
+}
+}
+
+function checkLinkPresence() {
+    const linkBox = document.getElementById('linkBox');
+    const removeLinkBtn = document.getElementById('removeLink');
+    if (linkBox.value.trim() !== '') {
+        removeLinkBtn.style.display = 'inline'; // Show the Remove Link button
+    } else {
+        removeLinkBtn.style.display = 'none'; // Hide the Remove Link button
+    }
+}
+
+function candidateLinkBoxPresence() {
+    const candidateLinkBox = document.getElementById('candidateLinkBox');
+    const removeCandidateLink = document.getElementById('removeCandidateLink');
+    if (candidateLinkBox.value.trim() !== '') {
+      removeCandidateLink.style.display = 'inline'; // Show the Remove Link button
+    } else {
+      removeCandidateLink.style.display = 'none'; // Hide the Remove Link button
+    }
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    checkLinkPresence(); // Check on page load
+    candidateLinkBoxPresence()
+});
+
+function copyLink() {
+    const copyText = document.getElementById('linkBox');
+    copyText.select();
+    document.execCommand("copy");
+}
+
+function copyCandidateLink() {
+    const copyText = document.getElementById('candidateLinkBox');
+    copyText.select();
+    document.execCommand("copy");
+}
+
+function removeLink() {
+  if (confirm("Are you sure you want to remove this link?")) {
+
+    const election_id = localStorage.getItem('election_id');
+
+    fetch('/invalidate_token', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ election_id: election_id }) // Include the election_id in the body
+    })
+    .then(response => {
+      if (response.ok) {
+        document.getElementById('linkBox').value = ''; // Clear the input field
+        document.getElementById('removeLink').style.display = 'none'; // Hide the Remove Link button
+        alert('Link has been successfully removed.');
+      } else {
+        response.json().then(data => alert(data.error)); // Process error message
+      }
+    })
+    .catch(error => {
+      console.error('Error:', error);
+      alert('Failed to remove the link.');
+    });
+  }
+}
+
+function removeCandidateLink() {
+  if (confirm("Are you sure you want to remove this link?")) {
+
+    const election_id = localStorage.getItem('election_id');
+
+
+      fetch('/invalidate_candidate_token', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ election_id: election_id }) // Include the election_id in the body
+      })
+      .then(response => {
+        if (response.ok) {
+          // alert('Token has been invalidated successfully.');
+          document.getElementById('candidateLinkBox').value = ''; // Clear the input field
+          document.getElementById('removeCandidateLink').style.display = 'none'; // Hide the Remove Link button
+        } else {
+          response.json().then(data => alert(data.error)); // Process error message
+        }
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        alert('Failed to remove the link.');
+      });
+  }
+}
+
+function validateDates() {
+    const startDate = document.getElementById('start_date').value;
+    const endDate = document.getElementById('end_date').value;
+    if (startDate && endDate && new Date(startDate) > new Date(endDate)) {
+      alert('Start date must be earlier than end date.');
+      return false;
+    }
+    return true;
+}
+
+function validateField(fieldId, value) {
+  const fieldName = fieldId.replace('_', ' ');
+  if (fieldId === 'election_name' && value.length > 20) {
+    alert('Election name should only be 20 characters long.');
+    return false;
+  } else if (fieldId === 'election_description' && value.length > 50) {
+    alert('Election description should only be 50 characters long.');
+    return false;
+  } else if ((fieldId === 'start_date' || fieldId === 'end_date') && !value) {
+    alert(fieldName + ' is required.');
+    return false;
+  }
+
+  if (fieldId === 'end_date') {
+    const startDate = document.getElementById('start_date').value;
+    const endDate = document.getElementById('end_date').value;
+    if (startDate && endDate && new Date(startDate) > new Date(endDate)) {
+      alert('Start date must be earlier than end date.');
+      return false;
+    }
+  }
+  return true;
+}
+
+function editField(fieldId) {
+  const field = document.getElementById(fieldId);
+  const editBtn = field.parentNode.querySelector('.edit-btn');
+  const saveBtn = field.parentNode.querySelector('.save-btn');
+
+  field.removeAttribute(field.tagName.toLowerCase() === 'select' ? 'disabled' : 'readonly');
+
+  editBtn.style.display = 'none';
+  saveBtn.style.display = 'inline';
+  field.focus();
+}
+
+function saveField(fieldId) {
+  const field = document.getElementById(fieldId);
+  const value = field.value.trim();
+
+  // First validate the field
+  if (!validateField(fieldId, value) || !validateDates()) {
+    return; // Stop the save operation if validation fails
+  }
+
+  const editBtn = field.parentNode.querySelector('.edit-btn');
+  const saveBtn = field.parentNode.querySelector('.save-btn');
+
+  // Define the keys that should only accept '0' or '1'
+  const restrictedKeys = ['randomisation', 'anonymous', 'pollview', 'voterview', 'info_extra'];
+
+  // Validate values for restricted keys
+  if (restrictedKeys.includes(fieldId) && !['0', '1'].includes(value)) {
+    alert('Value must be 0 or 1.');
+    field.focus();
+    return; // Stop the save operation
+  }
+
+  // Assuming you have a Flask route set up at '/update_election_data' that accepts POST requests
+  fetch('/update_election_data', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ field: fieldId, value: value, election_id: localStorage.getItem('election_id') })
+  })
+  .then(response => response.json())
+  .then(data => {
+    console.log('Success:', data);
+    // Disable the field again after saving
+    field.setAttribute(field.tagName.toLowerCase() === 'select' ? 'disabled' : 'readonly', true);
+    saveBtn.style.display = 'none';
+    editBtn.style.display = 'inline';
+  })
+  .catch(error => {
+    console.error('Error:', error);
+    alert('Failed to save the changes.');
+  });
+}
+
+// Assume `election_id` is passed to the template and rendered here
+localStorage.setItem('election_id', '{{ election_id }}');
+
+</script>
+{% endblock %}

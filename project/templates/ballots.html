@@ -1,0 +1,167 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Election Ballot - Academica
+{% endblock %}
+
+{% block styles %}
+<style>
+  .header {
+    text-align: left;
+    padding-left: 30px;
+    padding-top: 65px;
+    padding-bottom: 20px;
+    background-color: #f8f9fa; /* Light gray background */
+  }
+  .metric-container {
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: #f8f9fa; /* Light gray background */
+    text-decoration: none; /* Remove underline */
+    color: black; /* Set text color to black */
+    display: block; /* or display: flex; based on your layout needs */
+    margin-bottom: 0; /* Adjust this as needed to reduce space between cards */
+  }
+  .card {
+    margin-bottom: 0; /* Remove any default margin */
+    /* Other styles for .card */
+  }
+  .metric-container a:hover {
+    text-decoration: none; /* Prevent underline on hover */
+    color: black; /* Maintain text color on hover */
+  }
+  .metric-box {
+    background-color: #ffff; /* Light gray background */
+    border-radius: 8px; /* Rounded corners for the boxes */
+    margin-bottom: 20px; /* Spacing between boxes */
+    padding: 15px;
+    text-align: center; /* Center the text inside the boxes */
+  }
+  @media (min-width: 768px) {
+    /* Adjustments for larger screens */
+    .metric-box {
+      margin: 0;
+      display: inline-block;
+      width: calc(50% - 20px); /* Half width minus margin */
+    }
+  }
+
+  .charts-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+
+  .chart-container {
+    flex-basis: calc(33% - 40px); /* for a 3x3 grid, adjust to 50% for a 2x2 grid */
+    margin: 20px;
+    box-sizing: border-box;
+  }
+
+  canvas {
+    width: 100%;
+    height: auto;
+  }
+
+  @media (max-width: 768px) {
+    .chart-container {
+      flex-basis: calc(50% - 40px); /* on smaller screens, switch to a 2x2 grid */
+    }
+  }
+</style>
+{% endblock %}
+
+{% block content %}
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<div class="header" style="padding-top: 100px">
+  <h2>Election Ballot</h2>
+</div>
+
+<div class="charts-grid">
+{% for trait, groups in traits.items() %}
+  <div class="chart-container">
+    <h3>{{ trait|capitalize }}</h3>
+    <canvas id="chart-{{ trait }}"></canvas>
+  </div>
+  <script>
+    var ctx = document.getElementById('chart-{{ trait }}').getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: 'pie', // or 'bar' or other types based on your preference
+        data: {
+            labels: {{ groups.keys()|list|tojson }},
+            datasets: [{
+                label: 'Number of Candidates',
+                data: {{ groups.values()|list|tojson }},
+                backgroundColor: [
+                  '#FF6384', // Red
+                  '#36A2EB', // Blue
+                  '#FFCE56', // Yellow
+                  '#4BC0C0', // Green
+                  '#9966FF', // Purple
+                  // Add more colors as needed, using hex values for full opacity
+                ],
+                borderColor: [
+                  '#FF6384',
+                  '#36A2EB',
+                  '#FFCE56',
+                  '#4BC0C0',
+                  '#9966FF',
+                  // Ensure borders are also opaque if they are shown
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: { beginAtZero: true }
+            }
+        }
+    });
+  </script>
+{% endfor %}
+</div>
+
+{% for position, candidates in position_groups.items() %}
+<div class="header" style="padding-top: 30px; padding-bottom: 10px;">
+  <h5>{{ position }}</h5>
+</div>
+{% for candidate in candidates %}
+<div class="metric-container" onclick="location.href='{{ url_for('edit_candidate', ballot_id=candidate.ballot_id, election_id=candidate.election_id) }}'" style="cursor: pointer;">
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">{{ candidate.ballot_id }} - {{ candidate.first_name }} {{ candidate.last_name }}</h5>
+      <p class="card-text">{{ candidate.position }}</p>
+    </div>
+  </div>
+</div>
+{% endfor %}
+{% endfor %}
+{% endblock %}
+
+<script>
+  function deleteSubject(unitCode, year) {
+    if (confirm("Are you sure you want to delete this subject?")) {
+      fetch("/delete_subject", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ unit_code: unitCode, year: year }),
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          if (data.success) {
+            window.location.reload(); // Reload the page to update the list
+          } else {
+            alert("Error deleting the subject: " + data.error);
+          }
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+          alert("An error occurred while deleting the subject.");
+        });
+    }
+  }
+</script>
