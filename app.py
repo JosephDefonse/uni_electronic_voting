@@ -25,7 +25,7 @@ load_dotenv()  # This loads the environment variables from .env
 db_config = {
     'host': 'localhost',
     'user': 'root',
-    'password': 'password123',
+    'password': 'monashpassword123',
     'database': 'electronic_voting'
 }
 
@@ -40,7 +40,7 @@ def create_connection():
     return connection
 
 # UNCOMMENT FOR TESTING
-# cred = credentials.Certificate("serviceAccountKey.json")
+cred = credentials.Certificate("serviceAccountKey.json")
 
 # COMMENT FOR TESTING
 # cred = credentials.Certificate({
