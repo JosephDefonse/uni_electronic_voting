@@ -9,58 +9,86 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 <style>
-    .settings-menu {
-        max-width: 300px;
-        margin: 0 auto;
-    }
-    .form-group {
-        margin-bottom: 20px;
-    }
-    .form-control,
-    .btn {
-        border-radius: 0;
+    body {
+        background-color: #f7f9fc;
+        font-family: Arial, sans-serif;
     }
 
-    /* Add additional custom styles if needed */
-    .search-bar {
+    .navbar {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .settings-menu {
+        max-width: 400px;
+        margin: 50px auto;
+        padding: 30px;
+        background-color: #ffffff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+    }
+
+    h4 {
+        font-weight: bold;
         margin-bottom: 20px;
+        color: #333;
     }
-    .control-row {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+
+    .form-group label {
+        font-weight: 600;
+        color: #555;
     }
-    .control-row > .search-bar {
-        flex-grow: 1;
-        margin-right: 15px;
+
+    .form-control {
+        border-radius: 5px;
+        border: 1px solid #ced4da;
+    }
+
+    .btn-primary {
+        background-color: #007bff;
+        border-color: #007bff;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
+    }
+
+    .btn-secondary {
+        background-color: #6c757d;
+        border-color: #6c757d;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px rgba(108, 117, 125, 0.2);
+    }
+
+    .btn-block {
+        padding: 10px;
+        font-size: 16px;
+        font-weight: bold;
     }
 </style>
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="/app">Election Dashboard</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="/app">Dashboard</a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="/app/settings">Settings</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/app/analysis">Analysis</a>
-                </li>
-            </ul>
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="btn btn-outline-primary" href="#">Log Out</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/app">Election Dashboard</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="/app">Dashboard</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="/app/settings">Settings</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/app/analysis">Analysis</a>
+            </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="btn btn-outline-primary" href="#">Log Out</a>
+            </li>
+        </ul>
+    </div>
+</nav>
 
 <div class="container">
     <div class="settings-menu">
@@ -75,9 +103,13 @@
         </div>
         <div class="form-group">
             <label for="userPhone">Phone Number</label>
-            <input type="text" class="form-control" id="phone_number" value="{{ phone_number }}" readonly>
-            <button class="btn btn-secondary" onclick="editField('phone_number')">Edit</button>
-            <button class="btn btn-primary" onclick="saveField('phone_number')" style="display: none;">Save</button>
+            <div class="input-group">
+                <input type="text" class="form-control" id="phone_number" value="{{ phone_number }}" readonly>
+                <div class="input-group-append">
+                    <button class="btn btn-secondary" onclick="editField('phone_number')">Edit</button>
+                    <button class="btn btn-primary" onclick="saveField('phone_number')" style="display: none;">Save</button>
+                </div>
+            </div>
         </div>
         <div class="form-group">
             <button class="btn btn-primary btn-block">Reset Password</button>
@@ -92,8 +124,8 @@
 <script>
 function editField(fieldId) {
     const field = document.getElementById(fieldId);
-    const editBtn = field.nextElementSibling;
-    const saveBtn = editBtn.nextElementSibling;
+    const editBtn = field.nextElementSibling.children[0];
+    const saveBtn = field.nextElementSibling.children[1];
 
     field.removeAttribute('readonly');  // Enable editing
     editBtn.style.display = 'none';
@@ -104,8 +136,8 @@ function saveField(fieldId) {
     const field = document.getElementById(fieldId);
     const value = field.value;
     const userEmail = document.getElementById('email').value;
-    const editBtn = field.nextElementSibling;
-    const saveBtn = editBtn.nextElementSibling;
+    const editBtn = field.nextElementSibling.children[0];
+    const saveBtn = field.nextElementSibling.children[1];
 
     // Post the data to the backend
     fetch('/update_user_info', {
@@ -117,7 +149,6 @@ function saveField(fieldId) {
     }).then(response => response.json())
       .then(data => {
           console.log(data);
-        //   alert('Phone number updated successfully!');
           field.setAttribute('readonly', true);  // Disable editing
           saveBtn.style.display = 'none';
           editBtn.style.display = 'inline';
