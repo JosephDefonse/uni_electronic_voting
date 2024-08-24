@@ -3,72 +3,128 @@
 {% block title %}Home - Academica{% endblock %}
 
 {% block styles %}
-<!-- Existing styles plus any additional styles you want to include -->
 <style>
   .header {
     text-align: left;
     padding-left: 30px;
     padding-top: 80px;
     padding-bottom: 20px;
-    background-color: #f8f9fa; /* Light gray background */
+    background-color: #f8f9fa;
   }
+
   .metric-container {
     padding: 20px;
-    background-color: #f8f9fa; /* Light gray background */
-    text-align: center; /* Center text for all containers */
+    background-color: #f8f9fa;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
   }
+
   .metric-box {
-    background-color: #ffff; /* White background */
-    border-radius: 8px; /* Rounded corners for the boxes */
-    margin-bottom: 20px; /* Spacing between boxes */
-    padding: 15px;
-    text-align: center; /* Center the text inside the boxes */
-  }
-  /* Additional styles */
-  .counter-box {
-    display: inline-flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 10px;
-    padding: 10px;
+    background-color: #ffffff;
     border-radius: 8px;
-    box-shadow: 0px 2px 4px rgba(0,0,0,0.1); /* Box shadow for depth */
+    padding: 15px;
+    width: 150px;
+    text-align: center;
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.1);
   }
+
   .counter-box h3 {
     margin: 5px 0;
-    color: #333; /* Darker font color for contrast */
+    color: #333;
   }
+
   .counter-box p {
     margin: 0;
-    font-size: 1.5em; /* Larger font size for the counter */
+    font-size: 1.5em;
     font-weight: bold;
   }
-  .date-container {
-    margin-top: 20px;
-    text-align: center; /* Center text for all containers */
+
+  .form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.1);
   }
-  .date-box {
-    margin: 10px 0;
+
+  .form-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
   }
-  .date-label {
+
+  .form-group label {
+    flex: 1;
+    margin-right: 10px;
     font-weight: bold;
     color: #555;
   }
-  #myChart {
-    max-width: 1000px; /* Set a max-width as desired */
-    max-height: 1000px; /* Set a max-height as desired */
+
+  .form-group input,
+  .form-group select {
+    flex: 2;
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+    padding: 8px;
+  }
+
+  .form-group button {
+    flex: 0 0 auto;
+    margin-left: 10px;
+  }
+
+  .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
+  }
+
+  .btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(108, 117, 125, 0.2);
+  }
+
+  .btn-danger {
+    margin-top: 20px;
+  }
+
+  .date-container {
+    margin-top: 20px;
     text-align: center;
+  }
+
+  .metric-container {
+    margin-top: 30px;
+  }
+
+  .select-container {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+  }
+
+  .select-container select {
+    width: 45%;
+  }
+
+  #myChart {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  table {
+    margin-top: 20px;
   }
 </style>
 {% endblock %}
 
 {% block content %}
-
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-
-<!-- Academic title -->
 <div class="full-width-background header">
   <div class="content-container header-with-icon">
     <h1>{{ club_name }}</h1>
@@ -77,42 +133,34 @@
 
 <!-- Metric counters -->
 <div class="metric-container">
-  <div class="counter-box" style="background-color: #f0ad4e;"> <!-- Bootstrap warning color -->
+  <div class="counter-box" style="background-color: #f0ad4e;">
     <h3>Votes</h3>
     <p>{{ voters_count }}</p>
   </div>
-  <div class="counter-box" style="background-color: #d9534f;"> <!-- Bootstrap danger color -->
+  <div class="counter-box" style="background-color: #d9534f;">
     <h3>Candidates</h3>
     <p>{{ ballot_questions_count }}</p>
   </div>
-  <div class="counter-box" style="background-color: #5bc0de;"> <!-- Bootstrap info color -->
+  <div class="counter-box" style="background-color: #5bc0de;">
     <h3>Positions</h3>
     <p>{{ options_count }}</p>
   </div>
 </div>
 
-<!-- Dates -->
-<div class="date-container">
+<div class="form-container">
   <div class="date-container">
     {% for key, value in election_data.items() %}
-    {% if key != 'token' %}
-    {% if key != 'candidate_token' %}
-    {% if key != 'uni_id' %}
-    {% if key != 'election_id' %}
-    <div class="date-box">
-      <span class="date-label">{{ key.replace('_', ' ') | capitalize }}:</span>
+    {% if key not in ['token', 'candidate_token', 'uni_id', 'election_id'] %}
+    <div class="form-group">
+      <label for="{{ key }}">{{ key.replace('_', ' ') | capitalize }}:</label>
       {% if key in ['election_name', 'election_description'] %}
         <input type="text" class="value-field" id="{{ key }}" value="{{ value }}" readonly>
       {% elif key in ['start_date', 'end_date'] %}
-        <!-- Using datetime-local for date and time selection -->
         <input type="datetime-local" class="value-field" id="{{ key }}" value="{{ value | datetime }}" readonly>
-      {% elif key == 'election_type' %}
+      {% elif key in ['election_type', 'status'] %}
         <select id="{{ key }}" class="value-field" disabled>
           <option value="Standard" {% if value == 'Standard' %}selected{% endif %}>Standard</option>
           <option value="Preferential" {% if value == 'Preferential' %}selected{% endif %}>Preferential</option>
-        </select>
-        {% elif key == 'status' %}
-        <select id="{{ key }}" class="value-field" disabled>
           <option value="Open" {% if value == 'Open' %}selected{% endif %}>Open</option>
           <option value="Building" {% if value == 'Building' %}selected{% endif %}>Building</option>
           <option value="Closed" {% if value == 'Closed' %}selected{% endif %}>Closed</option>
@@ -123,9 +171,6 @@
       <button class="edit-btn btn btn-secondary" onclick="editField('{{ key }}')">Edit</button>
       <button class="save-btn btn btn-primary" onclick="saveField('{{ key }}')" style="display: none;">Save</button>
     </div>
-    {% endif %}
-    {% endif %}
-    {% endif %}
     {% endif %}
     {% endfor %}
   </div>
@@ -138,8 +183,6 @@
   <button id="removeLink" onclick="removeLink()" class="btn btn-danger" style="display: none;">Remove Link</button>
 </div>
 
-<button id="removeAllVotesBtn" onclick="removeAllVotes()" class="btn btn-danger">Remove All Votes</button>
-
 <div style="text-align: center; margin-top: 20px;">
   <button onclick="generateCandidateLink()" class="btn btn-primary">Create Candidate Link</button>
   <input id="candidateLinkBox" type="text" value="{{candidate_token}}" style="margin-top: 10px; width: 300px;" readonly>
@@ -147,25 +190,22 @@
   <button id="removeCandidateLink" onclick="removeCandidateLink()" class="btn btn-danger" style="display: none;">Remove Link</button>
 </div>
 
-<title>Interactive Dashboard</title>
-
-<p> Voter's trait </p>
-<select id="x-axis" onchange="updateGraph()">
-  <option value="faculty">Faculty</option>
-  <option value="degree">Degree</option>
-  <option value="gender">Gender</option>
-  <option value="ethnicity">Ethnicity</option>
-  <option value="year">Year</option>
-</select>
-
-<p> and it influences the following Candidate's trait behaviour </p>
-<select id="y-axis" onchange="updateGraph()">
-  <option value="faculty">Faculty</option>
-  <option value="degree">Degree</option>
-  <option value="gender">Gender</option>
-  <option value="ethnicity">Ethnicity</option>
-  <option value="year">Year</option>
-</select>
+<div class="select-container">
+  <select id="x-axis" onchange="updateGraph()" class="form-control">
+    <option value="faculty">Faculty</option>
+    <option value="degree">Degree</option>
+    <option value="gender">Gender</option>
+    <option value="ethnicity">Ethnicity</option>
+    <option value="year">Year</option>
+  </select>
+  <select id="y-axis" onchange="updateGraph()" class="form-control">
+    <option value="faculty">Faculty</option>
+    <option value="degree">Degree</option>
+    <option value="gender">Gender</option>
+    <option value="ethnicity">Ethnicity</option>
+    <option value="year">Year</option>
+  </select>
+</div>
 
 <div>
   <canvas id="myChart"></canvas>
@@ -186,6 +226,9 @@
       </tbody>
   </table>
 </div>
+
+<button id="removeAllVotesBtn" onclick="removeAllVotes()" class="btn btn-danger btn-block">Remove All Votes</button>
+
 
 <script>
 
