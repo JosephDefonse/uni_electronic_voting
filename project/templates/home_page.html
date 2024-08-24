@@ -2,47 +2,70 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Company - Home</title>
+    <title>PollPal - Home</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
         .hero {
-            background-size: cover;
-            height: 90vh;
+            background: linear-gradient(135deg, #FAD0C4, #FFD1D1);
+            height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: black;
+            color: white;
             text-align: center;
+            position: relative;
         }
         .hero h1 {
             font-size: 3rem;
             font-weight: bold;
+            color: #333333;
         }
         .hero p {
             font-size: 1.5rem;
             margin-top: 20px;
+            color: #333333;
+        }
+        .hero img {
+            max-width: 150px;
+            margin-bottom: 20px;
         }
         .navbar {
             margin-bottom: 0;
+            background-color: #FFD1D1; 
+        }
+        .navbar-brand {
+            color: #ffffff;
+            font-weight: bold;
+        }
+        .navbar-nav .nav-link {
+            color: #ffffff;
+        }
+        .btn-outline-primary {
+            color: #ffffff;
+            border-color: #ffffff;
+        }
+        .btn-outline-primary:hover {
+            background-color: #ffffff;
+            color: #FFD1D1;
         }
     </style>
 
-<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
-
-<script>
-  const firebaseConfig = {
+    <!-- Firebase and other scripts remain unchanged -->
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
+    <script>
+        const firebaseConfig = {
             apiKey: "AIzaSyAMQjEmw7Wpkqb9KlPSg__6taL5_B25Dg0",
             authDomain: "pollpal-c62d2.firebaseapp.com",
             projectId: "pollpal-c62d2",
             storageBucket: "pollpal-c62d2.appspot.com"
         };
 
-    // Initialize Firebase
-    const app = firebase.initializeApp(firebaseConfig);
-    const auth = firebase.auth();
+        // Initialize Firebase
+        const app = firebase.initializeApp(firebaseConfig);
+        const auth = firebase.auth();
 
-    firebase.auth().onAuthStateChanged(function(user) {
+        firebase.auth().onAuthStateChanged(function(user) {
             const dashboardLink = document.getElementById('dashboardLink');
             const loginLink = document.getElementById('loginLink');
 
@@ -61,19 +84,18 @@
             }
         });
 
-    function signOut() {
-        firebase.auth().signOut().then(() => {
-            window.location.href = '/home_logout';
-        }).catch((error) => {
-            console.error('Sign out failed:', error);
-        });
-    }
-</script>
-
+        function signOut() {
+            firebase.auth().signOut().then(() => {
+                window.location.href = '/home_logout';
+            }).catch((error) => {
+                console.error('Sign out failed:', error);
+            });
+        }
+    </script>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="/">Company</a>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="/">PollPal</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -102,6 +124,7 @@
 
     <div class="hero">
         <div>
+            <img src="static/images/PollPalLogo.png" alt="PollPal Logo">
             <h1>Electronic Voting Project 2</h1>
             <p>by Monash University Students</p>
         </div>
@@ -113,11 +136,10 @@
 </body>
 
 <script>
-
     // Check if user is authenticated. This should ideally be determined by checking a session variable set by your backend
     document.addEventListener('DOMContentLoaded', function() {
         const isLoggedIn = localStorage.getItem('isLoggedIn');  // Example, using localStorage which should be set when logging in
-        console.log(isLoggedIn)
+        console.log(isLoggedIn);
 
         const loginLink = document.getElementById('loginLink');
         if (isLoggedIn) {

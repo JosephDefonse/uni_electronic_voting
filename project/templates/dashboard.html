@@ -7,18 +7,67 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 <style>
-    /* Add additional custom styles if needed */
+    body {
+        background-color: #f8f9fa;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        color: #333;
+    }
+
     .search-bar {
         margin-bottom: 20px;
     }
+
     .control-row {
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
+
     .control-row > .search-bar {
         flex-grow: 1;
         margin-right: 15px;
+    }
+
+    .card {
+        border-radius: 8px; 
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+        transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .card:hover {
+        transform: translateY(-5px); 
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+    }
+
+    .btn-primary {
+        background-color: #007bff;
+        border-color: #007bff;
+        border-radius: 5px; 
+    }
+
+    .btn-secondary {
+        background-color: #6c757d;
+        border-color: #6c757d;
+        border-radius: 5px; 
+    }
+
+    .pagination .page-link {
+        color: #007bff;
+    }
+
+    .pagination .page-item:hover .page-link {
+        background-color: #0056b3;
+        border-color: #0056b3;
+        color: #fff;
+    }
+
+    .pagination .page-item.active .page-link {
+        background-color: #007bff;
+        border-color: #007bff;
+        color: #fff;
     }
 </style>
 <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
